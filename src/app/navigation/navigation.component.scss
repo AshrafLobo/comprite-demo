@@ -1,0 +1,28 @@
+mat-toolbar {
+  position: relative;
+  background: white;
+  z-index: 2 !important;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  ul > li {
+    list-style: none;
+    a {
+      cursor: pointer;
+
+      &:hover {
+        color: lightblue;
+      }
+    }
+  }
+
+  button[mat-icon-button],
+  mat-icon {
+    &:focus {
+      outline: none;
+    }
+  }
+}

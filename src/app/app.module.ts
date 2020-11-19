@@ -11,9 +11,10 @@ import { AppMaterialModule } from './modules/app-material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, NavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

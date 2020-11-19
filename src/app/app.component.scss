@@ -1,3 +1,7 @@
+main {
+  height: 500px;
+}
+
 mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {
@@ -6,4 +10,13 @@ mat-sidenav {
 
 mat-sidenav {
   width: 250px;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: gray;
+    }
+  }
 }

@@ -1,14 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-
-//Include all of Bootstrap
+//Includes
 @import "~bootstrap/scss/bootstrap";
+@import "~@angular/material/theming";
+@import "colors";
+
+// Define a custom typography config that overrides the font-family as well as the
+$custom-typography: mat-typography-config(
+  $font-family: "Open Sans, sans-serif",
+);
+
+@include mat-core($custom-typography);
 
 html,
 body {
   height: 100%;
   margin: 0;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $text-primary !important;
 }

@@ -12,6 +12,7 @@ mat-toolbar {
     list-style: none;
     a {
       cursor: pointer;
+      text-decoration: none;
 
       &:hover {
         color: lightblue;

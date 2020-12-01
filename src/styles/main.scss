@@ -1,0 +1,17 @@
+// Global Styles
+// Angular imports
+@import "~@angular/material/theming";
+
+// Abstract imports
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Vendor imports
+@import "vendors/bootstrap";
+
+// Base imports
+@import "base/reset";
+@import "base/typography";
+
+// Layout imports
+@import "layout/layout";

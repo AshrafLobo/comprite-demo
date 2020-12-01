@@ -11,7 +11,11 @@ import { AppMaterialModule } from './modules/app-material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { NavigationComponent } from './components/index';
+import { 
+	NavigationComponent,
+	SidenavComponent, 
+	FooterComponent
+} from './components/index';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,8 @@ import { NavigationComponent } from './components/index';
     HomeComponent,
     AboutComponent,
     NavigationComponent,
+	SidenavComponent, 
+	FooterComponent
   ],
   imports: [
     BrowserModule,

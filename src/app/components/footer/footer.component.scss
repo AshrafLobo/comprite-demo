@@ -1,0 +1,65 @@
+@import "abstracts/variables";
+
+// Outer wrapper
+footer {
+  background: $dark-blue;
+  font-size: 16px;
+  color: $text-secondary;
+
+  // Inner Wrapper
+  .footer-container {
+    max-width: 1280px;
+
+    // Footer heading styles
+    h2 {
+      color: white;
+    }
+
+    // Column 1 Styles
+    .column1 {
+      // Comprite Logo section
+      .footer-logo {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        span {
+          color: white;
+          font-size: 20px;
+        }
+      }
+
+      // Social Media Icons Section
+      .icon-container {
+        max-width: 200px;
+
+        .icon {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    // Column 2 Styles
+    .column2 {
+    }
+
+    // Column 3 Styles
+    .column3 {
+    }
+
+    // Column 4 Styles
+    .column4 {
+      a {
+        color: $text-secondary;
+
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
+}

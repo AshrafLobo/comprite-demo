@@ -11,10 +11,11 @@ import { AppMaterialModule } from './modules/app-material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { 
-	NavigationComponent,
-	SidenavComponent, 
-	FooterComponent
+import {
+  NavigationComponent,
+  SidenavComponent,
+  FooterComponent,
+  NewsCardComponent,
 } from './components/index';
 
 @NgModule({
@@ -23,8 +24,9 @@ import {
     HomeComponent,
     AboutComponent,
     NavigationComponent,
-	SidenavComponent, 
-	FooterComponent
+    SidenavComponent,
+    FooterComponent,
+    NewsCardComponent,
   ],
   imports: [
     BrowserModule,

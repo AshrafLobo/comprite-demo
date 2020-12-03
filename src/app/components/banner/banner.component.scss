@@ -1,0 +1,18 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.banner {
+  background-color: $comprite-blue;
+  height: 300px;
+
+  h2 {
+    color: $dark-blue;
+    font-size: $banner-size;
+    font-weight: 600;
+  }
+
+  p {
+    color: white;
+    font-size: $paragraph-size;
+  }
+}

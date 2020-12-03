@@ -1,4 +1,7 @@
-.parallax {
+@import "abstracts/variables";
+@import "base/typography";
+
+.parallax-section {
   z-index: -100;
 
   /* The image used */
@@ -12,4 +15,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.news-card-section {
+  h2 {
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: $heading-size;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: $paragraph-size;
+  }
 }

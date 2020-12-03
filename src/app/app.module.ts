@@ -20,6 +20,7 @@ import {
   NewsCardComponent,
   CustomButtonComponent,
   BannerComponent,
+  SplitBannerComponent,
 } from './components/index';
 
 @NgModule({
@@ -33,6 +34,7 @@ import {
     NewsCardComponent,
     CustomButtonComponent,
     BannerComponent,
+    SplitBannerComponent,
   ],
   imports: [
     BrowserModule,

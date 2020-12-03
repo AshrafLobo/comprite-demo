@@ -1,0 +1,11 @@
+@import "abstracts/variables";
+
+[mat-raised-button] {
+  color: white;
+  background-color: $gold;
+  border-radius: 20px;
+
+  &:focus {
+    outline: none;
+  }
+}

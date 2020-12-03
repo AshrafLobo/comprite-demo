@@ -7,15 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppMaterialModule } from './modules/app-material.module';
 
-// Components
+// Pages
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+
+// Components
 import {
   NavigationComponent,
   SidenavComponent,
   FooterComponent,
   NewsCardComponent,
+  CustomButtonComponent,
+  BannerComponent,
 } from './components/index';
 
 @NgModule({
@@ -27,6 +31,8 @@ import {
     SidenavComponent,
     FooterComponent,
     NewsCardComponent,
+    CustomButtonComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

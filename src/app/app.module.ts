@@ -21,6 +21,7 @@ import {
   CustomButtonComponent,
   BannerComponent,
   SplitBannerComponent,
+  TimelineComponent,
 } from './components/index';
 
 @NgModule({
@@ -35,6 +36,7 @@ import {
     CustomButtonComponent,
     BannerComponent,
     SplitBannerComponent,
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,

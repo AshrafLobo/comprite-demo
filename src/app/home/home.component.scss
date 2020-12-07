@@ -1,6 +1,16 @@
 @import "abstracts/variables";
 @import "base/typography";
 
+/*Global styles*/
+h2 {
+  font-weight: 600;
+  font-size: $heading-size;
+}
+
+p {
+  font-size: $paragraph-size;
+}
+
 .parallax-section {
   z-index: -100;
 
@@ -19,7 +29,7 @@
   color: white;
 
   h1 {
-    font-weight: 600;
+    font-weight: bold;
   }
 
   p {
@@ -27,15 +37,25 @@
   }
 }
 
+/* Styles for banner section */
+.banner-section {
+  h2 {
+    font-size: $banner-size;
+  }
+
+  h2,
+  p {
+    color: white;
+  }
+}
+
+/* Styles for news card section */
 .news-card-section {
   h2 {
     color: $dark-blue;
-    font-weight: 600;
-    font-size: $heading-size;
   }
 
   p {
     color: $text-secondary;
-    font-size: $paragraph-size;
   }
 }

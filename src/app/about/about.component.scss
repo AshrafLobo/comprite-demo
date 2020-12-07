@@ -1,0 +1,22 @@
+@import "base/typography";
+
+h1 {
+  font-weight: bold;
+  font-size: $banner-size;
+}
+
+p {
+  font-size: $paragraph-size;
+}
+
+/*About Banner Section*/
+.about-banner-section {
+  h1,
+  p {
+    color: white;
+  }
+
+  p {
+    max-width: 800px;
+  }
+}

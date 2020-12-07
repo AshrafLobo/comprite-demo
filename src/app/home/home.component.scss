@@ -37,6 +37,29 @@ p {
   }
 }
 
+/* Styles for split banner section */
+.split-banner-section {
+  h2 {
+    color: $comprite-blue;
+    font-weight: 600;
+  }
+
+  p {
+    color: $text-secondary;
+    max-width: 400px;
+    font-size: $paragraph-size;
+  }
+
+  .column1 {
+    min-height: 500px;
+  }
+
+  .column2 {
+    min-height: 500px;
+    background-color: $dark-blue;
+  }
+}
+
 /* Styles for banner section */
 .banner-section {
   h2 {

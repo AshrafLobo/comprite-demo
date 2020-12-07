@@ -1,3 +1,4 @@
+<!-- About Banner Section  -->
 <app-banner class="about-banner-section">
   <h1 class="m-0">About us</h1>
   <p class="m-3 mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores saepe voluptates,
@@ -6,3 +7,135 @@
     veritatis in repudiandae quidem velit eaque provident eveniet, blanditiis similique sint voluptatibus nesciunt fugit
     architecto!</p>
 </app-banner>
+
+<!-- About History-Timeline Split Banner Section -->
+<app-split-banner class="about-history-split-banner-section">
+  <!-- Column 1 Section -->
+  <ng-container class="column1-content">
+    <div class="column1 col-12 col-md p-5 h-100 d-flex align-items-center">
+
+      <!-- Column Wrapper -->
+      <div class="text-center mx-auto">
+        <h2 class="mat-display-2 m-0">History</h2>
+
+        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis ab sequi
+          recusandae
+          eveniet
+          placeat itaque minima est deleniti distinctio sint doloribus, hic et id porro quis asperiores facere!
+          Reiciendis.</p>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Column 2 Section -->
+  <ng-container class="column2-content">
+    <div class="column2 col-12 col-md p-5 h-100 d-flex align-items-center">
+      <div class="text-center w-100 text-muted mat-display-1 mat-body-2">Timeline goes here</div>
+      <!-- <app-timeline></app-timeline> -->
+    </div>
+  </ng-container>
+</app-split-banner>
+
+<!-- About Payroll Share Registration Split Banner Section -->
+<app-split-banner class="about-payroll-split-banner-section">
+
+  <!-- Column 1 Section -->
+  <ng-container class="column1-content">
+    <div class="column1 col-12 col-md p-5 h-100 d-flex align-items-center">
+
+      <!-- Column Wrapper -->
+      <div class="text-center mx-auto">
+        <h2 class="mat-display-2 m-0">Payroll</h2>
+
+        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis ab sequi
+          recusandae
+          eveniet
+          placeat itaque minima est deleniti distinctio sint doloribus, hic et id porro quis asperiores facere!
+          Reiciendis.</p>
+
+        <app-custom-button [large]="true">
+          Go to payroll
+        </app-custom-button>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Column 2 Section -->
+  <ng-container class="column2-content">
+    <div class="column2 col-12 col-md p-5 h-100 d-flex align-items-center">
+
+      <!-- Column Wrapper -->
+      <div class="text-center mx-auto">
+        <h2 class="mat-display-2 m-0">Share registration</h2>
+
+        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis ab sequi
+          recusandae
+          eveniet
+          placeat itaque minima est deleniti distinctio sint doloribus, hic et id porro quis asperiores facere!
+          Reiciendis.</p>
+
+        <div class="row justify-content-around">
+          <div class="col-12 col-lg my-2 my-lg-0">
+            <app-custom-button [large]="true">
+              For issuers
+            </app-custom-button>
+          </div>
+
+          <div class="col-12 col-lg my-2 my-lg-0">
+            <app-custom-button [large]="true">
+              For shareholders
+            </app-custom-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-split-banner>
+
+<!-- About Contacts Split Banner Section -->
+<app-split-banner class="about-contacts-split-banner-section">
+
+  <!-- Column 1 Section -->
+  <ng-container class="column1-content">
+    <div class="column1 col-12 col-md p-5 h-100 d-flex align-items-center">
+      <div class="text-center w-100 text-muted mat-display-1 mat-body-2">Map goes here</div>
+    </div>
+  </ng-container>
+
+  <!-- Column 2 Section -->
+  <ng-container class="column2-content">
+    <div class="column2 col-12 col-md p-5 h-100 d-flex align-items-center">
+
+      <!-- Column Wrapper -->
+      <div class="text-center mx-auto">
+        <h2 class="mat-display-2 m-0">Find us</h2>
+
+        <hr />
+
+        <div class="row contacts">
+          <!-- Physical Address Section -->
+          <div class="px-3 mt-4 mt-lg-0 col-12 col-md text-left">
+            <h2 class="d-inline-flex align-items-center">
+              <mat-icon class="mr-1">place</mat-icon>Physical Address
+            </h2>
+            <p>Comp-rite Kenya Limited</p>
+            <p>4th Floor, Muthaiga Mini Market,</p>
+            <p>Limuru road Behind Post Office</p>
+            <p>P.O. Box 63428-00619</p>
+            <p>Nairobi, Kenya</p>
+          </div>
+
+          <!-- Contacts Section -->
+          <div class="px-3 mt-4 mt-lg-0 col-12 col-md text-left">
+            <h2 class="d-inline-flex align-items-center">
+              <mat-icon class="mr-1">phone</mat-icon>Contact Us
+            </h2>
+            <p>Email: info@comp-rite.com</p>
+            <p>Telephone: +254-20-269-0955</p>
+            <p>Cell: +254 723-611786</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-split-banner>

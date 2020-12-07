@@ -1,12 +1,28 @@
+@import "abstracts/variables";
 @import "base/typography";
 
+/*Global Styles*/
 h1 {
   font-weight: bold;
   font-size: $banner-size;
 }
 
+h2 {
+  color: $comprite-blue;
+  font-weight: 600;
+}
+
 p {
   font-size: $paragraph-size;
+  color: $text-secondary;
+}
+
+.column1 {
+  min-height: 500px;
+}
+
+.column2 {
+  min-height: 500px;
 }
 
 /*About Banner Section*/
@@ -18,5 +34,48 @@ p {
 
   p {
     max-width: 800px;
+  }
+}
+
+/*About History Timeline Split Banner Section*/
+.about-history-split-banner-section {
+  p {
+    max-width: 500px;
+  }
+
+  .column1 {
+    background-color: $dark-blue;
+  }
+}
+
+/*About Payroll Split Banner Section*/
+.about-payroll-split-banner-section {
+  p {
+    max-width: 500px;
+  }
+
+  .column2 {
+    background-color: $dark-blue;
+  }
+}
+
+/*About Contacts Split Banner Section*/
+.about-contacts-split-banner-section {
+  h2 {
+    color: $dark-blue;
+  }
+
+  .column2 {
+    background-color: $comprite-blue;
+
+    hr {
+      border-color: $border-color;
+    }
+
+    .contacts {
+      h2 {
+        color: $text-secondary;
+      }
+    }
   }
 }

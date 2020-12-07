@@ -68,6 +68,10 @@ p {
   .column2 {
     background-color: $comprite-blue;
 
+    p {
+      max-width: 600px;
+    }
+
     hr {
       border-color: $border-color;
     }

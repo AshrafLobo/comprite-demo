@@ -1,0 +1,15 @@
+<div class="card-wrapper w-100">
+  <mat-card>
+    <mat-card-header>
+      <ng-content select=".mat-card-header"></ng-content>
+    </mat-card-header>
+
+    <mat-card-content class="m-0">
+      <ng-content select=".mat-card-content"></ng-content>
+    </mat-card-content>
+
+    <mat-card-actions *ngIf="hasButtons" class="m-0">
+      <ng-content select=".mat-card-actions"></ng-content>
+    </mat-card-actions>
+  </mat-card>
+</div>

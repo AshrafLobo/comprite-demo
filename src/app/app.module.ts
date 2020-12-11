@@ -11,18 +11,24 @@ import { AppMaterialModule } from './modules/app-material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { PayrollComponent } from './payroll/payroll.component';
 
 // Components
 import {
   NavigationComponent,
   SidenavComponent,
   FooterComponent,
+  CardComponent,
   NewsCardComponent,
   CustomButtonComponent,
   BannerComponent,
   SplitBannerComponent,
   TimelineComponent,
+  MapComponent,
 } from './components/index';
+
+// Angular Google Maps
+// import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,9 @@ import {
     BannerComponent,
     SplitBannerComponent,
     TimelineComponent,
+    MapComponent,
+    PayrollComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

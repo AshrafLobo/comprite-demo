@@ -1,3 +1,12 @@
 $banner-size: 30px;
 $heading-size: 25px;
-$paragraph-size: 16px;
+$paragraph-size: 17px;
+
+p {
+  font-size: $paragraph-size;
+}
+
+p,
+a {
+  font-weight: lighter;
+}

@@ -16,22 +16,21 @@
     color: $text-secondary;
 
     .date {
-      font-size: 17px;
+      font-size: 16px;
     }
   }
 }
 
-.mat-card-content {
-  h2 {
-    color: $dark-blue;
-    font-weight: 600;
-  }
+.news-card-title {
+  color: $dark-blue;
+  font-weight: 600;
+}
 
-  p {
-    color: $text-secondary;
-  }
+.issuer-title,
+.text-content {
+  color: $text-secondary;
+}
 
-  hr {
-    border-color: $border-color;
-  }
+hr {
+  border-color: $border-color;
 }

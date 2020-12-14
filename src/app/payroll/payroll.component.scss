@@ -1,0 +1,77 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+/*About Banner Section*/
+.payroll-banner-section {
+  h1,
+  p {
+    color: white;
+  }
+
+  p {
+    max-width: 600px;
+  }
+}
+
+/*Payroll Features Section*/
+
+.payroll-features-section {
+  .row {
+    img {
+      max-height: 200px;
+      max-width: 200px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h2 {
+      color: $dark-blue;
+      font-size: $heading-size;
+      font-weight: 600;
+    }
+
+    p {
+      color: $text-secondary;
+      max-width: 600px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) to laptops/desktops, 992px  */
+@media only screen and (max-width: 991px) {
+  .payroll-banner-section {
+    img {
+      max-width: 300px !important;
+    }
+  }
+
+  .payroll-features-section {
+    .row {
+      p {
+        max-width: 500px !important;
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up to large laptops and desktops, 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .payroll-features-section {
+    .row {
+      img {
+        max-height: 175px !important;
+        max-width: 175px !important;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .payroll-features-section {
+    .row {
+      width: 80%;
+    }
+  }
+}

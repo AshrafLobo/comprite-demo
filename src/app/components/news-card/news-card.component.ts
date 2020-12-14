@@ -11,6 +11,6 @@ export class NewsCardComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick() {
-    console.log('Button clicked');
+    console.log('News card button clicked');
   }
 }

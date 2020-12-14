@@ -25,6 +25,7 @@ import {
   SplitBannerComponent,
   TimelineComponent,
   MapComponent,
+  PriceCardComponent,
 } from './components/index';
 
 // Angular Google Maps
@@ -46,6 +47,7 @@ import {
     MapComponent,
     PayrollComponent,
     CardComponent,
+    PriceCardComponent,
   ],
   imports: [
     BrowserModule,

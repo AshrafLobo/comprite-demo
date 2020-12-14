@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input('hasButtons') hasButtons = true;
-  @Input('background') background = 'white';
+  @Input('hasButtons') hasButtons: boolean = true;
+  @Input('hasBackground') hasBackground: string = 'white';
 
   constructor() {}
 

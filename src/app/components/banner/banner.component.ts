@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
-  @Input('background') background = '#0f75bd';
+  @Input('hasBackground') hasBackground: string = '#0f75bd';
 
   constructor() {}
 

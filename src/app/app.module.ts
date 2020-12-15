@@ -26,6 +26,7 @@ import {
   TimelineComponent,
   MapComponent,
   PriceCardComponent,
+  TestimonialCardComponent,
 } from './components/index';
 
 // Angular Google Maps
@@ -48,6 +49,7 @@ import {
     PayrollComponent,
     CardComponent,
     PriceCardComponent,
+    TestimonialCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,14 @@
 <app-card [hasBackground]="'#0f75bd'">
   <!-- Card header section -->
   <ng-container class="mat-card-header">
-    <h2 class="my-0 mx-auto">
+    <h2 class="my-0 mt-5 pt-2 mx-auto">
       <ng-content select=".price-header"></ng-content>
     </h2>
   </ng-container>
 
   <!-- Card body section -->
   <ng-container class="mat-card-content">
-    <h3 class="my-5 py-2 mx-auto mat-display-2">
+    <h3 class="mt-2 mb-5 py-2 mx-auto mat-display-2">
       <ng-content select=".price"></ng-content>
     </h3>
     <ul class="p-0 mb-2 mt-3 text-left d-inline-flex flex-column">

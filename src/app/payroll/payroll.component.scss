@@ -37,6 +37,15 @@
   }
 }
 
+/*Payroll Testimonial Section*/
+.payroll-testimonial-section {
+  h2 {
+    color: $dark-blue;
+    font-size: $heading-size;
+    font-weight: 600;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) to laptops/desktops, 992px  */
 @media only screen and (max-width: 991px) {
   .payroll-banner-section {

@@ -28,6 +28,7 @@ import {
   PriceCardComponent,
   TestimonialCardComponent,
 } from './components/index';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 // Angular Google Maps
 // import { AgmCoreModule } from '@agm/core';
@@ -50,6 +51,7 @@ import {
     CardComponent,
     PriceCardComponent,
     TestimonialCardComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+@import "abstracts/variables";
+
+.mat-expansion-panel-content {
+  background-color: white;
+}
+
+.mat-expansion-indicator::after {
+  color: $gold;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}

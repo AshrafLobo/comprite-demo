@@ -41,7 +41,7 @@
 .payroll-contacts-section {
   .column1,
   .column2 {
-    height: 500px !important;
+    min-height: 500px !important;
   }
 
   .column1 {
@@ -51,6 +51,8 @@
 
 /*Payroll Testimonial Section*/
 .payroll-testimonial-section {
+  background-color: $border-color;
+
   h2 {
     color: $dark-blue;
     font-size: $heading-size;
@@ -64,6 +66,12 @@
     color: white;
     font-size: $heading-size;
     font-weight: 600;
+  }
+
+  .enquire-section {
+    h2 {
+      color: $dark-blue !important;
+    }
   }
 }
 

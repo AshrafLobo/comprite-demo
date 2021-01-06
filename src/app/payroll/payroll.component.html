@@ -48,7 +48,7 @@
 
 <!-- Payroll Price Cards Section -->
 <app-banner class="payroll-price-section" [hasBackground]="'#3e4756'">
-  <div class="container">
+  <div class="container py-3">
 
     <!-- Demo version card -->
     <div class="row justify-content-center text-center">
@@ -81,7 +81,7 @@
 </app-banner>
 
 <!-- Payroll Testimonial Section -->
-<div class="payroll-testimonial-section my-5">
+<div class="payroll-testimonial-section py-5">
   <div class="container-fluid no-gutter">
     <div class="text-center mb-4">
       <h2 class="m-0">Testimonials</h2>
@@ -107,20 +107,21 @@
 
   <!-- Column 1 Section -->
   <ng-container class="column1-content">
-    <div class="column1 col-12 col-lg h-100 d-flex align-items-center">
+    <div class="column1 col-12 col-xl h-100 d-flex align-items-center py-3">
       <div class="row">
         <h2 class="col-12 text-center">Faqs</h2>
         <app-accordion class="col-12"></app-accordion>
       </div>
-
-
     </div>
   </ng-container>
 
   <!-- Column 2 Section -->
   <ng-container class="column2-content">
-    <div class="column2 col-12 col-lg p-3 h-100 d-flex align-items-center">
-      <!-- Contact form goes here -->
+    <div class="enquire-section column2 col-12 col-xl p-3 h-100 d-flex align-items-center py-3">
+      <div class="row w-100">
+        <h2 class="text-center col-12">Enquire</h2>
+        <app-enquiry-form class="col-12"></app-enquiry-form>
+      </div>
     </div>
   </ng-container>
 </app-split-banner>

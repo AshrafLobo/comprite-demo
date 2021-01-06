@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Custom Modules
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PayrollComponent } from './payroll/payroll.component';
+import { ShareRegistrationComponent } from './share-registration/share-registration.component';
 
 // Components
 import {
@@ -27,8 +29,9 @@ import {
   MapComponent,
   PriceCardComponent,
   TestimonialCardComponent,
+  AccordionComponent,
+  EnquiryFormComponent,
 } from './components/index';
-import { AccordionComponent } from './components/accordion/accordion.component';
 
 // Angular Google Maps
 // import { AgmCoreModule } from '@agm/core';
@@ -38,6 +41,8 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
+    PayrollComponent,
+    ShareRegistrationComponent,
     NavigationComponent,
     SidenavComponent,
     FooterComponent,
@@ -47,17 +52,19 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     SplitBannerComponent,
     TimelineComponent,
     MapComponent,
-    PayrollComponent,
     CardComponent,
     PriceCardComponent,
     TestimonialCardComponent,
     AccordionComponent,
+    EnquiryFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

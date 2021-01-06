@@ -10,3 +10,5 @@ export * from './map/map.component';
 export * from './card/card.component';
 export * from './price-card/price-card.component';
 export * from './testimonial-card/testimonial-card.component';
+export * from './accordion/accordion.component';
+export * from './enquiry-form/enquiry-form.component';

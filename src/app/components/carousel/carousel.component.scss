@@ -1,0 +1,27 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.carousel-container {
+  .slide-section {
+    min-height: 350px;
+
+    img {
+      max-height: 200px;
+      max-width: 500px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h2 {
+      color: $text-primary;
+      font-size: $heading-size;
+    }
+
+    p {
+      max-width: 800px;
+      color: $text-secondary;
+      font-weight: lighter;
+      font-size: $paragraph-size;
+    }
+  }
+}

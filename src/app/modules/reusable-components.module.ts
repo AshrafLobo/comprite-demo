@@ -17,11 +17,13 @@ import {
   TestimonialCardComponent,
   AccordionComponent,
   EnquiryFormComponent,
+  CarouselComponent,
 } from '../components/index';
 
 // Modules
 import { AppMaterialModule } from './app-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const reusableComponents = [
   NavigationComponent,
@@ -38,11 +40,12 @@ const reusableComponents = [
   TestimonialCardComponent,
   AccordionComponent,
   EnquiryFormComponent,
+  CarouselComponent,
 ];
 
 @NgModule({
   declarations: [reusableComponents],
-  imports: [CommonModule, AppMaterialModule, ReactiveFormsModule],
+  imports: [CommonModule, AppMaterialModule, ReactiveFormsModule, NgbModule],
   exports: [reusableComponents],
 })
 export class ReusableComponentsModule {}

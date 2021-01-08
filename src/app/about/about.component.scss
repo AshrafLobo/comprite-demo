@@ -2,19 +2,13 @@
 @import "base/typography";
 
 /*Global Styles*/
-h1 {
+h1,
+h2 {
   font-weight: bold;
-  font-size: $banner-size;
 }
 
 h2 {
   color: $comprite-blue;
-  font-weight: 600;
-}
-
-p {
-  font-size: $paragraph-size;
-  color: $text-secondary;
 }
 
 .column1 {

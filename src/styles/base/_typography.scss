@@ -1,9 +1,16 @@
+@import "../abstracts/variables";
+
 $banner-size: 30px;
 $heading-size: 25px;
 $paragraph-size: 17px;
 
+h1 {
+  font-size: $banner-size;
+}
+
 p {
   font-size: $paragraph-size;
+  color: $text-secondary;
 }
 
 p,

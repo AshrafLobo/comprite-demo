@@ -37,18 +37,6 @@
   }
 }
 
-/*Payroll Features Section*/
-.payroll-contacts-section {
-  .column1,
-  .column2 {
-    min-height: 500px !important;
-  }
-
-  .column1 {
-    background-color: $comprite-blue;
-  }
-}
-
 /*Payroll Testimonial Section*/
 .payroll-testimonial-section {
   background-color: $border-color;
@@ -62,6 +50,15 @@
 
 /*Payroll Contacts Section*/
 .payroll-contacts-section {
+  .column1,
+  .column2 {
+    min-height: 500px !important;
+  }
+
+  .column1 {
+    background-color: $comprite-blue;
+  }
+
   h2 {
     color: white;
     font-size: $heading-size;

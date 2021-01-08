@@ -1,0 +1,36 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.quotes {
+  img {
+    max-width: 50px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.testimonial-quote {
+  color: white;
+  max-width: 600px;
+}
+
+.testimonial-details {
+  max-width: 500px;
+
+  img {
+    border-radius: 50%;
+    max-height: 75px;
+    object-fit: cover;
+  }
+
+  .testimonial-name {
+    color: $dark-blue;
+    font-size: $testimonial-heading-size;
+    font-weight: 600;
+  }
+
+  .testimonial-title {
+    font-size: $paragraph-size;
+    color: white;
+  }
+}

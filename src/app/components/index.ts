@@ -13,3 +13,4 @@ export * from './testimonial-card/testimonial-card.component';
 export * from './accordion/accordion.component';
 export * from './enquiry-form/enquiry-form.component';
 export * from './carousel/carousel.component';
+export * from './company-testimonial-card/company-testimonial-card.component';

@@ -1,6 +1,8 @@
 @import "abstracts/variables";
+@import "base/typography";
 
-// Mat tabs - Mat expansion styles
+// MAT TABS Styles
+/**Mat tabs - Mat expansion styles**/
 .mat-expansion-panel-content {
   background-color: white;
 }
@@ -13,10 +15,19 @@
   padding: 0 !important;
 }
 
-// Carousel - Carousel styles
+/**Mat tabs - Mat tabs label**/
+.mat-tab-label-content {
+  font-size: $paragraph-size;
+}
+
+.mat-ink-bar {
+  background-color: $dark-blue !important;
+}
+
+// CAROUSEL STYLES
 .carousel-container {
   .carousel {
-    padding: 0 50px;
+    // padding: 0 50px;
 
     &:focus {
       outline: none;
@@ -28,7 +39,7 @@
   }
 }
 
-// Carousel - Carousel Indicators styles
+/**Carousel Indicators styles**/
 .carousel-indicators {
   margin: 0;
 
@@ -45,7 +56,7 @@
   }
 }
 
-// Carousel - Carousel Buttons styles
+/**Carousel - Carousel Buttons styles**/
 .carousel-control-next,
 .carousel-control-prev {
   width: 50px;

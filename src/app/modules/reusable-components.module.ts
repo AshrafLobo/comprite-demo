@@ -19,6 +19,7 @@ import {
   EnquiryFormComponent,
   CarouselComponent,
   CompanyTestimonialCardComponent,
+  ClientCardComponent,
 } from '../components/index';
 
 // Modules
@@ -43,6 +44,7 @@ const reusableComponents = [
   EnquiryFormComponent,
   CarouselComponent,
   CompanyTestimonialCardComponent,
+  ClientCardComponent,
 ];
 
 @NgModule({

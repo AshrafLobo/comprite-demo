@@ -1,0 +1,60 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+h2 {
+  font-size: $heading-size;
+  font-weight: bold;
+}
+
+/*Shareholders Banner Section*/
+.shareholders-banner-section {
+  h1,
+  p {
+    color: white;
+  }
+
+  p {
+    max-width: 600px;
+  }
+}
+
+/* Shareholder testimonial section */
+.shareholder-testimonial-section {
+  background-color: $border-color;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h2 {
+    color: white;
+    font-size: $heading-size;
+    font-weight: 600;
+  }
+}
+
+/* Our clients section */
+.our-clients-section {
+  h2 {
+    color: $dark-blue;
+  }
+
+  p {
+    color: $text-secondary;
+    max-width: 600px;
+  }
+}
+
+/* Styles for banner section */
+.banner-section {
+  h2 {
+    font-size: $banner-size;
+    font-weight: normal;
+  }
+
+  h2,
+  p {
+    color: white;
+  }
+}

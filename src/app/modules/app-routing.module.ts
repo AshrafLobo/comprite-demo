@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent } from '../about/about.component';
-import { HomeComponent } from '../home/home.component';
-import { PayrollComponent } from '../payroll/payroll.component';
-import { ShareRegistrationComponent } from '../share-registration/share-registration.component';
-import { IssuersComponent } from '../issuers/issuers.component';
+import {
+  HomeComponent,
+  AboutComponent,
+  PayrollComponent,
+  ShareRegistrationComponent,
+  IssuersComponent,
+  ShareholdersComponent,
+} from '../pages/index';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'payroll', component: PayrollComponent },
   { path: 'share-registration', component: ShareRegistrationComponent },
   { path: 'issuers', component: IssuersComponent },
+  { path: 'shareholders', component: ShareholdersComponent },
   { path: '', component: HomeComponent },
 ];
 

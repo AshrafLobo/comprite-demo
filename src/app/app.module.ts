@@ -8,13 +8,17 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { AppMaterialModule } from './modules/app-material.module';
 import { ReusableComponentsModule } from './modules/reusable-components.module';
 
-// Pages
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { PayrollComponent } from './payroll/payroll.component';
-import { ShareRegistrationComponent } from './share-registration/share-registration.component';
-import { IssuersComponent } from './issuers/issuers.component';
+
+// Pages
+import {
+  HomeComponent,
+  AboutComponent,
+  PayrollComponent,
+  ShareRegistrationComponent,
+  IssuersComponent,
+  ShareholdersComponent,
+} from './pages/index';
 
 // Angular Google Maps
 // import { AgmCoreModule } from '@agm/core';
@@ -27,6 +31,7 @@ import { IssuersComponent } from './issuers/issuers.component';
     PayrollComponent,
     ShareRegistrationComponent,
     IssuersComponent,
+    ShareholdersComponent,
   ],
   imports: [
     BrowserModule,

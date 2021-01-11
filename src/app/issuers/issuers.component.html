@@ -1,0 +1,94 @@
+<!-- Issuers Banner Section  -->
+<app-banner class="issuers-banner-section">
+  <h1 class="m-0">Issuers</h1>
+  <p class="m-3 mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores saepe voluptates,
+    repellendus, itaque
+    eos earum
+    veritatis in repudiandae quidem velit eaque provident eveniet, blanditiis similique sint voluptatibus nesciunt fugit
+    architecto!</p>
+</app-banner>
+
+<!-- Issuers Testimonial Section -->
+<app-banner [hasBackground]="'#3e4756'" class="issuers-testimonial-section">
+  <div class="container-fluid no-gutter py-5">
+    <div class="text-center mb-4">
+      <h2 class="m-0">Testimonials</h2>
+    </div>
+
+    <div class="row mx-md-5">
+      <div class="col-12 col-lg-4 my-2 my-lg-0">
+        <app-company-testimonial-card>
+        </app-company-testimonial-card>
+      </div>
+      <div class="col-12 col-lg-4 my-2 my-lg-0">
+        <app-company-testimonial-card>
+        </app-company-testimonial-card>
+      </div>
+      <div class="col-12 col-lg-4 my-2 my-lg-0">
+        <app-company-testimonial-card>
+        </app-company-testimonial-card>
+      </div>
+    </div>
+  </div>
+</app-banner>
+
+<!-- What we can do for you -->
+<div class="container what-we-do-section py-5">
+  <div class="row">
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/shareRegistryMaintenance.png" alt="Share Registry Maintenance">
+      <h2>Share registry maintenance</h2>
+      <p class="mx-auto">We manage record and distribute information regarding shares to shareholders as well as
+        issuers.</p>
+    </div>
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/dividendProcessing.png" alt="Dividend Processing">
+      <h2>Dividend processing</h2>
+      <p class="mx-auto">We perform a variety of tasks to ensure dividend is allocated correctly including dividend
+        calculation,
+        printing of dividend cheques, processing of dividend EFT's and replacement of old/stale cheques.</p>
+    </div>
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/mailingRoomServices.png" alt="Mailing Room Services">
+      <h2>Mailing room services</h2>
+      <p class="mx-auto">We perform collating, insertion and labelling of Annual Reports as well as returned mail
+        management including
+        indexing and filing returned dividend cheques etc.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/agmManagement.png" alt="AGM Management">
+      <h2>AGM management</h2>
+      <p class="mx-auto">Comp-rite workd with our issuers by collating and handling the registration of shareholders and
+        proxies,
+        conducting polls and reporting on shareholder and proxy attendance.</p>
+    </div>
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/dataSecurity.png" alt="Data Security">
+      <h2>Data security</h2>
+      <p class="mx-auto">The data handled within our organization is securely held in both a dedicated server and a
+        cloud database with
+        daily backups of both databases.</p>
+    </div>
+    <div class="col-12 col-lg text-center">
+      <img src="assets/whatWeDo/isharePro.png" alt="iShare Pro">
+      <h2>iShare pro</h2>
+      <p class="mx-auto">Our trend setting proprietary software was designed from the ground up, in consideration with
+        the CDSC IT
+        vendors and has been specifically written to integrate fully with the CDSC environment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Call to action banner section -->
+<app-banner class="banner-section">
+  <h2 class="m-0">Ready to <span>work with us?</span></h2>
+  <p class="m-3">Have an urgent question? Send us a message. Click the button below to go to our contact
+    us
+    page.
+  </p>
+  <app-custom-button [large]="true">
+    Contact us
+  </app-custom-button>
+</app-banner>

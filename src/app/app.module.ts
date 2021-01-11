@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { ShareRegistrationComponent } from './share-registration/share-registration.component';
+import { IssuersComponent } from './issuers/issuers.component';
 
 // Angular Google Maps
 // import { AgmCoreModule } from '@agm/core';
@@ -25,6 +26,7 @@ import { ShareRegistrationComponent } from './share-registration/share-registrat
     AboutComponent,
     PayrollComponent,
     ShareRegistrationComponent,
+    IssuersComponent,
   ],
   imports: [
     BrowserModule,

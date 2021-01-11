@@ -1,0 +1,60 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+/*Share Registration Banner Section*/
+.issuers-banner-section {
+  h1,
+  p {
+    color: white;
+  }
+
+  p {
+    max-width: 600px;
+  }
+}
+
+/*Issuers Testimonial Section*/
+.issuers-testimonial-section {
+  background-color: $border-color;
+
+  h2 {
+    color: white;
+    font-size: $heading-size;
+    font-weight: 600;
+  }
+}
+
+/*What we do section*/
+.what-we-do-section {
+  img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: $heading-size;
+    color: $dark-blue;
+  }
+
+  p {
+    max-width: 600px;
+    font-size: $paragraph-size;
+    color: $text-secondary;
+  }
+}
+
+/* Styles for banner section */
+.banner-section {
+  h2 {
+    font-size: $banner-size;
+    span {
+      color: $dark-blue;
+    }
+  }
+
+  h2,
+  p {
+    color: white;
+  }
+}

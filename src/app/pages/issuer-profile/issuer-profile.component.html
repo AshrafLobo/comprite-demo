@@ -1,0 +1,90 @@
+<!-- Profile section -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12 col-lg-3 text-center text-lg-right issuer-logo">
+      <img class="w-100" src="assets/issuerLogos/wppScangroup/logo_small.png" alt="Issuer Logo">
+    </div>
+    <div class="col-12 col-lg-9 mt-3 mt-lg-0 text-center text-lg-left">
+      <h2 class="issuer-name mat-display-1 mb-1">Wpp ScanGroup</h2>
+      <p class="issuer-title mat-title m-0 mt-1">Marketing and communications</p>
+      <hr />
+      <p class="issuer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, libero! Nostrum
+        aperiam cum, porro tenetur saepe nemo, unde voluptas itaque delectus harum id temporibus ullam vel accusamus,
+        eius ipsum repellendus?</p>
+      <app-custom-button [large]="true">Enquire about company</app-custom-button>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs section -->
+<div class="container">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="News">
+      <div class="row m-0 my-3 news-section">
+        <mat-sidenav-container>
+          <mat-sidenav #sidenav>
+            <div class="search-section text-center">
+              <h2 class="m-0 my-2">Filter list</h2>
+              <hr class="m-0 mb-2" />
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option value="Asc">Asc</mat-option>
+                  <mat-option value="Desc">Desc</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-icon matPrefix>search</mat-icon>
+                <input type="text" placeholder="Search" matInput>
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Choose a start date</mat-label>
+                <input type="text" matInput [matDatepicker]="startDate">
+                <mat-datepicker-toggle [for]="startDate" matSuffix></mat-datepicker-toggle>
+                <mat-datepicker #startDate></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Choose an end date</mat-label>
+                <input type="text" matInput [matDatepicker]="endDate">
+                <mat-datepicker-toggle [for]="endDate" matSuffix></mat-datepicker-toggle>
+                <mat-datepicker #endDate></mat-datepicker>
+              </mat-form-field>
+            </div>
+
+            <button mat-icon-button (click)="sidenav.close()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-sidenav>
+          <mat-sidenav-content>
+            <div class="news-container">
+              <button class="m-2" mat-icon-button (click)="sidenav.open()">
+                <mat-icon>menu</mat-icon>
+              </button>
+
+              <div class="mx-lg-5 pt-5 mb-3">
+                <app-news-card></app-news-card>
+              </div>
+              <div class="mx-lg-5 mb-3">
+                <app-news-card></app-news-card>
+              </div>
+              <div class="mx-lg-5 mb-3">
+                <app-news-card></app-news-card>
+              </div>
+              <div class="mx-lg-5 mb-3">
+                <app-news-card></app-news-card>
+              </div>
+              <div class="mx-lg-5 mb-3">
+                <app-news-card></app-news-card>
+              </div>
+            </div>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </div>
+    </mat-tab>
+    <mat-tab label="Shareholder information"> Content 2 </mat-tab>
+  </mat-tab-group>
+</div>

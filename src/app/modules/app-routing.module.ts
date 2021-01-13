@@ -8,6 +8,7 @@ import {
   ShareRegistrationComponent,
   IssuersComponent,
   ShareholdersComponent,
+  IssuerProfileComponent,
 } from '../pages/index';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'share-registration', component: ShareRegistrationComponent },
   { path: 'issuers', component: IssuersComponent },
   { path: 'shareholders', component: ShareholdersComponent },
+  { path: 'issuer-profile', component: IssuerProfileComponent },
   { path: '', component: HomeComponent },
 ];
 

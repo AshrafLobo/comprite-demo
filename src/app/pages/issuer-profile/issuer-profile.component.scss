@@ -3,7 +3,7 @@
 
 .issuer-logo {
   img {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 
@@ -13,6 +13,7 @@ button {
   }
 }
 
+/*News section*/
 .news-section {
   min-height: 500px;
 
@@ -27,9 +28,9 @@ button {
     mat-sidenav-content {
       min-height: 500px;
       max-height: 1000px;
-      overflow-y: scroll;
 
       .news-container {
+        overflow-y: scroll;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -63,5 +64,23 @@ button {
         right: 0;
       }
     }
+  }
+}
+
+/*Shareholder information section*/
+.shareholder-information {
+  .completed,
+  .pending {
+    border-radius: 25px;
+    color: White;
+    padding: 5px 10px;
+  }
+
+  .completed {
+    background-color: lime;
+  }
+
+  .pending {
+    background-color: $text-secondary;
   }
 }

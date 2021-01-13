@@ -1,17 +1,20 @@
 <!-- Profile section -->
 <div class="container my-5">
   <div class="row">
-    <div class="col-12 col-lg-3 text-center text-lg-right issuer-logo">
+    <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
       <img class="w-100" src="assets/issuerLogos/wppScangroup/logo_small.png" alt="Issuer Logo">
     </div>
-    <div class="col-12 col-lg-9 mt-3 mt-lg-0 text-center text-lg-left">
+    <div class="col-12 col-lg-8 mt-3 mt-lg-0 text-center text-lg-left">
       <h2 class="issuer-name mat-display-1 mb-1">Wpp ScanGroup</h2>
       <p class="issuer-title mat-title m-0 mt-1">Marketing and communications</p>
       <hr />
-      <p class="issuer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, libero! Nostrum
+      <p class="issuer-description my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, libero!
+        Nostrum
         aperiam cum, porro tenetur saepe nemo, unde voluptas itaque delectus harum id temporibus ullam vel accusamus,
         eius ipsum repellendus?</p>
-      <app-custom-button [large]="true">Enquire about company</app-custom-button>
+      <div>
+        <app-custom-button [large]="true">Enquire about company</app-custom-button>
+      </div>
     </div>
   </div>
 </div>
@@ -20,8 +23,12 @@
 <div class="container">
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="News">
+
+      <!-- News section -->
       <div class="row m-0 my-3 news-section">
         <mat-sidenav-container>
+
+          <!-- Filter sidenav section -->
           <mat-sidenav #sidenav>
             <div class="search-section text-center">
               <h2 class="m-0 my-2">Filter list</h2>
@@ -59,9 +66,11 @@
               <mat-icon>close</mat-icon>
             </button>
           </mat-sidenav>
+
+          <!-- News cards section -->
           <mat-sidenav-content>
             <div class="news-container">
-              <button class="m-2" mat-icon-button (click)="sidenav.open()">
+              <button class="m-3" mat-icon-button (click)="sidenav.open()">
                 <mat-icon>menu</mat-icon>
               </button>
 
@@ -77,7 +86,7 @@
               <div class="mx-lg-5 mb-3">
                 <app-news-card></app-news-card>
               </div>
-              <div class="mx-lg-5 mb-3">
+              <div class="mx-lg-5 pb-5 mb-3">
                 <app-news-card></app-news-card>
               </div>
             </div>
@@ -85,6 +94,153 @@
         </mat-sidenav-container>
       </div>
     </mat-tab>
-    <mat-tab label="Shareholder information"> Content 2 </mat-tab>
+
+    <!-- Shareholder inforamtion section -->
+    <mat-tab label="Shareholder information">
+      <div class="shareholder-information table-responsive-sm">
+        <!-- AGM table section -->
+        <h2 class="mt-5">Annual General Meetings(AGM)</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col">Year</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">10/10/2020</th>
+              <td>Scangroup AGM 2020</td>
+              <td>2020</td>
+              <td>Muthaiga Mini Market</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">TBD</th>
+              <td>TBD</td>
+              <td>2021</td>
+              <td>TBD</td>
+              <td>
+                <div class="pending text-center">pending</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- EGM table section -->
+        <h2 class="mt-5">Extraordinary General Meetings(EGM)</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col">Year</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">01/05/2020</th>
+              <td>Elect new board members</td>
+              <td>2020</td>
+              <td>City park</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">23/06/2020</th>
+              <td>Discuss agenda</td>
+              <td>2020</td>
+              <td>Uhuru park</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">28/06/2020</th>
+              <td>Some other business</td>
+              <td>2020</td>
+              <td>City park</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">15/10/2020</th>
+              <td>Discuss notices</td>
+              <td>2020</td>
+              <td>TBD</td>
+              <td>
+                <div class="pending text-center">pending</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Dividends table section -->
+        <h2 class="mt-5">Dividends</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Book closure date</th>
+              <th scope="col">Disbursment date</th>
+              <th scope="col">Year</th>
+              <th scope="col">Type</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01/05/2017</td>
+              <td>01/05/2017</td>
+              <td>2017</td>
+              <td>Cash dividend</td>
+              <td>1.2</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <td>23/06/2018</td>
+              <td>23/06/2018</td>
+              <td>2018</td>
+              <td>Stock dividend</td>
+              <td>N/A</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <td>28/06/2019</td>
+              <td>28/06/2019</td>
+              <td>2019</td>
+              <td>Cash dividend</td>
+              <td>1.5</td>
+              <td>
+                <div class="completed text-center">completed</div>
+              </td>
+            </tr>
+            <tr>
+              <td>15/10/2020</td>
+              <td>25/10/2020</td>
+              <td>2020</td>
+              <td>Cash dividend</td>
+              <td>1.25</td>
+              <td>
+                <div class="pending text-center">pending</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>

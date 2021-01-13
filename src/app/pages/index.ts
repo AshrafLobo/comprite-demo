@@ -5,3 +5,4 @@ export * from './payroll/payroll.component';
 export * from './share-registration/share-registration.component';
 export * from './shareholders/shareholders.component';
 export * from './issuer-profile/issuer-profile.component';
+export * from './news/news.component';

@@ -1,14 +1,11 @@
 @import "abstracts/variables";
 @import "base/typography";
 
-.issuer-logo {
-  img {
-    max-width: 400px;
+/*News Banner Section*/
+.news-banner-section {
+  p {
+    max-width: 600px;
   }
-}
-
-.issuer-title {
-  color: $text-secondary;
 }
 
 button {
@@ -17,8 +14,8 @@ button {
   }
 }
 
-/*News section*/
-.news-section {
+/*News card section*/
+.news-card-section {
   min-height: 500px;
 
   mat-sidenav-container {
@@ -30,11 +27,7 @@ button {
     }
 
     mat-sidenav-content {
-      min-height: 500px;
-      max-height: 1000px;
-
       .news-container {
-        overflow-y: scroll;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -50,7 +43,7 @@ button {
     }
 
     mat-sidenav {
-      width: 200px;
+      width: 300px;
 
       .search-section {
         h2 {
@@ -68,23 +61,5 @@ button {
         right: 0;
       }
     }
-  }
-}
-
-/*Shareholder information section*/
-.shareholder-information {
-  .completed,
-  .pending {
-    border-radius: 25px;
-    color: White;
-    padding: 5px 10px;
-  }
-
-  .completed {
-    background-color: lime;
-  }
-
-  .pending {
-    background-color: $text-secondary;
   }
 }

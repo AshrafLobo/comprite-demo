@@ -19,6 +19,7 @@ import {
   IssuersComponent,
   ShareholdersComponent,
   IssuerProfileComponent,
+  NewsComponent 
 } from './pages/index';
 
 // Angular Google Maps
@@ -34,6 +35,7 @@ import {
     IssuersComponent,
     ShareholdersComponent,
     IssuerProfileComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

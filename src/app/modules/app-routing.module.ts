@@ -9,6 +9,7 @@ import {
   IssuersComponent,
   ShareholdersComponent,
   IssuerProfileComponent,
+  NewsComponent,
 } from '../pages/index';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'issuers', component: IssuersComponent },
   { path: 'shareholders', component: ShareholdersComponent },
   { path: 'issuer-profile', component: IssuerProfileComponent },
+  { path: 'news', component: NewsComponent },
   { path: '', component: HomeComponent },
 ];
 

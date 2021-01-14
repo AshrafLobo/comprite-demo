@@ -10,6 +10,7 @@ import {
   ShareholdersComponent,
   IssuerProfileComponent,
   NewsComponent,
+  ContactsComponent,
 } from '../pages/index';
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'shareholders', component: ShareholdersComponent },
   { path: 'issuer-profile', component: IssuerProfileComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'contact-us', component: ContactsComponent },
   { path: '', component: HomeComponent },
 ];
 

@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 // Custom Modules
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -45,6 +46,7 @@ import {
     BrowserAnimationsModule,
     AppMaterialModule,
     ReusableComponentsModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

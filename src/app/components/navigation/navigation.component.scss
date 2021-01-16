@@ -1,18 +1,28 @@
 @import "abstracts/variables";
 
+a {
+  text-decoration: none;
+  color: $text_primary;
+}
+
 mat-toolbar {
   position: relative;
   background: white;
   z-index: 2 !important;
 
-  img {
-    height: 40px;
-    width: 40px;
+  .logo {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    font-weight: normal;
   }
 
   ul > li {
     list-style: none;
-    a {
+    a,
+    mat-icon {
       cursor: pointer;
       text-decoration: none;
       color: $text_primary;
@@ -20,6 +30,11 @@ mat-toolbar {
       &:hover {
         color: $gold;
       }
+    }
+
+    mat-icon {
+      vertical-align: middle;
+      cursor: pointer;
     }
   }
 
@@ -29,4 +44,9 @@ mat-toolbar {
       outline: none;
     }
   }
+}
+
+.active-link {
+  color: $gold !important;
+  font-weight: bold;
 }

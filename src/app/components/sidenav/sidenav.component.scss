@@ -1,3 +1,12 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+a {
+  color: $text-primary;
+  text-decoration: none;
+  font-size: $paragraph-size;
+}
+
 mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {
@@ -7,12 +16,19 @@ mat-sidenav {
 mat-sidenav {
   width: 250px;
 
-  a {
-    text-decoration: none;
+  li {
+    mat-icon {
+      vertical-align: middle;
+    }
 
-    &:hover,
-    &:active {
-      color: gray;
+    a {
+      &:active {
+        color: gray;
+      }
+
+      &:hover {
+        color: $gold;
+      }
     }
   }
 }

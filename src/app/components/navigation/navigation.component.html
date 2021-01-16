@@ -1,13 +1,25 @@
 <mat-toolbar class="mat-elevation-z4" role="header">
   <span>
-    <img class="mx-2" src="assets/logo/logo.png" alt="Comp-rite" /> Comp-rite Kenya
+    <a class="logo" routerLink="/">
+      <img class="mx-2" src="assets/logo/logo.png" alt="Comp-rite" /> Comp-rite Kenya
+    </a>
   </span>
 
   <ul class="d-none ml-auto mb-0 d-sm-inline-flex flex-row">
-    <li class="mx-2"><a class="small">About Us</a></li>
-    <li class="mx-2"><a class="small">Payroll</a></li>
-    <li class="mx-2"><a class="small">Share Registration <mat-icon>arrow_drop_down</mat-icon></a></li>
-    <li class="mx-2"><a class="small">Contact Us</a></li>
+    <li class="mx-2"><a class="small" routerLink="/about" routerLinkActive="active-link">About Us</a></li>
+    <li class="mx-2"><a class="small" routerLink="/payroll" routerLinkActive="active-link">Payroll</a></li>
+    <li class="mx-2">
+      <a class="small" routerLink="/share-registration" routerLinkActive="active-link">Share Registration</a>
+      <mat-icon [matMenuTriggerFor]="menu">arrow_drop_down</mat-icon>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <ul class="p-0 m-0">
+          <li mat-menu-item><a routerLink="/shareholders">Shareholders</a></li>
+          <li mat-menu-item><a routerLink="/issuers">Issuers</a></li>
+          <li mat-menu-item><a routerLink="/news">News</a></li>
+        </ul>
+      </mat-menu>
+    </li>
+    <li class="mx-2"><a class="small" routerLink="/contact-us" routerLinkActive="active-link">Contact Us</a></li>
   </ul>
 
   <div class="ml-auto d-sm-none">

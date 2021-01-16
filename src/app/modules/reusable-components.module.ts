@@ -26,6 +26,7 @@ import {
 import { AppMaterialModule } from './app-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
 
 const reusableComponents = [
   NavigationComponent,
@@ -49,7 +50,13 @@ const reusableComponents = [
 
 @NgModule({
   declarations: [reusableComponents],
-  imports: [CommonModule, AppMaterialModule, ReactiveFormsModule, NgbModule],
+  imports: [
+    CommonModule,
+    AppMaterialModule,
+    ReactiveFormsModule,
+    NgbModule,
+    RouterModule,
+  ],
   exports: [reusableComponents],
 })
 export class ReusableComponentsModule {}

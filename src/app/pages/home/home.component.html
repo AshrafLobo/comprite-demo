@@ -19,19 +19,16 @@
 
   <!-- Column 1 Section -->
   <ng-container class="column1-content">
-    <div class="column1 col-12 col-md p-5 h-100 d-flex align-items-center">
+    <div class="column1 col-12 col-lg p-5 h-100 d-flex align-items-center">
 
       <!-- Column Wrapper -->
       <div class="text-center mx-auto">
         <h2 class="mat-display-2 m-0">Payroll</h2>
 
-        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis ab sequi
-          recusandae
-          eveniet
-          placeat itaque minima est deleniti distinctio sint doloribus, hic et id porro quis asperiores facere!
-          Reiciendis.</p>
+        <p class="my-4">Pay100 Plus is a Kenyan payroll processing system for small, medium, and large companies. It
+          offers numerous benefits at an affordable cost.</p>
 
-        <app-custom-button [large]="true">
+        <app-custom-button routerLink="/payroll" [large]="true">
           Go to payroll
         </app-custom-button>
       </div>
@@ -40,27 +37,24 @@
 
   <!-- Column 2 Section -->
   <ng-container class="column2-content">
-    <div class="column2 col-12 col-md p-5 h-100 d-flex align-items-center">
+    <div class="column2 col-12 col-lg p-5 h-100 d-flex align-items-center">
 
       <!-- Column Wrapper -->
       <div class="text-center mx-auto">
         <h2 class="mat-display-2 m-0">Share registration</h2>
 
-        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis ab sequi
-          recusandae
-          eveniet
-          placeat itaque minima est deleniti distinctio sint doloribus, hic et id porro quis asperiores facere!
-          Reiciendis.</p>
+        <p class="my-4">Share registration has been easy with the iSharePro which for the last 30 years it has been in
+          operation.</p>
 
         <div class="row justify-content-around">
           <div class="col-12 col-md my-2 my-lg-0">
-            <app-custom-button [large]="true">
+            <app-custom-button routerLink="/issuers" [large]="true">
               For issuers
             </app-custom-button>
           </div>
 
           <div class="col-12 col-md my-2 my-lg-0">
-            <app-custom-button [large]="true">
+            <app-custom-button routerLink="/shareholders" [large]="true">
               For shareholders
             </app-custom-button>
           </div>
@@ -78,7 +72,7 @@
     page.
   </p>
 
-  <app-custom-button [large]="true">
+  <app-custom-button routerLink="/contact-us" [large]="true">
     Contact us
   </app-custom-button>
 </app-banner>

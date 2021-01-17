@@ -61,15 +61,21 @@
         color: white;
         border-radius: 10px;
 
+        &:first-child {
+          h1 {
+            font-size: $heading-size !important;
+          }
+        }
+
         .timeline-content {
           h1 {
-            font-size: $heading-size;
+            font-size: $testimonial-heading-size;
             font-weight: 500;
             line-height: 30px;
           }
 
           p {
-            font-size: $paragraph-size;
+            font-size: $paragraph-size-sm;
           }
 
           .date {

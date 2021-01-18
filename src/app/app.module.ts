@@ -24,9 +24,6 @@ import {
   ContactsComponent,
 } from './pages/index';
 
-// Angular Google Maps
-// import { AgmCoreModule } from '@agm/core';
-
 @NgModule({
   declarations: [
     AppComponent,

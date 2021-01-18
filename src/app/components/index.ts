@@ -15,3 +15,4 @@ export * from './enquiry-form/enquiry-form.component';
 export * from './carousel/carousel.component';
 export * from './company-testimonial-card/company-testimonial-card.component';
 export * from './client-card/client-card.component';
+export * from './google-maps/google-maps.component';

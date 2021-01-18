@@ -20,6 +20,7 @@ import {
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
+  GoogleMapsComponent,
 } from '../components/index';
 
 // Modules
@@ -27,6 +28,7 @@ import { AppMaterialModule } from './app-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 const reusableComponents = [
   NavigationComponent,
@@ -46,6 +48,7 @@ const reusableComponents = [
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
+  GoogleMapsComponent,
 ];
 
 @NgModule({
@@ -56,6 +59,9 @@ const reusableComponents = [
     ReactiveFormsModule,
     NgbModule,
     RouterModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAeJ1-R1eGxmLCAIPENZQKGXz6tYaFijAo',
+    }),
   ],
   exports: [reusableComponents],
 })

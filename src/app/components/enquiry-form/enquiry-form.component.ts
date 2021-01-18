@@ -22,7 +22,6 @@ export class EnquiryFormComponent implements OnInit {
       phoneNumber: new FormControl('', [
         Validators.required,
         Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
-        // EnquiryFormValidators.cannotContainSpace,
       ]),
     }),
     companyDetails: new FormGroup({
@@ -31,6 +30,7 @@ export class EnquiryFormComponent implements OnInit {
       numberOfEmployees: new FormControl('', Validators.pattern('[0-9]+')),
     }),
     enquireAbout: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
   });
 
   // Get form controls
@@ -60,6 +60,10 @@ export class EnquiryFormComponent implements OnInit {
 
   get enquireAbout() {
     return this.form.get('enquireAbout');
+  }
+
+  get message() {
+    return this.form.get('message');
   }
 
   // Submit form fuction

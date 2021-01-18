@@ -20,6 +20,7 @@ import {
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
+  TestimonialsComponent,
   GoogleMapsComponent,
 } from '../components/index';
 
@@ -48,6 +49,7 @@ const reusableComponents = [
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
+  TestimonialsComponent,
   GoogleMapsComponent,
 ];
 

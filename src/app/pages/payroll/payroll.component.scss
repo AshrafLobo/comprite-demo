@@ -32,8 +32,16 @@
 
     p {
       color: $text-secondary;
+      font-size: $paragraph-size-sm;
       max-width: 600px;
     }
+  }
+}
+
+/*Payroll Price Section*/
+.payroll-price-section {
+  li {
+    font-size: $paragraph-size-sm;
   }
 }
 

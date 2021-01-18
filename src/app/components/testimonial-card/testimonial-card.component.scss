@@ -10,17 +10,20 @@
 }
 
 .testimonial-quote {
+  font-size: $testimonial-heading-size;
+  font-weight: normal;
   color: white;
-  max-width: 600px;
+  max-width: 350px;
 }
 
 .testimonial-name {
   color: $dark-blue;
-  font-size: $testimonial-heading-size;
+  font-size: $paragraph-size;
   font-weight: 600;
 }
 
 .testimonial-title {
-  font-size: $paragraph-size;
+  font-size: $paragraph-size-sm;
+  font-weight: lighter;
   color: white;
 }

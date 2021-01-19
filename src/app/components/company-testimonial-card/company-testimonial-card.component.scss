@@ -19,6 +19,7 @@
 
   img {
     border-radius: 50%;
+    height: 100%;
     max-height: 75px;
     object-fit: cover;
   }
@@ -32,5 +33,12 @@
   .testimonial-title {
     font-size: $paragraph-size-sm;
     color: white;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 1200px) {
+  .testimonial-quote {
+    font-size: 15px !important;
   }
 }

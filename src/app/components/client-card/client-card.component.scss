@@ -4,7 +4,7 @@
 .company-logo {
   img {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 
@@ -14,12 +14,12 @@
 
   .testimonial-name {
     color: $dark-blue;
-    font-size: $testimonial-heading-size;
+    font-size: $paragraph-size;
     font-weight: 600;
   }
 
   .testimonial-title {
-    font-size: $paragraph-size;
+    font-size: $paragraph-size-sm;
     color: $text-secondary;
   }
 }

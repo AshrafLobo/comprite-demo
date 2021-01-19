@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-card.component.scss'],
 })
 export class ClientCardComponent implements OnInit {
+  clients = {
+    src: 'assets/issuerLogos/wppScangroup/logo_large.jpg',
+    name: 'Wpp ScanGroup',
+    title: 'Marketing and communications',
+  };
+
   constructor() {}
 
   ngOnInit(): void {}

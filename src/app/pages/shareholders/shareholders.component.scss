@@ -58,3 +58,11 @@ h2 {
     color: white;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .our-clients-section {
+    .client-cards-section {
+      max-width: 600px;
+    }
+  }
+}

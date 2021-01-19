@@ -25,3 +25,10 @@
   font-weight: lighter;
   color: white;
 }
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 1200px) {
+  .testimonial-quote {
+    font-size: 15px !important;
+  }
+}

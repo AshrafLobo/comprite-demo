@@ -1,7 +1,9 @@
 <!-- Shareholders Banner Section  -->
 <app-banner class="shareholders-banner-section">
-  <h1 class="m-0">Shareholders</h1>
-  <p class="m-3 mx-auto">Comp-rite Kenya (CRK) Ltd has fueled the software needs of hundreds of companies, from small to
+  <h1 class="m-0 mt-5 mt-md-0">Shareholders</h1>
+  <p class="m-3 mx-5 mb-5 mb-md-0 mx-md-auto">Comp-rite Kenya (CRK) Ltd has fueled the software needs of hundreds of
+    companies, from
+    small to
     medium sized local corporations to the massive multi-national organizations who's logos appear on this page. In
     addition to powering the data acquisition and processing needs for corporations, we have worked with the government,
     assisting them with their data capture efforts. Our services have ranged from providing software consultancy, to
@@ -27,26 +29,8 @@
   </div>
 
   <div class="client-cards-section row mx-auto mx-xl-5 p-2">
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
-    </div>
-
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
-    </div>
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
-    </div>
-
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
-    </div>
-
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
-    </div>
-    <div class="col-12 col-xl-4 my-2">
-      <app-client-card></app-client-card>
+    <div *ngFor="let client of clients" class="col-12 col-xl-4 my-2">
+      <app-client-card [client]="client"></app-client-card>
     </div>
   </div>
 </div>

@@ -2,8 +2,8 @@
   <!-- Card body section -->
   <ng-container class="mat-card-content">
     <!-- Some content -->
-    <div class="row text-center company-logo mx-2 mx-md-0">
-      <img class="mx-auto" [attr.src]="clients.src" [attr.alt]="clients.name">
+    <div class="row text-center company-logo mx-2 mx-md-0 my-3">
+      <img class="mx-auto" [attr.src]="client.src" [attr.alt]="client.name">
     </div>
   </ng-container>
 
@@ -11,8 +11,8 @@
   <ng-container class="mat-card-actions">
     <div class="row mx-auto client-card-footer text-center text-lg-left align-items-center">
       <div class="col-12 col-lg-8">
-        <h2 class="testimonial-name m-0">{{clients.name}}</h2>
-        <p class="testimonial-title m-0">{{clients.title}}</p>
+        <h2 class="testimonial-name m-0">{{client.name}}</h2>
+        <p class="testimonial-title m-0">{{client.title}}</p>
       </div>
       <div class="col-12 col-lg-4 my-2 my-xl-0">
         <app-custom-button (click)="onClick()">View profile</app-custom-button>

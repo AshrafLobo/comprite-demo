@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-client-card',
@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-card.component.scss'],
 })
 export class ClientCardComponent implements OnInit {
-  clients = {
-    src: 'assets/issuerLogos/wppScangroup/logo_large.jpg',
-    name: 'Wpp ScanGroup',
-    title: 'Marketing and communications',
-  };
+  @Input('client') client;
 
   constructor() {}
 

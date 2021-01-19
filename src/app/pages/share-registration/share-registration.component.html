@@ -1,17 +1,15 @@
 <!-- Share Registration Banner Section  -->
 <app-banner class="share-registration-banner-section">
   <h1 class="m-0">Share registry</h1>
-  <p class="m-3 mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores saepe voluptates,
-    repellendus, itaque
-    eos earum
-    veritatis in repudiandae quidem velit eaque provident eveniet, blanditiis similique sint voluptatibus nesciunt fugit
-    architecto!</p>
+  <p class="m-3 mx-auto">Comp-rite Bureau Share registration have been in operation for the last 30 years. Our
+    services have ensured that companies such as Total Kenya, Housing Finance and Scan
+    Group limited have an up to date and accurate share register.</p>
 </app-banner>
 
 <!-- Share Registration Carousel Section -->
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Issuers">
-    <app-carousel></app-carousel>
+    <app-carousel [slides]="issuerSlides"></app-carousel>
 
     <!-- Issuers Testimonial Section -->
     <app-banner [hasBackground]="'#3e4756'" class="issuers-testimonial-section">
@@ -38,7 +36,7 @@
     </app-banner>
   </mat-tab>
   <mat-tab label="Shareholders">
-    <app-carousel></app-carousel>
+    <app-carousel [slides]="shareholderSlides"></app-carousel>
 
     <!-- Shareholder Testimonial Section -->
     <app-banner [hasBackground]="'#3e4756'" class="shareholder-testimonial-section">

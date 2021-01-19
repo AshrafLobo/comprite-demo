@@ -77,7 +77,7 @@
         <mat-form-field class="w-100 mb-2" appearance="outline">
           <!--Company input -->
           <mat-label>Company</mat-label>
-          <input formControlName="company" matInput type="text" placeholder="Please enter your company name" required>
+          <input formControlName="company" matInput type="text" placeholder="Please enter your company name">
         </mat-form-field>
       </div>
 
@@ -145,7 +145,8 @@
     </div>
 
     <div class="row">
-      <app-custom-button class="ml-auto mr-3" large="true" type="submit">Submit</app-custom-button>
+      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
+      </app-custom-button>
     </div>
   </form>
 </div>

@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class CustomButtonComponent {
   @Input('large') large: boolean;
   @Input('type') type: String = 'button';
+  @Input('disabled') disabled: boolean = false;
 
   constructor() {}
 }

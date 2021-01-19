@@ -18,10 +18,21 @@
     }
 
     p {
-      max-width: 800px;
+      max-width: 600px;
       color: $text-secondary;
       font-weight: lighter;
       font-size: $paragraph-size;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel-container {
+    .slide-section {
+      p {
+        max-width: 800px;
+      }
     }
   }
 }

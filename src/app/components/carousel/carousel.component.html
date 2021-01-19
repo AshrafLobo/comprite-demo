@@ -1,27 +1,13 @@
 <div class="container-fluid carousel-container  py-5 p-lg-5">
-  <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
-    <ng-template ngbSlide>
-      <div class="slide-section text-center">
-        <img src="assets/carousel/issuers/Ishare.png" alt="Ishare Pro">
-        <h2>iShare Pro</h2>
-        <p class="m-0 mx-auto px-md-5 pb-5">Our share registry software ISharePro is a trend setting proprietary
-          software
-          that
-          was
-          designed from the ground up, in consideration with the CDSC IT vendors and has been specifically written to
-          integrate fully with the CDSC environment.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="slide-section text-center">
-        <img src="assets/carousel/shareholders/mpesa.png" alt="Mpesa">
-        <h2>Title 2</h2>
-        <p class="m-0 mx-auto px-md-5 pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sequi nihil
-          eum
-          maxime odio
-          excepturi
-          voluptas
-          optio sit totam quasi?</p>
+  <ngb-carousel [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="slides.length > 1 && showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let slide of slides">
+      <div class="d-flex d-flex-column slide-section text-center">
+        <div class="align-self-center w-100">
+          <img *ngIf="slide.src" [attr.src]="slide.src" [attr.alt]="slide.heading">
+          <h2>{{slide.heading}}</h2>
+          <p class="m-0 mx-auto px-md-5 pb-5">{{slide.description}}</p>
+        </div>
       </div>
     </ng-template>
   </ngb-carousel>

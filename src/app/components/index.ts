@@ -6,7 +6,6 @@ export * from './custom-button/custom-button.component';
 export * from './banner/banner.component';
 export * from './split-banner/split-banner.component';
 export * from './timeline/timeline.component';
-export * from './map/map.component';
 export * from './card/card.component';
 export * from './price-card/price-card.component';
 export * from './testimonial-card/testimonial-card.component';

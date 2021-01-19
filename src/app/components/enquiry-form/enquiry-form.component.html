@@ -78,11 +78,6 @@
           <!--Company input -->
           <mat-label>Company</mat-label>
           <input formControlName="company" matInput type="text" placeholder="Please enter your company name" required>
-
-          <!--Company errors -->
-          <mat-error *ngIf="company.touched && company.invalid">
-            <div *ngIf="company.errors.required">Company name is required</div>
-          </mat-error>
         </mat-form-field>
       </div>
 
@@ -121,10 +116,9 @@
           <!-- Enquire about input -->
           <mat-label>Enquire about</mat-label>
           <mat-select formControlName="enquireAbout">
-            <mat-option value="Option 1">Option 1</mat-option>
-            <mat-option value="Option 2">Option 2</mat-option>
-            <mat-option value="Option 3">Option 3</mat-option>
-            <mat-option value="Option 4">Option 4</mat-option>
+            <mat-option value="iShare Pro">iShare Pro</mat-option>
+            <mat-option value="Pay 100">Pay100 Plus</mat-option>
+            <mat-option value="Share registration services">Share registration services</mat-option>
           </mat-select>
 
           <!-- Enquire about errors -->

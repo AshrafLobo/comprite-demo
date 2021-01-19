@@ -25,7 +25,7 @@ export class EnquiryFormComponent implements OnInit {
       ]),
     }),
     companyDetails: new FormGroup({
-      company: new FormControl('', Validators.required),
+      company: new FormControl(''),
       jobTitle: new FormControl(''),
       numberOfEmployees: new FormControl('', Validators.pattern('[0-9]+')),
     }),

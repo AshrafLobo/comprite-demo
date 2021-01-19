@@ -1,58 +1,11 @@
 <div class="container-fluid no-gutter px-3 py-2 px-lg-5">
   <mat-accordion>
-    <mat-expansion-panel>
+    <mat-expansion-panel *ngFor="let faq of faqs">
       <mat-expansion-panel-header class="specific-class">
-        <mat-panel-description>How much does Pay100 cost?</mat-panel-description>
+        <mat-panel-description>{{faq.question}}</mat-panel-description>
       </mat-expansion-panel-header>
 
-      <p class="m-0 p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore magnam possimus commodi
-        corrupti similique
-        minus quis. Pariatur maiores distinctio placeat facilis? Aut obcaecati quam nemo distinctio voluptatibus amet
-        minus.</p>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header class="specific-class">
-        <mat-panel-description>What do I get for the price I pay?</mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <p class="m-0 p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore magnam possimus commodi
-        corrupti similique
-        minus quis. Pariatur maiores distinctio placeat facilis? Aut obcaecati quam nemo distinctio voluptatibus amet
-        minus.</p>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header class="specific-class">
-        <mat-panel-description>What is ALF?</mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <p class="m-0 p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore magnam possimus commodi
-        corrupti similique
-        minus quis. Pariatur maiores distinctio placeat facilis? Aut obcaecati quam nemo distinctio voluptatibus amet
-        minus.</p>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header class="specific-class">
-        <mat-panel-description>Is there a limit to the number of employees I can run?</mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <p class="m-0 p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore magnam possimus commodi
-        corrupti similique
-        minus quis. Pariatur maiores distinctio placeat facilis? Aut obcaecati quam nemo distinctio voluptatibus amet
-        minus.</p>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header class="specific-class">
-        <mat-panel-description>What Year End Reports does Pay100+ produce?</mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <p class="m-0 p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore magnam possimus commodi
-        corrupti similique
-        minus quis. Pariatur maiores distinctio placeat facilis? Aut obcaecati quam nemo distinctio voluptatibus amet
-        minus.</p>
+      <p class="m-0 p-4">{{faq.answer}}</p>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

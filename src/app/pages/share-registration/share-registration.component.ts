@@ -23,7 +23,7 @@ export class ShareRegistrationComponent implements OnInit {
   shareholderSlides = [
     {
       src: 'assets/carousel/shareholders/mpesa.png',
-      heading: 'iShare Pro',
+      heading: 'Mpesa Dividend Payment',
       description:
         'Comp-rite now allows you to receive your dividend using mpesa dial *483*505# to change how you receive your dividend payment',
     },

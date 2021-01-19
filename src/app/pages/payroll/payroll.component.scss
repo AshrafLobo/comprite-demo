@@ -17,8 +17,8 @@
 .payroll-features-section {
   .row {
     img {
-      max-height: 200px;
-      max-width: 200px;
+      max-height: 100px;
+      max-width: 100px;
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -92,18 +92,6 @@
     .row {
       p {
         max-width: 500px !important;
-      }
-    }
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up to large laptops and desktops, 1200px) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .payroll-features-section {
-    .row {
-      img {
-        max-height: 175px !important;
-        max-width: 175px !important;
       }
     }
   }

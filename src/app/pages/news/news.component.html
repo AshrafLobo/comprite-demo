@@ -1,11 +1,7 @@
 <!-- News Banner Section  -->
 <app-banner class="news-banner-section" [hasBackground]="'white'">
   <h1 class="m-0">News and information</h1>
-  <p class="m-3 mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores saepe voluptates,
-    repellendus, itaque
-    eos earum
-    veritatis in repudiandae quidem velit eaque provident eveniet, blanditiis similique sint voluptatibus nesciunt fugit
-    architecto!</p>
+  <p class="m-3 mx-auto">Discover the latest news regarding our company and issuers</p>
 </app-banner>
 
 <!-- News cards section -->
@@ -35,10 +31,12 @@
           <mat-icon matPrefix>business</mat-icon>
           <mat-select placeholder="Select company name">
             <mat-option>None</mat-option>
-            <mat-option value="Company 1">Company 1</mat-option>
-            <mat-option value="Company 2">Company 2</mat-option>
-            <mat-option value="Company 3">Company 3</mat-option>
-            <mat-option value="Company 4">Company 4</mat-option>
+            <mat-option value="Comp-rite Kenya">Comp-rite Kenya</mat-option>
+            <mat-option value="Wpp Scangroup">Wpp Scangroup</mat-option>
+            <mat-option value="Total Kenya">Total Kenya</mat-option>
+            <mat-option value="Diamond Trust Bank Kenya">Diamond Trust Bank Kenya</mat-option>
+            <mat-option value="Diamond Trust Bank Tanzania">Diamond Trust Bank Tanzania</mat-option>
+            <mat-option value="Athi River Mining">Athi River Mining</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -69,25 +67,17 @@
           <mat-icon>menu</mat-icon>
         </button>
 
-        <div class="row mx-1 mx-lg-5 pt-5 mb-3">
-          <app-news-card class="col-12 col-md mb-3 mb-md-0"></app-news-card>
-          <app-news-card class="col-12 col-md"></app-news-card>
-        </div>
-        <div class="row mx-1 mx-lg-5 mb-3">
-          <app-news-card class="col-12 col-md mb-3 mb-md-0"></app-news-card>
-          <app-news-card class="col-12 col-md"></app-news-card>
-        </div>
-        <div class="row mx-1 mx-lg-5 mb-3">
-          <app-news-card class="col-12 col-md mb-3 mb-md-0"></app-news-card>
-          <app-news-card class="col-12 col-md"></app-news-card>
-        </div>
-        <div class="row mx-1 mx-lg-5 mb-3">
-          <app-news-card class="col-12 col-md mb-3 mb-md-0"></app-news-card>
-          <app-news-card class="col-12 col-md"></app-news-card>
-        </div>
-        <div class="row mx-1 mx-lg-5 pb-5 mb-3">
-          <app-news-card class="col-12 col-md mb-3 mb-md-0"></app-news-card>
-          <app-news-card class="col-12 col-md"></app-news-card>
+        <div class="news-cards-container row mx-1 mx-md-auto mx-xl-5 pt-5 mb-3">
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
+          <app-news-card class="col-12 col-xl-6 mb-3"></app-news-card>
         </div>
       </div>
     </mat-sidenav-content>

@@ -75,9 +75,17 @@
       <!--Company field -->
       <div class="col-12 col-lg">
         <mat-form-field class="w-100 mb-2" appearance="outline">
+
           <!--Company input -->
           <mat-label>Company</mat-label>
-          <input formControlName="company" matInput type="text" placeholder="Please enter your company name">
+          <mat-select formControlName="company">
+            <mat-option>None</mat-option>
+            <mat-option value="Wpp Scangroup">Wpp Scangroup</mat-option>
+            <mat-option value="Total Kenya">Total Kenya</mat-option>
+            <mat-option value="Diamond Trust Bank Kenya">Diamond Trust Bank Kenya</mat-option>
+            <mat-option value="Diamond Trust Bank Tanzania">Diamond Trust Bank Tanzania</mat-option>
+            <mat-option value="Athi River Mining">Athi River Mining</mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
 
@@ -116,6 +124,7 @@
           <!-- Enquire about input -->
           <mat-label>Enquire about</mat-label>
           <mat-select formControlName="enquireAbout">
+            <mat-option>None</mat-option>
             <mat-option value="iShare Pro">iShare Pro</mat-option>
             <mat-option value="Pay 100">Pay100 Plus</mat-option>
             <mat-option value="Share registration services">Share registration services</mat-option>

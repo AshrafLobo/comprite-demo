@@ -63,3 +63,9 @@ button {
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .news-cards-container {
+    max-width: 600px;
+  }
+}

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GoogleMapsComponent implements OnInit {
   lat = -1.250116;
   lng = 36.820153;
+  zoom: number = 16;
 
   constructor() {}
 

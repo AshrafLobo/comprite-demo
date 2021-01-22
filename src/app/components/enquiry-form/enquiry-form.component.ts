@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { EnquiryFormValidators } from './enquiry-form.validators';
+import { FormValidators } from '../../common/form.validators';
 
 @Component({
   selector: 'app-enquiry-form',
@@ -12,11 +12,11 @@ export class EnquiryFormComponent implements OnInit {
     userDetails: new FormGroup({
       firstName: new FormControl('', [
         Validators.required,
-        EnquiryFormValidators.cannotContainSpace,
+        FormValidators.cannotContainSpace,
       ]),
       lastName: new FormControl('', [
         Validators.required,
-        EnquiryFormValidators.cannotContainSpace,
+        FormValidators.cannotContainSpace,
       ]),
       email: new FormControl('', [Validators.required, Validators.email]),
       phoneNumber: new FormControl('', [

@@ -4,15 +4,15 @@
     <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
       <img class="w-100" [attr.src]="issuer.src_small" [attr.alt]="issuer.name">
     </div>
-    <div class="col-12 col-lg-8 mt-3 mt-lg-0 text-center text-lg-left">
+    <div class="col-12 col-lg-8 my-5 text-center text-lg-left">
       <h1 class="issuer-name mb-1">{{issuer.name}}</h1>
       <h2 class="issuer-title m-0 mt-1">{{issuer.title}}</h2>
       <hr />
-      <p class="issuer-description my-5">{{issuer.description}}</p>
+      <p class="issuer-description my-3">{{issuer.description}}</p>
       <div>
-        <app-custom-button [large]="true">Enquire about company</app-custom-button>
-        <app-custom-button class="ml-2" [large]="true">
-          <mat-icon>get_app</mat-icon>Download documents
+        <app-custom-button [routerLink]="['/share-registration']">Enquire about company</app-custom-button>
+        <app-custom-button class="ml-2">
+          <mat-icon>get_app</mat-icon>Download dividend opt in form
         </app-custom-button>
       </div>
     </div>

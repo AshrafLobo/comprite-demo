@@ -1,10 +1,6 @@
 @import "abstracts/variables";
 @import "base/typography";
 
-h1 {
-  font-weight: bold;
-}
-
 /*Share Registration Banner Section*/
 .share-registration-banner-section {
   h1,
@@ -33,7 +29,7 @@ h1 {
 .share-registration-contacts-section {
   .column1,
   .column2 {
-    min-height: 700px !important;
+    min-height: 800px !important;
   }
 
   .column1 {

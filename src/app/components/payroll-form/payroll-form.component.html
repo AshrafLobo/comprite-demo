@@ -1,0 +1,159 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div formGroupName="userDetails">
+      <div class="row">
+
+        <!-- First name field -->
+        <div class="col-12 col-lg">
+          <mat-form-field class="w-100 mb-2" appearance="outline">
+            <!-- First name input -->
+            <mat-label>First name</mat-label>
+            <input formControlName="firstName" matInput type="text" placeholder="Please enter your first name" required>
+
+            <!-- First name errors -->
+            <mat-error *ngIf="firstName.touched && firstName.invalid">
+              <div *ngIf="firstName.errors.required">First name is required</div>
+              <div *ngIf="firstName.errors.cannotContainSpace">First name cannot contain space</div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Last name field -->
+        <div class="col-12 col-lg">
+          <mat-form-field class="w-100 mb-2" appearance="outline">
+            <!-- Last name input -->
+            <mat-label>Last name</mat-label>
+            <input formControlName="lastName" matInput type="text" placeholder="Please enter your last name" required>
+
+            <!-- Last name errors -->
+            <mat-error *ngIf="lastName.touched && lastName.invalid">
+              <div *ngIf="lastName.errors.required">Last name is required</div>
+              <div *ngIf="lastName.errors.cannotContainSpace">Last name cannot contain space</div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!-- Email field -->
+        <div class="col-12 col-lg">
+          <mat-form-field class="w-100 mb-2" appearance="outline">
+            <!-- Email input -->
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput type="email" placeholder="Please enter your email address" required>
+
+            <!-- Email errors -->
+            <mat-error *ngIf="email.touched && email.invalid">
+              <div *ngIf="email.errors.required">Email is required</div>
+              <div *ngIf="email.errors.email">Email shoud contain a valid email address</div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Phone number field -->
+        <div class="col-12 col-lg">
+          <mat-form-field class="w-100 mb-2" appearance="outline">
+
+            <!-- Phone number input -->
+            <mat-label>Phone number</mat-label>
+            <input formControlName="phoneNumber" matInput type="text" placeholder="Please enter your phone number"
+              required>
+
+            <!-- Phone number errors -->
+            <mat-error *ngIf="phoneNumber.touched && phoneNumber.invalid">
+              <div *ngIf="phoneNumber.errors.required">Phone number is required</div>
+              <div *ngIf="phoneNumber.errors.pattern">Phone number should be a valid phone number</div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" formGroupName="companyDetails">
+
+      <!--Company field -->
+      <div class="col-12 col-lg">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!--Company input -->
+          <mat-label>Company</mat-label>
+          <input formControlName="company" matInput type="text" placeholder="Please enter your company name" required>
+
+          <!-- Company errors -->
+          <mat-error *ngIf="company.touched && company.invalid">
+            <div *ngIf="company.errors.required">Company name is required</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Job title field -->
+      <div class="col-12 col-lg">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!-- Job title input -->
+          <mat-label>Job title</mat-label>
+          <input formControlName="jobTitle" matInput type="text" placeholder="Please enter your job title">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- Number of employees field -->
+      <div class="col-12 col-lg" formGroupName="companyDetails">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+          <!-- Number of employees input -->
+          <mat-label>Number of employees</mat-label>
+          <input formControlName="numberOfEmployees" matInput type="text"
+            placeholder="Please enter the number of employees">
+
+          <!-- Number of employees errors -->
+          <mat-error *ngIf="numberOfEmployees.touched && numberOfEmployees.invalid">
+            <div *ngIf="numberOfEmployees.errors.pattern">Value should be a number</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Enquire about field -->
+      <div class="col-12 col-lg">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!-- Enquire about input -->
+          <mat-label>Enquire about</mat-label>
+          <mat-select formControlName="enquireAbout">
+            <mat-option>None</mat-option>
+            <mat-option value="Pay 100">Pay100 Plus</mat-option>
+            <mat-option value="Payroll outsourcing services">Payroll submission</mat-option>
+            <mat-option value="Payroll outsourcing services">Payroll outsourcing services</mat-option>
+          </mat-select>
+
+          <!-- Enquire about errors -->
+          <mat-error *ngIf="enquireAbout.touched && enquireAbout.invalid">
+            <div *ngIf="enquireAbout.errors.required">Select an option</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Message field -->
+      <div class="message col-12">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!-- Message input -->
+          <mat-label>Message</mat-label>
+          <textarea matInput placeholder="Please enter a message" formControlName="message"></textarea>
+
+          <!-- Message errors -->
+          <mat-error *ngIf="message.touched && message.invalid">
+            <div *ngIf="message.errors.required">Message is required</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
+      </app-custom-button>
+    </div>
+  </form>
+</div>

@@ -24,6 +24,9 @@ import {
   ContactsComponent,
 } from './pages/index';
 
+//Services
+import { IssuersService } from './services/index';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,7 @@ import {
     ReusableComponentsModule,
     RouterModule,
   ],
-  providers: [],
+  providers: [IssuersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -7,8 +7,17 @@
   }
 }
 
+.issuer-name {
+  font-size: $heading-size;
+}
+
 .issuer-title {
+  font-size: $paragraph-size;
   color: $text-secondary;
+}
+
+.issuer-description {
+  font-size: $paragraph-size-sm;
 }
 
 button {

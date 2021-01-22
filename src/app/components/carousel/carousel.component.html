@@ -1,5 +1,5 @@
 <div class="container-fluid carousel-container py-5 p-lg-5">
-  <ngb-carousel [showNavigationArrows]="showNavigationArrows"
+  <ngb-carousel [showNavigationArrows]="slides.length > 1 && showNavigationArrows"
     [showNavigationIndicators]="slides.length > 1 && showNavigationIndicators">
     <ng-template ngbSlide *ngFor="let slide of slides">
       <div class="d-flex d-flex-column slide-section text-center">

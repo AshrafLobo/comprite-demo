@@ -2,16 +2,13 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
-      <img class="w-100" src="assets/issuerLogos/wppScangroup/logo_small.png" alt="Issuer Logo">
+      <img class="w-100" [attr.src]="issuer.src_small" [attr.alt]="issuer.name">
     </div>
     <div class="col-12 col-lg-8 mt-3 mt-lg-0 text-center text-lg-left">
-      <h1 class="issuer-name mat-display-1 mb-1">Wpp ScanGroup</h1>
-      <h2 class="issuer-title mat-title m-0 mt-1">Marketing and communications</h2>
+      <h1 class="issuer-name mb-1">{{issuer.name}}</h1>
+      <h2 class="issuer-title m-0 mt-1">{{issuer.title}}</h2>
       <hr />
-      <p class="issuer-description my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, libero!
-        Nostrum
-        aperiam cum, porro tenetur saepe nemo, unde voluptas itaque delectus harum id temporibus ullam vel accusamus,
-        eius ipsum repellendus?</p>
+      <p class="issuer-description my-5">{{issuer.description}}</p>
       <div>
         <app-custom-button [large]="true">Enquire about company</app-custom-button>
         <app-custom-button class="ml-2" [large]="true">

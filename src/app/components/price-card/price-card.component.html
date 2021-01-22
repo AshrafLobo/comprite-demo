@@ -18,6 +18,8 @@
 
   <!-- Card buttons section -->
   <ng-container class="mat-card-actions">
-    <app-custom-button (click)="onClick()" [large]="true">Buy product</app-custom-button>
+    <app-custom-button (click)="onClick()" [large]="true">
+      <ng-content select=".button-content"></ng-content>
+    </app-custom-button>
   </ng-container>
 </app-card>

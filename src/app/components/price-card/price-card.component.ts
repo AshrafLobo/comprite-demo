@@ -11,6 +11,6 @@ export class PriceCardComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick() {
-    console.log('Buy product button clicked');
+    window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
   }
 }

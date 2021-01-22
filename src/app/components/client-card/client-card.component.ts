@@ -11,8 +11,4 @@ export class ClientCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  onClick() {
-    console.log('Card testimonial button clicked');
-  }
 }

@@ -21,6 +21,10 @@ button {
 .news-section {
   min-height: 500px;
 
+  .news-cards-wrapper {
+    max-width: 800px;
+  }
+
   mat-sidenav-container {
     width: 100%;
 

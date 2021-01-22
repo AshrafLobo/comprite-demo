@@ -15,7 +15,7 @@
         <p class="testimonial-title m-0">{{client.title}}</p>
       </div>
       <div class="col-12 col-lg-4 my-2 my-xl-0">
-        <app-custom-button (click)="onClick()">View profile</app-custom-button>
+        <app-custom-button [routerLink]="['/issuers', client.url_link]">View profile</app-custom-button>
       </div>
     </div>
   </ng-container>

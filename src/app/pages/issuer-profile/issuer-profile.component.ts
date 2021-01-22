@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-issuer-profile',
@@ -8,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class IssuerProfileComponent implements OnInit {
   opened = false;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      let issuer = params.get('issuer_name');
+      console.log(issuer);
+    });
+  }
 }

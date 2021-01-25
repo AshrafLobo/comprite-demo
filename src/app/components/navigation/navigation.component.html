@@ -1,7 +1,7 @@
 <mat-toolbar class="mat-elevation-z4" role="header">
   <span>
     <a class="logo" routerLink="/">
-      <img class="mx-2" src="assets/logo/logo.png" alt="Comp-rite" /> Comp-rite Kenya
+      <img class="mx-2" src="assets/logo/logo.png" alt="Comp-rite" /> Comp-rite Kenya Limited
     </a>
   </span>
 
@@ -9,10 +9,10 @@
     <li class="mx-2"><a class="small" routerLink="/about" routerLinkActive="active-link">About Us</a></li>
     <li class="mx-2"><a class="small" routerLink="/payroll" routerLinkActive="active-link">Payroll</a></li>
     <li class="mx-2">
-      <a class="small" routerLink="/share-registration" routerLinkActive="active-link">Share Registration</a>
-      <mat-icon [matMenuTriggerFor]="menu">arrow_drop_down</mat-icon>
+      <a class="small" [matMenuTriggerFor]="menu">Share Registration <mat-icon>arrow_drop_down</mat-icon></a>
       <mat-menu #menu="matMenu" xPosition="before">
         <ul class="p-0 m-0">
+          <li mat-menu-item><a routerLink="/share-registration">Share registration</a></li>
           <li mat-menu-item><a routerLink="/shareholders">For Shareholders</a></li>
           <li mat-menu-item><a routerLink="/issuers">For Issuers</a></li>
           <li mat-menu-item><a routerLink="/news">News</a></li>

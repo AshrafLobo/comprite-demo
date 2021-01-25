@@ -24,12 +24,7 @@ export class EnquiryFormComponent implements OnInit {
         Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
       ]),
     }),
-    companyDetails: new FormGroup({
-      company: new FormControl(''),
-      jobTitle: new FormControl(''),
-      numberOfEmployees: new FormControl('', Validators.pattern('[0-9]+')),
-    }),
-    enquireAbout: new FormControl('', Validators.required),
+    subject: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
   });
 
@@ -50,16 +45,8 @@ export class EnquiryFormComponent implements OnInit {
     return this.form.get('userDetails.phoneNumber');
   }
 
-  get company() {
-    return this.form.get('companyDetails.company');
-  }
-
-  get numberOfEmployees() {
-    return this.form.get('companyDetails.numberOfEmployees');
-  }
-
-  get enquireAbout() {
-    return this.form.get('enquireAbout');
+  get subject() {
+    return this.form.get('subject');
   }
 
   get message() {

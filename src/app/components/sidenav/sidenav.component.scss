@@ -17,17 +17,21 @@ mat-sidenav {
   width: 250px;
 
   li {
-    mat-icon {
-      vertical-align: middle;
-    }
-
     a {
+      mat-icon {
+        vertical-align: middle;
+      }
+
       &:active {
         color: gray;
       }
 
       &:hover {
         color: $gold;
+      }
+
+      &::-moz-focus-inner {
+        border: 0;
       }
     }
   }

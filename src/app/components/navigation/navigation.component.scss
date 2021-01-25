@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "base/typography";
 
 a {
   text-decoration: none;
@@ -11,30 +12,38 @@ mat-toolbar {
   z-index: 2 !important;
 
   .logo {
+    font-size: $paragraph_size;
     img {
       height: 40px;
       width: 40px;
     }
 
     font-weight: normal;
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
   }
 
   ul > li {
     list-style: none;
-    a,
-    mat-icon {
+    a {
       cursor: pointer;
+      font-weight: normal;
       text-decoration: none;
       color: $text_primary;
 
       &:hover {
         color: $gold;
       }
-    }
 
-    mat-icon {
-      vertical-align: middle;
-      cursor: pointer;
+      &::-moz-focus-inner {
+        border: 0;
+      }
+
+      mat-icon {
+        vertical-align: middle;
+      }
     }
   }
 

@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'contact-us', component: ContactsComponent },
   { path: '', component: HomeComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

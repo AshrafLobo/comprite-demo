@@ -31,7 +31,8 @@
     }
 
     p {
-      color: $text-secondary;
+      color: $text-primary;
+      font-weight: normal;
       font-size: $paragraph-size-sm;
       max-width: 600px;
     }

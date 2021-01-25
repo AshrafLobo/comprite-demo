@@ -8,6 +8,8 @@ import { FormValidators } from '../../common/form.validators';
   styleUrls: ['./enquiry-form.component.scss'],
 })
 export class EnquiryFormComponent implements OnInit {
+  siteKey = '6Lc6ejsaAAAAAI_N3NxRd7Iiu_JoXVmzncrr1z0o';
+
   form = new FormGroup({
     userDetails: new FormGroup({
       firstName: new FormControl('', [
@@ -26,6 +28,7 @@ export class EnquiryFormComponent implements OnInit {
     }),
     subject: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
+    recaptchaReactive: new FormControl(null, Validators.required),
   });
 
   // Get form controls

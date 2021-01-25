@@ -17,6 +17,7 @@ import {
   AccordionComponent,
   EnquiryFormComponent,
   PayrollFormComponent,
+  PayrollSubmissionFormComponent,
   ShareRegistrationFormComponent,
   CarouselComponent,
   CompanyTestimonialCardComponent,
@@ -31,7 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
-import {} from '../pages';
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 
 const reusableComponents = [
   NavigationComponent,
@@ -48,6 +49,7 @@ const reusableComponents = [
   AccordionComponent,
   EnquiryFormComponent,
   PayrollFormComponent,
+  PayrollSubmissionFormComponent,
   ShareRegistrationFormComponent,
   CarouselComponent,
   CompanyTestimonialCardComponent,
@@ -64,6 +66,8 @@ const reusableComponents = [
     ReactiveFormsModule,
     NgbModule,
     RouterModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAeJ1-R1eGxmLCAIPENZQKGXz6tYaFijAo',
     }),

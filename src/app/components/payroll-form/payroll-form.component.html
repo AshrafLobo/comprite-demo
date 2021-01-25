@@ -126,6 +126,7 @@
             <mat-option value="Pay 100">Pay100 Plus</mat-option>
             <mat-option value="Payroll outsourcing services">Payroll submission</mat-option>
             <mat-option value="Payroll outsourcing services">Payroll outsourcing services</mat-option>
+            <mat-option value="Online FTP Backup">Online FTP Backup</mat-option>
           </mat-select>
 
           <!-- Enquire about errors -->
@@ -152,6 +153,7 @@
     </div>
 
     <div class="row">
+      <re-captcha class="ml-3" [siteKey]="siteKey" formControlName="recaptchaReactive"></re-captcha>
       <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
       </app-custom-button>
     </div>

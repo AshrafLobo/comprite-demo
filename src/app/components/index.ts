@@ -12,6 +12,7 @@ export * from './testimonial-card/testimonial-card.component';
 export * from './accordion/accordion.component';
 export * from './enquiry-form/enquiry-form.component';
 export * from './payroll-form/payroll-form.component';
+export * from './payroll-submission-form/payroll-submission-form.component';
 export * from './share-registration-form/share-registration-form.component';
 export * from './carousel/carousel.component';
 export * from './company-testimonial-card/company-testimonial-card.component';

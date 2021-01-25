@@ -8,6 +8,8 @@ import { FormValidators } from '../../common/form.validators';
   styleUrls: ['./payroll-form.component.scss'],
 })
 export class PayrollFormComponent implements OnInit {
+  siteKey = '6Lc6ejsaAAAAAI_N3NxRd7Iiu_JoXVmzncrr1z0o';
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -35,6 +37,7 @@ export class PayrollFormComponent implements OnInit {
     }),
     enquireAbout: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
+    recaptchaReactive: new FormControl(null, Validators.required),
   });
 
   // Get form controls

@@ -1,0 +1,105 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row">
+
+      <!-- First name field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+          <!-- First name input -->
+          <mat-label>First name</mat-label>
+          <input formControlName="firstName" matInput type="text" placeholder="Please enter your first name" required>
+
+          <!-- First name errors -->
+          <mat-error *ngIf="firstName.touched && firstName.invalid">
+            <div *ngIf="firstName.errors.required">First name is required</div>
+            <div *ngIf="firstName.errors.cannotContainSpace">First name cannot contain space</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Last name field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+          <!-- Last name input -->
+          <mat-label>Last name</mat-label>
+          <input formControlName="lastName" matInput type="text" placeholder="Please enter your last name" required>
+
+          <!-- Last name errors -->
+          <mat-error *ngIf="lastName.touched && lastName.invalid">
+            <div *ngIf="lastName.errors.required">Last name is required</div>
+            <div *ngIf="lastName.errors.cannotContainSpace">Last name cannot contain space</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Email field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+          <!-- Email input -->
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput type="email" placeholder="Please enter your email address" required>
+
+          <!-- Email errors -->
+          <mat-error *ngIf="email.touched && email.invalid">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Email shoud contain a valid email address</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Phone number field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!-- Phone number input -->
+          <mat-label>Phone number</mat-label>
+          <input formControlName="phoneNumber" matInput type="text" placeholder="Please enter your phone number"
+            required>
+
+          <!-- Phone number errors -->
+          <mat-error *ngIf="phoneNumber.touched && phoneNumber.invalid">
+            <div *ngIf="phoneNumber.errors.required">Phone number is required</div>
+            <div *ngIf="phoneNumber.errors.pattern">Phone number should be a valid phone number</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!--Company field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+
+          <!--Company input -->
+          <mat-label>Company</mat-label>
+          <input formControlName="company" matInput type="text" placeholder="Please enter your company name" required>
+
+          <!-- Company errors -->
+          <mat-error *ngIf="company.touched && company.invalid">
+            <div *ngIf="company.errors.required">Company name is required</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Number of employees field -->
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="w-100 mb-2" appearance="outline">
+          <!-- Number of employees input -->
+          <mat-label>Number of employees</mat-label>
+          <input formControlName="numberOfEmployees" matInput type="text"
+            placeholder="Please enter the number of employees">
+
+          <!-- Number of employees errors -->
+          <mat-error *ngIf="numberOfEmployees.touched && numberOfEmployees.invalid">
+            <div *ngIf="numberOfEmployees.errors.pattern">Value should be a number</div>
+            <div *ngIf="numberOfEmployees.errors.required">Number of employees is required</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <re-captcha class="ml-3" [siteKey]="siteKey" formControlName="recaptchaReactive"></re-captcha>
+      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
+      </app-custom-button>
+    </div>
+  </form>
+</div>

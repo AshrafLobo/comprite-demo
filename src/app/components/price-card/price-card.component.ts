@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PayrollPaymentDialogComponent } from '../index';
+import { PayrollPaymentDialogComponent } from '../payroll-payment-dialog/payroll-payment-dialog.component';
 
 @Component({
   selector: 'app-price-card',

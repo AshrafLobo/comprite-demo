@@ -25,6 +25,7 @@ import {
   PayrollTestimonialsComponent,
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
+  PayrollPaymentDialogComponent,
 } from '../components/index';
 
 // Modules
@@ -58,6 +59,7 @@ const reusableComponents = [
   PayrollTestimonialsComponent,
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
+  PayrollPaymentDialogComponent,
 ];
 
 @NgModule({

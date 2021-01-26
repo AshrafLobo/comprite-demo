@@ -1,0 +1,21 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.modal-container {
+  position: relative;
+
+  p {
+    font-size: $paragraph-size-sm;
+    color: $text-secondary;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

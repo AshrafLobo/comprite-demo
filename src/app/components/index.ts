@@ -20,3 +20,4 @@ export * from './client-card/client-card.component';
 export * from './google-maps/google-maps.component';
 export * from './payroll-testimonials/payroll-testimonials.component';
 export * from './share-registration-testimonials/share-registration-testimonials.component';
+export * from './payroll-payment-dialog/payroll-payment-dialog.component';

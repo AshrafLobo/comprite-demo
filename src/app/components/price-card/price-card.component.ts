@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PayrollPaymentDialogComponent } from '../index';
 
 @Component({
   selector: 'app-price-card',
@@ -6,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./price-card.component.scss'],
 })
 export class PriceCardComponent implements OnInit {
-  constructor() {}
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
-  onClick() {
-    window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
+  openDialog() {
+    this.modalService.open(PayrollPaymentDialogComponent, {
+      size: 'lg',
+    });
   }
 }

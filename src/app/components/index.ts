@@ -18,4 +18,5 @@ export * from './carousel/carousel.component';
 export * from './company-testimonial-card/company-testimonial-card.component';
 export * from './client-card/client-card.component';
 export * from './google-maps/google-maps.component';
-export * from './testimonials/testimonials.component';
+export * from './payroll-testimonials/payroll-testimonials.component';
+export * from './share-registration-testimonials/share-registration-testimonials.component';

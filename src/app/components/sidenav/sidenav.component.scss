@@ -17,22 +17,29 @@ mat-sidenav {
   width: 250px;
 
   li {
+    outline: none;
+    border: none;
+
     a {
       mat-icon {
         vertical-align: middle;
       }
+    }
 
-      &:active {
+    &:active {
+      a {
         color: gray;
       }
+    }
 
-      &:hover {
+    &:hover {
+      a {
         color: $gold;
       }
+    }
 
-      &::-moz-focus-inner {
-        border: 0;
-      }
+    &::-moz-focus-inner {
+      border: 0;
     }
   }
 }

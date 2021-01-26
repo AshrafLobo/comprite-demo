@@ -22,7 +22,8 @@ import {
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
-  TestimonialsComponent,
+  PayrollTestimonialsComponent,
+  ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
 } from '../components/index';
 
@@ -54,7 +55,8 @@ const reusableComponents = [
   CarouselComponent,
   CompanyTestimonialCardComponent,
   ClientCardComponent,
-  TestimonialsComponent,
+  PayrollTestimonialsComponent,
+  ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
 ];
 

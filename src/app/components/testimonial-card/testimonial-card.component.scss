@@ -9,6 +9,15 @@
   }
 }
 
+ngb-rating {
+  font-size: 24px;
+  color: $gold;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .testimonial-quote {
   color: white;
   max-width: 350px;

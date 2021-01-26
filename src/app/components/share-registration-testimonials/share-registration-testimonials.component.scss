@@ -1,0 +1,19 @@
+@import "abstracts/variables";
+
+.testimonials-container {
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      font-weight: normal;
+      color: $gold;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials-container {
+    max-width: 600px;
+  }
+}

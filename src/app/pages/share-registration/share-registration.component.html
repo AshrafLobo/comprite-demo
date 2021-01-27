@@ -7,7 +7,7 @@
 </app-banner>
 
 <!-- Share Registration Carousel Section -->
-<mat-tab-group mat-align-tabs="center">
+<mat-tab-group mat-align-tabs="center" [selectedIndex]="selectedIndex">
   <mat-tab label="Issuers">
     <app-carousel [slides]="issuerSlides"></app-carousel>
 

@@ -97,8 +97,13 @@
     </div>
 
     <div class="row">
-      <re-captcha class="ml-3 mb-2 mb-md-0" [siteKey]="siteKey" formControlName="recaptchaReactive"></re-captcha>
-      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit and download
+      <re-captcha class="text-left ml-0 ml-lg-3 mb-2 mb-lg-0 col-12 col-lg" [siteKey]="siteKey"
+        formControlName="recaptchaReactive">
+      </re-captcha>
+      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3 col-12 col-lg text-left text-lg-right"
+        large="true" type="submit">Submit
+        and
+        download
       </app-custom-button>
     </div>
   </form>

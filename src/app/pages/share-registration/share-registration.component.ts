@@ -29,7 +29,17 @@ export class ShareRegistrationComponent implements OnInit {
     },
   ];
 
+  selectedIndex: number;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const routesObj = JSON.parse(sessionStorage.getItem('routesObj'));
+
+    if (routesObj.previousRoute.url == '/issuers') {
+      this.selectedIndex = 0;
+    } else if (routesObj.previousRoute.url === '/shareholders') {
+      this.selectedIndex = 1;
+    }
+  }
 }

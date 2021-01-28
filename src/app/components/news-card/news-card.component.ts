@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IssuersService, NewsService } from 'src/app/services';
 
 @Component({
   selector: 'app-news-card',

@@ -25,7 +25,7 @@ import {
 } from './pages/index';
 
 //Services
-import { IssuersService } from './services/index';
+import { IssuersService, NewsService } from './services/index';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { IssuersService } from './services/index';
     ReusableComponentsModule,
     RouterModule,
   ],
-  providers: [IssuersService],
+  providers: [IssuersService, NewsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

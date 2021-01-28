@@ -61,6 +61,13 @@ export class IssuersService {
     },
   ];
 
+  comprite = {
+    src: 'assets/logo/logo.png',
+    src_small: 'assets/logo/logo.png',
+    name: 'Comp-rite Kenya Limited',
+    title: 'Share registrar',
+  };
+
   getIssuers() {
     return this.issuers;
   }
@@ -68,5 +75,9 @@ export class IssuersService {
   getIssuer(url: string) {
     const issuer = this.issuers.filter((issuer) => issuer.url_link === url);
     return issuer[0];
+  }
+
+  getCompriteData() {
+    return this.comprite;
   }
 }

@@ -1,6 +1,6 @@
 <div class="container-fluid no-gutter px-3 py-2 px-lg-5">
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let faq of faqs">
+    <mat-expansion-panel [ngStyle]="{'background-color': backgroundColor}" *ngFor="let faq of faqs">
       <mat-expansion-panel-header class="specific-class">
         <mat-panel-description>{{faq.question}}</mat-panel-description>
       </mat-expansion-panel-header>

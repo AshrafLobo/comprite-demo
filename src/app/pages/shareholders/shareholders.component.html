@@ -8,6 +8,42 @@
   <app-select-service></app-select-service>
 </app-banner>
 
+<!-- Share registration Contacts Section -->
+<app-split-banner class="share-registration-contacts-section">
+
+  <!-- Column 1 Section -->
+  <ng-container class="column1-content">
+    <div class="column1 col-12 col-xl h-100 d-flex align-items-center py-5">
+      <div class="row">
+        <h2 class="col-12 text-center">Faqs</h2>
+        <app-accordion [backgroundColor]="'#0f75bd'" [faqs]="faqs" class="col-12"></app-accordion>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Column 2 Section -->
+  <ng-container class="column2-content">
+    <div class="enquire-section column2 col-12 col-xl p-3 h-100 d-flex align-items-center py-5 py-lg-0">
+      <div class="row w-100">
+        <h2 class="text-center col-12">Enquire</h2>
+        <app-share-registration-form class="col-12"></app-share-registration-form>
+      </div>
+    </div>
+  </ng-container>
+</app-split-banner>
+
+<!-- Call to action banner section -->
+<app-banner class="banner-section">
+  <h2 class="m-0">Still have some questions?</h2>
+  <p class="m-3">Have an urgent question? Send us a message. Click the button below to go to our contact
+    us
+    page.
+  </p>
+  <app-custom-button routerLink="/share-registration" [large]="true">
+    Contact us
+  </app-custom-button>
+</app-banner>
+
 <!-- Shareholder Testimonial Section -->
 <app-banner [hasBackground]="'#3e4756'" class="shareholder-testimonial-section">
   <div class="container-fluid no-gutter py-5">
@@ -32,15 +68,3 @@
     </div>
   </div>
 </div>
-
-<!-- Call to action banner section -->
-<app-banner class="banner-section">
-  <h2 class="m-0">Still have some questions?</h2>
-  <p class="m-3">Have an urgent question? Send us a message. Click the button below to go to our contact
-    us
-    page.
-  </p>
-  <app-custom-button routerLink="/share-registration" [large]="true">
-    Contact us
-  </app-custom-button>
-</app-banner>

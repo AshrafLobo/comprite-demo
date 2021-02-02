@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IssuersService } from 'src/app/services';
+import { FaqService, IssuersService } from 'src/app/services';
 
 @Component({
   selector: 'app-shareholders',
@@ -8,10 +8,15 @@ import { IssuersService } from 'src/app/services';
 })
 export class ShareholdersComponent implements OnInit {
   clients;
+  faqs;
 
-  constructor(service: IssuersService) {
-    this.clients = service.getIssuers();
+  constructor(
+    private issuersService: IssuersService,
+    private faqsServcice: FaqService
+  ) {}
+
+  ngOnInit(): void {
+    this.clients = this.issuersService.getIssuers();
+    this.faqs = this.faqsServcice.getShareRegistryFaqs();
   }
-
-  ngOnInit(): void {}
 }

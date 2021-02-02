@@ -2,11 +2,10 @@
 @import "base/typography";
 
 .container-fluid {
+  max-height: 500px;
   overflow-y: hidden;
 
   mat-expansion-panel {
-    background-color: $dark-blue;
-
     mat-panel-description {
       color: white;
     }
@@ -14,5 +13,33 @@
     p {
       font-size: $paragraph-size-sm;
     }
+  }
+
+  &:hover {
+    overflow-y: scroll;
+  }
+
+  /*Style timeline scrollbar*/
+  /* width */
+  &::-webkit-scrollbar {
+    position: absolute;
+    right: 0;
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    height: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }

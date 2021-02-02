@@ -18,6 +18,30 @@ h2 {
   }
 }
 
+/*Share registration Contacts Section*/
+.share-registration-contacts-section {
+  .column1,
+  .column2 {
+    min-height: 800px !important;
+  }
+
+  .column1 {
+    background-color: $dark-blue;
+  }
+
+  h2 {
+    color: white;
+    font-size: $heading-size;
+    font-weight: 600;
+  }
+
+  .enquire-section {
+    h2 {
+      color: $dark-blue !important;
+    }
+  }
+}
+
 /* Shareholder testimonial section */
 .shareholder-testimonial-section {
   background-color: $border-color;

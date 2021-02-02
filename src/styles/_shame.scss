@@ -65,3 +65,11 @@
   border-radius: 10px;
   background-color: $dark-blue;
 }
+
+// SHAREHOLDER - MAT SELECT STYLES
+#select-service {
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fff !important;
+    border-radius: 5px;
+  }
+}

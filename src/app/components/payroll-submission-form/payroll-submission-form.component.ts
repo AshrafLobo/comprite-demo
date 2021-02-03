@@ -63,7 +63,7 @@ export class PayrollSubmissionFormComponent implements OnInit {
 
   // Submit form fuction
   submit() {
-    console.log(this.form.value);
-    window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
+    // console.log(this.form.value);
+    // window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
   }
 }

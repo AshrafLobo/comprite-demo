@@ -7,7 +7,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class SelectServiceComponent implements OnInit {
+  service;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onChange() {
+    // console.log('Service', this.service);
+  }
 }

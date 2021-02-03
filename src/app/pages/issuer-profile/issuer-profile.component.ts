@@ -21,7 +21,7 @@ export class IssuerProfileComponent implements OnInit {
       let issuer_url = params.get('issuer_name');
       this.issuer = this.service.getIssuer(issuer_url);
 
-      console.log('Issuer', this.issuer);
+      // console.log('Issuer', this.issuer);
     });
   }
 }

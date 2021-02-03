@@ -4,7 +4,7 @@
 
       <!-- Service input -->
       <mat-label>Please select a service</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="service" (selectionChange)="onChange()">
         <mat-option>None</mat-option>
         <mat-option value="Account status">Account status</mat-option>
         <mat-option value="Dividend payment">Dividend payment</mat-option>

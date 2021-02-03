@@ -33,7 +33,6 @@ export class ShareRegistrationFormComponent implements OnInit {
       cdsc: new FormControl(''),
     }),
     company: new FormControl(''),
-    enquireAbout: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
     recaptchaReactive: new FormControl(null, Validators.required),
   });
@@ -63,17 +62,13 @@ export class ShareRegistrationFormComponent implements OnInit {
     return this.form.get('companyDetails.company');
   }
 
-  get enquireAbout() {
-    return this.form.get('enquireAbout');
-  }
-
   get message() {
     return this.form.get('message');
   }
 
   // Submit form fuction
   submit() {
-    console.log(this.form.value);
+    // console.log(this.form.value);
   }
 
   constructor() {}

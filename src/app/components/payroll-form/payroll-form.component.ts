@@ -75,6 +75,6 @@ export class PayrollFormComponent implements OnInit {
 
   // Submit form fuction
   submit() {
-    console.log(this.form.value);
+    // console.log(this.form.value);
   }
 }

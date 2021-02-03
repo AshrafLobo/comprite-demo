@@ -58,7 +58,7 @@ export class EnquiryFormComponent implements OnInit {
 
   // Submit form fuction
   submit() {
-    console.log(this.form.value);
+    // console.log(this.form.value);
   }
 
   constructor() {}

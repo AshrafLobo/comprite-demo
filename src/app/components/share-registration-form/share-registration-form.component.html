@@ -93,16 +93,6 @@
             </mat-error>
           </mat-form-field>
         </div>
-
-        <!-- CDSC field -->
-        <div class="col-12">
-          <mat-form-field class="w-100 mb-2" appearance="outline">
-
-            <!-- CDSC input -->
-            <mat-label>CDSC/ Certificate number</mat-label>
-            <input formControlName="cdsc" matInput type="text" placeholder="Please enter your CDSC number">
-          </mat-form-field>
-        </div>
       </div>
     </div>
 
@@ -124,24 +114,13 @@
         </mat-form-field>
       </div>
 
-      <!-- Enquire about field -->
-      <div class="col-12 col-lg-6">
+      <!-- CDSC field -->
+      <div formGroupName="userDetails" class="col-12 col-lg-6">
         <mat-form-field class="w-100 mb-2" appearance="outline">
 
-          <!-- Enquire about input -->
-          <mat-label>Enquire about</mat-label>
-          <mat-select formControlName="enquireAbout">
-            <mat-option>None</mat-option>
-            <mat-option value="iShare Pro">iShare Pro</mat-option>
-            <mat-option value="Share registration services">Share registration services</mat-option>
-            <mat-option value="Virtual AGMs">Virtual AGMs</mat-option>
-            <mat-option value="Dividend payments">Dividend payments</mat-option>
-          </mat-select>
-
-          <!-- Enquire about errors -->
-          <mat-error *ngIf="enquireAbout.touched && enquireAbout.invalid">
-            <div *ngIf="enquireAbout.errors.required">Select an option</div>
-          </mat-error>
+          <!-- CDSC input -->
+          <mat-label>CDSC/ Certificate number</mat-label>
+          <input formControlName="cdsc" matInput type="text" placeholder="Please enter your CDSC number">
         </mat-form-field>
       </div>
 

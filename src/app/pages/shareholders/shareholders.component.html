@@ -2,7 +2,7 @@
 <app-banner class="shareholders-banner-section">
   <h1 class="m-0 mt-5 mt-md-0">For shareholders</h1>
 
-  <p class="m-3 mx-5 mb-5 mb-md-0 mx-md-auto">Get access to various services we offer as part of our share registration
+  <p class="m-3 mx-5 mb-5 mx-md-auto">Get access to various services we offer as part of our share registration
     and management system. Select a service below and fill in the form as required. We will get back to you shortly.</p>
 
   <app-select-service></app-select-service>
@@ -13,7 +13,7 @@
 
   <!-- Column 1 Section -->
   <ng-container class="column1-content">
-    <div class="column1 col-12 col-xl h-100 d-flex align-items-center py-5">
+    <div class="order-2 order-lg-1 column1 col-12 col-xl h-100 d-flex align-items-center py-5">
       <div class="row">
         <h2 class="col-12 text-center">Faqs</h2>
         <app-accordion [backgroundColor]="'#0f75bd'" [faqs]="faqs" class="col-12"></app-accordion>
@@ -23,7 +23,8 @@
 
   <!-- Column 2 Section -->
   <ng-container class="column2-content">
-    <div class="enquire-section column2 col-12 col-xl p-3 h-100 d-flex align-items-center py-5 py-lg-0">
+    <div
+      class="order-1 order-lg-2 enquire-section column2 col-12 col-xl p-3 h-100 d-flex align-items-center py-5 py-lg-0">
       <div class="row w-100">
         <h2 class="text-center col-12">Enquire</h2>
         <app-share-registration-form class="col-12"></app-share-registration-form>

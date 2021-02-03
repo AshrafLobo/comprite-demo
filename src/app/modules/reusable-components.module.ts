@@ -31,7 +31,7 @@ import {
 
 // Modules
 import { AppMaterialModule } from './app-material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
@@ -69,6 +69,7 @@ const reusableComponents = [
   imports: [
     CommonModule,
     AppMaterialModule,
+    FormsModule,
     ReactiveFormsModule,
     NgbModule,
     RouterModule,

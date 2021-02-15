@@ -7,6 +7,11 @@ const mongoDbDebug = require('debug')('app:mongoDbDebug');
 
 // Route imports
 const issuers = require('./routes/issuers');
+const news = require('./routes/news');
+const timelines = require('./routes/timelines');
+const agms = require('./routes/agms');
+const egms = require('./routes/egms');
+const dividends = require('./routes/dividends');
 
 // Declare app
 const app = express();
@@ -28,6 +33,11 @@ mongoose.connect('mongodb://localhost/comprite', {
 
 // Routes 
 app.use('/api/issuers', issuers);
+app.use('/api/news', news);
+app.use('/api/timelines', timelines);
+app.use('/api/agms', agms);
+app.use('/api/egms', egms);
+app.use('/api/dividends', dividends);
 
 /**
  * Start server

@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  let issuer = new Issuer({
+  const issuer = new Issuer({
     name: req.body.name,
     title: req.body.title,
     description: req.body.description,
@@ -41,7 +41,8 @@ router.post('/', async (req, res) => {
     src_small: req.body.src_small,
     url_link: req.body.url_link,
   });
-  issuer = await issuer.save();
+
+  await issuer.save();
   res.send(issuer);
 });
 

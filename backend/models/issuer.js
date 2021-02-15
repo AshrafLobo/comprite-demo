@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
-// Issuerd model
+// Issuer model
 const Issuer = mongoose.model('Issuer', mongoose.Schema({
   name: {
     type: String,
     required: true,
     minLength: 5,
-    maxLength: 100
+    maxLength: 255
   },
   title: {
     type: String,
     required: true,
     minLength: 5,
-    maxLength: 100
+    maxLength: 255
   },
   description: {
     type: String,
@@ -28,7 +28,7 @@ const Issuer = mongoose.model('Issuer', mongoose.Schema({
     type: String,
     required: true,
     minLength: 5,
-    maxLength: 50
+    maxLength: 255
   },
   url_link: {
     type: String,

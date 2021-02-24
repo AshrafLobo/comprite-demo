@@ -1,8 +1,9 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 // Custom Modules
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -26,6 +27,7 @@ import {
 
 //Services
 import { FaqService, IssuersService, NewsService } from './services/index';
+import { AppErrorHandler } from './common/app-error-handler';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,17 @@ import { FaqService, IssuersService, NewsService } from './services/index';
     AppMaterialModule,
     ReusableComponentsModule,
     RouterModule,
+    HttpClientModule,
   ],
-  providers: [IssuersService, NewsService, FaqService],
+  providers: [
+    IssuersService,
+    NewsService,
+    FaqService,
+    {
+      provide: ErrorHandler,
+      useClass: AppErrorHandler,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -85,15 +85,8 @@
   </div>
 
   <div class="row mx-md-5 p-0">
-    <div class="col-12 col-lg-4 my-2 my-lg-0">
-      <app-news-card></app-news-card>
-    </div>
-
-    <div class="col-12 col-lg-4 my-2 my-lg-0">
-      <app-news-card></app-news-card>
-    </div>
-    <div class="col-12 col-lg-4 my-2 my-lg-0">
-      <app-news-card></app-news-card>
+    <div *ngFor="let article of articles" class="col-12 col-lg-4 my-2 my-lg-0">
+      <app-news-card [article]="article"></app-news-card>
     </div>
   </div>
 </div>

@@ -29,6 +29,9 @@ import {
   SelectServiceComponent,
 } from '../components/index';
 
+// Pipes
+import { SummaryPipe } from '../common/summary.pipe';
+
 // Modules
 import { AppMaterialModule } from './app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -62,6 +65,7 @@ const reusableComponents = [
   GoogleMapsComponent,
   PayrollPaymentDialogComponent,
   SelectServiceComponent,
+  SummaryPipe,
 ];
 
 @NgModule({

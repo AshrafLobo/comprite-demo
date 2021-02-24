@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { IssuersService, NewsService } from 'src/app/services';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-news-card',
@@ -7,11 +6,12 @@ import { IssuersService, NewsService } from 'src/app/services';
   styleUrls: ['./news-card.component.scss'],
 })
 export class NewsCardComponent implements OnInit {
+  @Input('article') article;
   constructor() {}
 
-  ngOnInit(): void {}
-
-  onClick() {
-    // console.log('News card button clicked');
+  ngOnInit(): void {
+    console.log(this.article);
   }
+
+  onClick() {}
 }

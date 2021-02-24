@@ -28,6 +28,7 @@ import {
 //Services
 import { FaqService, IssuersService, NewsService } from './services/index';
 import { AppErrorHandler } from './common/app-error-handler';
+import { NewsArticleDialogComponent } from './components/news-article-dialog/news-article-dialog.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AppErrorHandler } from './common/app-error-handler';
     IssuerProfileComponent,
     NewsComponent,
     ContactsComponent,
+    NewsArticleDialogComponent,
   ],
   imports: [
     BrowserModule,

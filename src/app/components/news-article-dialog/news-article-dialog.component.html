@@ -1,0 +1,33 @@
+<div class="modal-container">
+  <div class="modal-header">
+    <div class="w-100 mx-5">
+      <div class="row no-gutters">
+        <div mat-card-avatar class="col-4 h-100">
+          <img [attr.src]="article.issuer.src_small" [attr.alt]="article.issuer.name">
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-4">
+          <h3 class="issuer-name m-0">{{article.issuer.name}}</h3>
+          <p class="issuer-title m-0">{{article.issuer.title}}</p>
+        </div>
+        <div class="col-8 date-time text-right">
+          <p class="date mb-1">{{article.dateCreated | date:'fullDate'}}</p>
+          <p class="time">{{article.timeCreated}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <h2 class="mx-5 my-3">{{article.title}}</h2>
+    <p class="mx-5">{{article.newsArticle}}</p>
+  </div>
+  <div class="modal-footer">
+  </div>
+
+  <button ngbAutofocus class="close-button m-3" mat-icon-button (click)="activeModal.dismiss('Cross click')">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

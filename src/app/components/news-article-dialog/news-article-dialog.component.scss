@@ -1,0 +1,99 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.modal-container {
+  position: relative;
+
+  p {
+    font-size: $paragraph-size-sm;
+    color: $text-secondary;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal-header {
+  [mat-card-avatar] {
+    img {
+      width: 100%;
+      max-width: 150px;
+      max-height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .date-time {
+    color: $text-secondary;
+
+    .date {
+      font-size: 14px;
+    }
+    .time {
+      font-size: 13px;
+    }
+  }
+}
+
+.issuer-name,
+.modal-body h1 {
+  color: $dark-blue;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.issuer-title,
+.text-content {
+  color: $text-secondary;
+  font-size: $paragraph-size-sm;
+}
+
+hr {
+  border-color: $border-color;
+}
+
+.modal-body {
+  p {
+    font-size: $paragraph-size;
+    text-indent: 50px;
+    max-height: 500px;
+    overflow-y: hidden;
+
+    &:hover {
+      overflow-y: scroll;
+      cursor: pointer;
+    }
+
+    /*Style scrollbar*/
+    /* width */
+    &::-webkit-scrollbar {
+      position: absolute;
+      right: 0;
+      width: 5px;
+      margin: 0 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      height: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}

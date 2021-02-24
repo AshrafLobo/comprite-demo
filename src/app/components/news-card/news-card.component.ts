@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NewsArticleDialogComponent } from '../news-article-dialog/news-article-dialog.component';
 
 @Component({
   selector: 'app-news-card',
@@ -7,11 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NewsCardComponent implements OnInit {
   @Input('article') article;
-  constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.article);
+  constructor(private modalService: NgbModal) {}
+
+  ngOnInit(): void {}
+
+  openDialog() {
+    const modalRef = this.modalService.open(NewsArticleDialogComponent, {
+      size: 'xl',
+    });
+
+    modalRef.componentInstance.article = this.article;
   }
-
-  onClick() {}
 }

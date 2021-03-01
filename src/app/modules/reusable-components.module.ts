@@ -26,11 +26,11 @@ import {
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
   PayrollPaymentDialogComponent,
-  SelectServiceComponent,
 } from '../components/index';
 
 // Pipes
 import { SummaryPipe } from '../common/summary.pipe';
+import { FilterPipe } from '../common/filter.pipe';
 
 // Modules
 import { AppMaterialModule } from './app-material.module';
@@ -64,8 +64,8 @@ const reusableComponents = [
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
   PayrollPaymentDialogComponent,
-  SelectServiceComponent,
   SummaryPipe,
+  FilterPipe,
 ];
 
 @NgModule({

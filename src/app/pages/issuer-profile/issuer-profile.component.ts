@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IssuersService } from 'src/app/services';
+import { IssuersService, NewsService } from 'src/app/services';
 
 @Component({
   selector: 'app-issuer-profile',
@@ -10,18 +10,24 @@ import { IssuersService } from 'src/app/services';
 export class IssuerProfileComponent implements OnInit {
   opened = false;
   issuer;
+  articles;
 
   constructor(
     private route: ActivatedRoute,
-    protected service: IssuersService
+    private issuersService: IssuersService,
+    private newsService: NewsService
   ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      let issuer_url = params.get('issuer_name');
-      this.issuer = this.service.getIssuer(issuer_url);
+      let issuer_id = params.get('issuer_id');
+      this.issuersService.get(issuer_id).subscribe((issuer: {}) => {
+        this.issuer = issuer;
 
-      // console.log('Issuer', this.issuer);
+        this.newsService
+          .getAll(this.issuer._id)
+          .subscribe((articles: any[]) => (this.articles = articles));
+      });
     });
   }
 }

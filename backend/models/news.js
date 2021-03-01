@@ -9,9 +9,18 @@ const News = mongoose.model('News', mongoose.Schema({
     minLength: 5,
     maxLength: 255,
   },
+  article_src: {
+    type: String
+  },
   issuer: {
     type: new mongoose.Schema({
       name: {
+        type: String,
+        required: true,
+        minLength: 5,
+        maxLength: 255
+      },
+      title: {
         type: String,
         required: true,
         minLength: 5,

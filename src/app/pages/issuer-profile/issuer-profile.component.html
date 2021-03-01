@@ -2,15 +2,15 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
-      <img class="w-100" [attr.src]="issuer.src_small" [attr.alt]="issuer.name">
+      <img class="w-100" [attr.src]="issuer?.src_small" [attr.alt]="issuer?.name">
     </div>
     <div class="col-12 col-lg-8 my-5 text-center text-lg-left">
-      <h1 class="issuer-name mb-1">{{issuer.name}}</h1>
-      <h2 class="issuer-title m-0 mt-1">{{issuer.title}}</h2>
+      <h1 class="issuer-name mb-1">{{issuer?.name}}</h1>
+      <h2 class="issuer-title m-0 mt-1">{{issuer?.title}}</h2>
       <hr />
-      <p class="issuer-description my-3">{{issuer.description}}</p>
+      <p class="issuer-description my-3">{{issuer?.description}}</p>
       <div>
-        <app-custom-button [routerLink]="['/share-registration']">Enquire about company</app-custom-button>
+        <app-custom-button [routerLink]="['/shareholders']">Enquire about company</app-custom-button>
         <app-custom-button class="ml-2">
           <mat-icon>get_app</mat-icon>Download dividend opt in form
         </app-custom-button>
@@ -74,21 +74,9 @@
                 <mat-icon>menu</mat-icon>
               </button>
 
-              <div class="news-cards-wrapper mx-auto">
-                <div class="mx-lg-5 pt-5 mb-3">
-                  <app-news-card></app-news-card>
-                </div>
-                <div class="mx-lg-5 mb-3">
-                  <app-news-card></app-news-card>
-                </div>
-                <div class="mx-lg-5 mb-3">
-                  <app-news-card></app-news-card>
-                </div>
-                <div class="mx-lg-5 mb-3">
-                  <app-news-card></app-news-card>
-                </div>
-                <div class="mx-lg-5 pb-5 mb-3">
-                  <app-news-card></app-news-card>
+              <div *ngIf="articles" class="news-cards-wrapper mx-auto">
+                <div *ngFor="let article of articles" class="mx-lg-5 pt-5 mb-3">
+                  <app-news-card [article]="article"></app-news-card>
                 </div>
               </div>
             </div>

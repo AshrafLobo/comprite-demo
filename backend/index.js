@@ -4,6 +4,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const mongoDbDebug = require('debug')('app:mongoDbDebug');
+const cors = require('cors');
 
 // Route imports
 const issuers = require('./routes/issuers');
@@ -20,6 +21,7 @@ const app = express();
  * Middleware
  */
 app.use(express.json());
+app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/comprite', {
@@ -29,7 +31,7 @@ mongoose.connect('mongodb://localhost/comprite', {
   useCreateIndex: true
 })
   .then(() => console.log("Connected to MongoDB..."))
-  .catch(error => mongoDbDebug("Could not connect to MongoDB...\n", error));
+  .catch(error => console.error("Could not connect to MongoDB...\n", error));
 
 // Routes 
 app.use('/api/issuers', issuers);

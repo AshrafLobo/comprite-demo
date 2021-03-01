@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -11,21 +11,39 @@ import { NotFoundError } from '../common/not-found-error';
   providedIn: 'root',
 })
 export class DataService {
+  URL = 'http://localhost:3000/api/';
+
   private config = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set('Accept', 'application/json');
 
-  constructor(private url: string, private _http: HttpClient) {}
+  constructor(private url: string, private _http: HttpClient) {
+    this.URL = this.URL + url;
+  }
+
+  // Get one resource
+  get(id) {
+    return this._http
+      .get(this.URL + '/' + id)
+      .pipe(catchError(this.handleError));
+  }
 
   // Get all resources
-  getAll() {
-    return this._http.get(this.url).pipe(catchError(this.handleError));
+  getAll(issuerId?: string) {
+    if (issuerId) {
+      let params = new HttpParams().set('issuerId', issuerId);
+      return this._http
+        .get(`${this.URL}?${params.toString()}`)
+        .pipe(catchError(this.handleError));
+    }
+
+    return this._http.get(this.URL).pipe(catchError(this.handleError));
   }
 
   // Create resource
   create(resource) {
     return this._http
-      .post(this.url, JSON.stringify(resource), {
+      .post(this.URL, JSON.stringify(resource), {
         headers: this.config,
       })
       .pipe(catchError(this.handleError));
@@ -34,7 +52,7 @@ export class DataService {
   // Update resource
   update(resource, updateObject) {
     return this._http
-      .put(`${this.url}/${resource._id}`, JSON.stringify(updateObject), {
+      .put(`${this.URL}/${resource._id}`, JSON.stringify(updateObject), {
         headers: this.config,
       })
       .pipe(catchError(this.handleError));
@@ -43,7 +61,7 @@ export class DataService {
   // Delete resource
   delete(id) {
     return this._http
-      .delete(`${this.url}/${id}`, {
+      .delete(`${this.URL}/${id}`, {
         headers: this.config,
       })
       .pipe(catchError(this.handleError));

@@ -7,7 +7,20 @@ import { NewsService } from 'src/app/services';
   styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent implements OnInit {
-  constructor() {}
+  articles;
 
-  ngOnInit(): void {}
+  // Filter variables
+  sort: string = '';
+  searchTerm: string = '';
+  company: string = '';
+  dateStart: string = '';
+  dateEnd: string = '';
+
+  constructor(private service: NewsService) {}
+
+  ngOnInit(): void {
+    this.service
+      .getAll()
+      .subscribe((articles: any[]) => (this.articles = articles));
+  }
 }

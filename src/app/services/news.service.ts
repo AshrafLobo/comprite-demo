@@ -7,6 +7,6 @@ import { DataService } from './data.service';
 })
 export class NewsService extends DataService {
   constructor(_http: HttpClient) {
-    super('http://localhost:3000/api/news', _http);
+    super('news', _http);
   }
 }

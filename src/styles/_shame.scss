@@ -77,3 +77,10 @@
     display: none;
   }
 }
+
+/**Mat icon buttton fix*/
+[mat-icon-button] {
+  &:focus {
+    outline: none;
+  }
+}

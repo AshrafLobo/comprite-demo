@@ -17,6 +17,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { FormsModule } from '@angular/forms';
+
 const material = [
   MatTabsModule,
   MatSidenavModule,
@@ -35,7 +37,7 @@ const material = [
 ];
 
 @NgModule({
-  imports: [material],
-  exports: [material],
+  imports: [material, FormsModule],
+  exports: [material, FormsModule],
 })
 export class AppMaterialModule {}

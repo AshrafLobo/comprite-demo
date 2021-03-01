@@ -3,13 +3,15 @@
  */
 const express = require('express');
 const router = express();
+const dateFormat = require("dateformat");
 
 // Models
 const News = require('../models/news');
 const Issuer = require('../models/issuer');
 
-// News validator
+// Functions
 const { validateNews: validate } = require('../common/joiValidators');
+const { getNewsArticle } = require('../common/functions');
 
 /**
  * API Routes
@@ -17,13 +19,38 @@ const { validateNews: validate } = require('../common/joiValidators');
 
 // Get all news articles
 router.get('/', async (req, res) => {
-  const articles = await News.find();
+  let filter = {};
+
+  if (req.query.issuerId) {
+    filter["issuer._id"] = req.query.issuerId
+  }
+
+  let articles = await News
+    .find(filter)
+    .lean()
+    .sort('-_id')
+    .select();
+
+  for (const article of articles) {
+    const newsArticle = await getNewsArticle(article.article_src);
+    article.newsArticle = newsArticle;
+
+    const date = article._id.getTimestamp();
+	article.date = date;
+    article.dateCreated = dateFormat(date, "ddd, mmmm d, yyyy");
+    article.timeCreated = dateFormat(date, "shortTime");;
+  }
+
   res.send(articles);
 });
 
 // Get one news article
 router.get('/:newsId', async (req, res) => {
-  const article = await News.findById(req.params.newsId);
+  let article = await News.findById(req.params.newsId);
+
+  const newsArticle = await getNewsArticle(article.article_src);
+  article = article.toObject();
+  article.newsArticle = newsArticle;
 
   if (!article) return res.status(404).send('The news article with the given ID was not found');
   res.send(article);
@@ -43,8 +70,10 @@ router.post('/', async (req, res) => {
     issuer: {
       _id: issuer._id,
       name: issuer.name,
+      title: issuer.title,
       src_small: issuer.src_small
-    }
+    },
+    article_src: req.body.article_src
   });
 
   await article.save();
@@ -67,6 +96,7 @@ router.put('/:newsId', async (req, res) => {
       name: issuer.name,
       src_small: issuer.src_small
     },
+    article_src: req.body.article_src,
     dateUpdated: Date.now()
   }, { new: true });
   if (!article) return res.status(404).send('The news article with the given ID was not found');
@@ -79,7 +109,7 @@ router.delete('/:newsId', async (req, res) => {
   const article = await News.findByIdAndDelete(req.params.newsId);
   if (!article) return res.status(404).send('The news article with the given ID was not found');
 
-  res.send(article);
+  res.send();
 });
 
 module.exports = router;

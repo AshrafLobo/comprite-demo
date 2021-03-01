@@ -19,8 +19,8 @@ function validateIssuer(issuer) {
 function validateNews(news) {
   const schema = Joi.object({
     title: Joi.string().min(5).max(255).required(),
-    issuerId: Joi.objectId().required(),
-    dateUpdated: Joi.date()
+    article_src: Joi.string(),
+    issuerId: Joi.objectId().required()
   });
 
   return schema.validate(news);
@@ -44,8 +44,7 @@ function validateAgm(agm) {
     title: Joi.string().min(5).max(255).required(),
     agmDate: Joi.date(),
     venue: Joi.string().min(5).max(255),
-    status: Joi.string().valid('pending', 'completed'),
-    dateUpdated: Joi.date()
+    status: Joi.string().valid('pending', 'completed')
   });
 
   return schema.validate(agm);
@@ -58,8 +57,7 @@ function validateEgm(egm) {
     title: Joi.string().min(5).max(255).required(),
     egmDate: Joi.date(),
     venue: Joi.string().min(5).max(255),
-    status: Joi.string().valid('pending', 'completed'),
-    dateUpdated: Joi.date()
+    status: Joi.string().valid('pending', 'completed')
   });
 
   return schema.validate(egm);
@@ -73,8 +71,7 @@ function validateDividend(dividend) {
     disbursmentDate: Joi.date(),
     dividendType: Joi.string().min(2).max(50),
     dividendRate: Joi.boolean(),
-    status: Joi.string().valid('pending', 'completed'),
-    dateUpdated: Joi.date()
+    status: Joi.string().valid('pending', 'completed')
   });
 
   return schema.validate(dividend);

@@ -16,8 +16,7 @@ import {
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'payroll', component: PayrollComponent },
-  { path: 'share-registration', component: ShareRegistrationComponent },
-  { path: 'issuers/:issuer_name', component: IssuerProfileComponent },
+  { path: 'issuers/:issuer_id', component: IssuerProfileComponent },
   { path: 'issuers', component: IssuersComponent },
   { path: 'shareholders', component: ShareholdersComponent },
   { path: 'news', component: NewsComponent },

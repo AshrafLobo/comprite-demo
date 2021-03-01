@@ -16,7 +16,10 @@ export class ShareholdersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.clients = this.issuersService.getIssuers();
+    this.issuersService
+      .getAll()
+      .subscribe((issuers: any[]) => (this.clients = issuers));
+
     this.faqs = this.faqsServcice.getShareRegistryFaqs();
   }
 }

@@ -45,13 +45,6 @@
           <mat-datepicker-toggle [for]="startDate" matSuffix></mat-datepicker-toggle>
           <mat-datepicker #startDate></mat-datepicker>
         </mat-form-field>
-
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>Choose an end date</mat-label>
-          <input [(ngModel)]="dateEnd" name="dateEnd" type="text" matInput [matDatepicker]="endDate">
-          <mat-datepicker-toggle [for]="endDate" matSuffix></mat-datepicker-toggle>
-          <mat-datepicker #endDate></mat-datepicker>
-        </mat-form-field>
       </div>
 
       <button mat-icon-button (click)="sidenav.close()">
@@ -67,7 +60,9 @@
         </button>
 
         <div class="news-cards-container row mx-1 mx-md-auto mx-xl-5 pt-5 mb-3">
-          <app-news-card *ngFor="let article of (articles | filter:sort:searchTerm:company:dateStart:dateEnd)"
+          <div *ngIf="!articles" class="h-100 w-100 text-center align-content-center">NO ARTICLES ADDED
+          </div>
+          <app-news-card *ngFor="let article of (articles | filter:sort:searchTerm:company:dateStart)"
             [article]="article" class="col-12 col-xl-6 mb-3">
           </app-news-card>
         </div>

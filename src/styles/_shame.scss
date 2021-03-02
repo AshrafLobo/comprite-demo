@@ -78,9 +78,24 @@
   }
 }
 
-/**Mat icon buttton fix*/
-[mat-icon-button] {
+// Mat icon buttton fix
+[mat-icon-button],
+[mat-button] {
   &:focus {
     outline: none;
+  }
+}
+
+// Mat snackbar
+.mat-snack-bar-container {
+  background-color: white;
+
+  simple-snack-bar > span {
+    color: red;
+    font-weight: normal;
+  }
+
+  .mat-button-wrapper {
+    color: $text-primary;
   }
 }

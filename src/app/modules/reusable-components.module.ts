@@ -31,6 +31,7 @@ import {
 // Pipes
 import { SummaryPipe } from '../common/summary.pipe';
 import { FilterPipe } from '../common/filter.pipe';
+import { IssuerFilterPipe } from '../common/issuer-filter.pipe';
 
 // Modules
 import { AppMaterialModule } from './app-material.module';
@@ -66,6 +67,7 @@ const reusableComponents = [
   PayrollPaymentDialogComponent,
   SummaryPipe,
   FilterPipe,
+  IssuerFilterPipe,
 ];
 
 @NgModule({

@@ -16,10 +16,13 @@ button {
 
 /*News card section*/
 .news-card-section {
-  min-height: 500px;
+  .news-cards-container {
+    min-height: 500px;
+  }
 
   mat-sidenav-container {
     width: 100%;
+    min-height: 500px;
 
     mat-sidenav,
     mat-sidenav-content {

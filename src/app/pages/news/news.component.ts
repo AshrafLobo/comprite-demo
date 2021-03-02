@@ -14,7 +14,6 @@ export class NewsComponent implements OnInit {
   searchTerm: string = '';
   company: string = '';
   dateStart: string = '';
-  dateEnd: string = '';
 
   constructor(private service: NewsService) {}
 

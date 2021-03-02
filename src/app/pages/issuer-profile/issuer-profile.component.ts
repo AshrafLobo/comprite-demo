@@ -12,6 +12,11 @@ export class IssuerProfileComponent implements OnInit {
   issuer;
   articles;
 
+  // Filter variables
+  sort: string = '';
+  searchTerm: string = '';
+  dateStart: string = '';
+
   constructor(
     private route: ActivatedRoute,
     private issuersService: IssuersService,

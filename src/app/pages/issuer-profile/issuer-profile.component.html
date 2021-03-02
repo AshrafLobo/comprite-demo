@@ -29,13 +29,13 @@
         <mat-sidenav-container>
 
           <!-- Filter sidenav section -->
-          <mat-sidenav #sidenav>
-            <div class="search-section text-center">
+          <mat-sidenav class="py-3" #sidenav>
+            <div class="search-section text-center mx-3">
               <h2 class="m-0 my-2">Filter list</h2>
               <hr class="m-0 mb-2" />
 
               <mat-form-field class="w-100" appearance="outline">
-                <mat-select placeholder="Sort">
+                <mat-select [(ngModel)]="sort" name="sort" placeholder="Sort">
                   <mat-option>None</mat-option>
                   <mat-option value="Asc">Asc</mat-option>
                   <mat-option value="Desc">Desc</mat-option>
@@ -43,22 +43,15 @@
               </mat-form-field>
 
               <mat-form-field class="w-100" appearance="outline">
-                <mat-icon matPrefix>search</mat-icon>
-                <input type="text" placeholder="Search" matInput>
+                <mat-icon matSuffix>search</mat-icon>
+                <input [(ngModel)]="searchTerm" name="search" type="text" placeholder="Search" matInput>
               </mat-form-field>
 
               <mat-form-field class="w-100" appearance="outline">
                 <mat-label>Choose a start date</mat-label>
-                <input type="text" matInput [matDatepicker]="startDate">
+                <input [(ngModel)]="dateStart" name="dateStart" type="text" matInput [matDatepicker]="startDate">
                 <mat-datepicker-toggle [for]="startDate" matSuffix></mat-datepicker-toggle>
                 <mat-datepicker #startDate></mat-datepicker>
-              </mat-form-field>
-
-              <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Choose an end date</mat-label>
-                <input type="text" matInput [matDatepicker]="endDate">
-                <mat-datepicker-toggle [for]="endDate" matSuffix></mat-datepicker-toggle>
-                <mat-datepicker #endDate></mat-datepicker>
               </mat-form-field>
             </div>
 
@@ -75,7 +68,8 @@
               </button>
 
               <div *ngIf="articles" class="news-cards-wrapper mx-auto">
-                <div *ngFor="let article of articles" class="mx-lg-5 pt-5 mb-3">
+                <div *ngFor="let article of (articles | issuerfilter:sort:searchTerm:dateStart)"
+                  class="mx-lg-5 pt-5 mb-3">
                   <app-news-card [article]="article"></app-news-card>
                 </div>
               </div>

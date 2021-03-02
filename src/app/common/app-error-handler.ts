@@ -1,8 +1,20 @@
+import { Injectable, NgZone } from '@angular/core';
 import { ErrorHandler } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
+@Injectable()
 export class AppErrorHandler implements ErrorHandler {
+  constructor(private _snackBar: MatSnackBar, private zone: NgZone) {}
+
   handleError(error) {
-    alert('An unexpected error occured.');
+    this.zone.run(() => {
+      this._snackBar.open('An unexpected error occured', 'Dismiss', {
+        duration: 500000,
+        horizontalPosition: 'start',
+        verticalPosition: 'bottom',
+      });
+    });
+
     console.log(error);
   }
 }

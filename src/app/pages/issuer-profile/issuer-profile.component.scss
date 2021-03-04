@@ -47,7 +47,7 @@ button {
       max-height: 1000px;
 
       .news-container {
-        overflow-y: scroll;
+        overflow-y: hidden;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -58,6 +58,34 @@ button {
           position: absolute;
           top: 0;
           left: 0;
+        }
+
+        &:hover {
+          overflow-y: scroll;
+        }
+
+        /*Style timeline scrollbar*/
+        /* width */
+        &::-webkit-scrollbar {
+          position: absolute;
+          right: 0;
+          width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+          height: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
         }
       }
     }
@@ -81,23 +109,5 @@ button {
         right: 0;
       }
     }
-  }
-}
-
-/*Shareholder information section*/
-.shareholder-information {
-  .completed,
-  .pending {
-    border-radius: 25px;
-    color: White;
-    padding: 5px 10px;
-  }
-
-  .completed {
-    background-color: lime;
-  }
-
-  .pending {
-    background-color: $text-secondary;
   }
 }

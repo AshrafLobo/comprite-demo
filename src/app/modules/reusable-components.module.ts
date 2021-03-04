@@ -26,6 +26,10 @@ import {
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
   PayrollPaymentDialogComponent,
+  NewsArticleDialogComponent,
+  AgmComponent,
+  EgmComponent,
+  DividendsComponent,
 } from '../components/index';
 
 // Pipes
@@ -65,6 +69,10 @@ const reusableComponents = [
   ShareRegistrationTestimonialsComponent,
   GoogleMapsComponent,
   PayrollPaymentDialogComponent,
+  NewsArticleDialogComponent,
+  AgmComponent,
+  EgmComponent,
+  DividendsComponent,
   SummaryPipe,
   FilterPipe,
   IssuerFilterPipe,

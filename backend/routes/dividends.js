@@ -17,8 +17,16 @@ const { validateDividend: validate } = require('../common/joiValidators');
 
 // Get all dividends
 router.get('/', async (req, res) => {
+  let filter = {};
+
+  if (req.query.issuerId) {
+    filter["issuer"] = {
+		_id: req.query.issuerId
+	};
+  }
+  
   const dividends = await Dividend
-    .find()
+    .find(filter)
     .populate('issuer', 'name');
 
   res.send(dividends);

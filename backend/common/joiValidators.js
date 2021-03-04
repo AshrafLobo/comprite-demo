@@ -70,7 +70,7 @@ function validateDividend(dividend) {
     bookClosureDate: Joi.date(),
     disbursmentDate: Joi.date(),
     dividendType: Joi.string().min(2).max(50),
-    dividendRate: Joi.boolean(),
+    dividendRate: Joi.number(),
     status: Joi.string().valid('pending', 'completed')
   });
 

@@ -21,3 +21,7 @@ export * from './google-maps/google-maps.component';
 export * from './payroll-testimonials/payroll-testimonials.component';
 export * from './share-registration-testimonials/share-registration-testimonials.component';
 export * from './payroll-payment-dialog/payroll-payment-dialog.component';
+export * from './news-article-dialog/news-article-dialog.component';
+export * from './agm/agm.component';
+export * from './egm/egm.component';
+export * from './dividends/dividends.component';

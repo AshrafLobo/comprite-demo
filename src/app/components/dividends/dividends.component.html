@@ -1,0 +1,36 @@
+<h2 class="mt-5">Dividends</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Book closure date</th>
+      <th scope="col">Disbursment date</th>
+      <th scope="col">Year</th>
+      <th scope="col">Type</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="dividendsData && dividendsData.length <= 0">
+      <tr>
+        <td colspan="6" class="text-center">NO DIVIDENDS DATA AVAILABLE</td>
+      </tr>
+    </ng-container>
+
+    <ng-container *ngIf="dividendsData && dividendsData.length > 0">
+      <tr *ngFor="let data of dividendsData">
+        <td>{{ (data.bookClosureDate | date:'MM/dd/yyyy') || 'TBD'}}</td>
+        <td>{{ (data.disbursmentDate | date:'MM/dd/yyyy') || 'TBD'}}</td>
+        <td>{{ (data.bookClosureDate | date:'yyyy') || (today | date:'yyyy') }}</td>
+        <td>{{ data.dividendType || 'TBD'}}</td>
+        <td>{{ data.dividendRate || 'TBD'}}</td>
+        <td>
+          <div class="text-center" [ngClass]="{
+            'pending': data.status === 'pending',
+            'completed': data.status === 'completed'
+          }">{{data.status}}</div>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

@@ -1,0 +1,35 @@
+<h2>Annual General Meetings(AGM)</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Title</th>
+      <th scope="col">Year</th>
+      <th scope="col">Venue</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <ng-container *ngIf="agmData && agmData.length <= 0">
+      <tr>
+        <td colspan="5" class="text-center">NO AGM AVAILABLE</td>
+      </tr>
+    </ng-container>
+
+    <ng-container *ngIf="agmData && agmData.length > 0">
+      <tr *ngFor="let data of agmData">
+        <th scope="row">{{ (data.agmDate | date:'MM/dd/yyyy') || 'TBD'}}</th>
+        <td>{{ data.title }}</td>
+        <td>{{ (data.agmDate | date:'yyyy') || (today | date:'yyyy') }}</td>
+        <td>{{ data.venue || 'TBD'}}</td>
+        <td>
+          <div class="text-center" [ngClass]="{
+              'pending': data.status === 'pending',
+              'completed': data.status === 'completed'
+            }">{{data.status}}</div>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

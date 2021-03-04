@@ -17,8 +17,16 @@ const { validateEgm: validate } = require('../common/joiValidators');
 
 // Get all egms
 router.get('/', async (req, res) => {
+  let filter = {};
+
+  if (req.query.issuerId) {
+    filter["issuer"] = {
+		_id: req.query.issuerId
+	};
+  }
+  
   const egms = await Egm
-    .find()
+    .find(filter)
     .populate('issuer', 'name');
 
   res.send(egms);

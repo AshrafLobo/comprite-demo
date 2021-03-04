@@ -69,7 +69,7 @@
 
               <div *ngIf="articles" class="news-cards-wrapper mx-auto">
                 <div *ngFor="let article of (articles | issuerfilter:sort:searchTerm:dateStart)"
-                  class="mx-lg-5 pt-5 mb-3">
+                  class="mx-lg-5 pt-5 mb-3 mx-3 mx-xl-0">
                   <app-news-card [article]="article"></app-news-card>
                 </div>
               </div>
@@ -83,147 +83,13 @@
     <mat-tab label="Shareholder information">
       <div class="my-5 shareholder-information table-responsive-sm">
         <!-- AGM table section -->
-        <h2>Annual General Meetings(AGM)</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Title</th>
-              <th scope="col">Year</th>
-              <th scope="col">Venue</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">10/10/2020</th>
-              <td>Scangroup AGM 2020</td>
-              <td>2020</td>
-              <td>Muthaiga Mini Market</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">TBD</th>
-              <td>TBD</td>
-              <td>2021</td>
-              <td>TBD</td>
-              <td>
-                <div class="pending text-center">pending</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <app-agm *ngIf="issuer" [issuerId]="issuer._id"></app-agm>
 
         <!-- EGM table section -->
-        <h2 class="mt-5">Extraordinary General Meetings(EGM)</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Title</th>
-              <th scope="col">Year</th>
-              <th scope="col">Venue</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">01/05/2020</th>
-              <td>Elect new board members</td>
-              <td>2020</td>
-              <td>City park</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">23/06/2020</th>
-              <td>Discuss agenda</td>
-              <td>2020</td>
-              <td>Uhuru park</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">28/06/2020</th>
-              <td>Some other business</td>
-              <td>2020</td>
-              <td>City park</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">15/10/2020</th>
-              <td>Discuss notices</td>
-              <td>2020</td>
-              <td>TBD</td>
-              <td>
-                <div class="pending text-center">pending</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <app-egm *ngIf="issuer" [issuerId]="issuer._id"></app-egm>
 
         <!-- Dividends table section -->
-        <h2 class="mt-5">Dividends</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Book closure date</th>
-              <th scope="col">Disbursment date</th>
-              <th scope="col">Year</th>
-              <th scope="col">Type</th>
-              <th scope="col">Rate</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>01/05/2017</td>
-              <td>01/05/2017</td>
-              <td>2017</td>
-              <td>Cash dividend</td>
-              <td>1.2</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <td>23/06/2018</td>
-              <td>23/06/2018</td>
-              <td>2018</td>
-              <td>Stock dividend</td>
-              <td>N/A</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <td>28/06/2019</td>
-              <td>28/06/2019</td>
-              <td>2019</td>
-              <td>Cash dividend</td>
-              <td>1.5</td>
-              <td>
-                <div class="completed text-center">completed</div>
-              </td>
-            </tr>
-            <tr>
-              <td>15/10/2020</td>
-              <td>25/10/2020</td>
-              <td>2020</td>
-              <td>Cash dividend</td>
-              <td>1.25</td>
-              <td>
-                <div class="pending text-center">pending</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <app-dividends *ngIf="issuer" [issuerId]="issuer._id"></app-dividends>
       </div>
     </mat-tab>
   </mat-tab-group>

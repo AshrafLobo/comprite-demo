@@ -1,0 +1,17 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.completed,
+.pending {
+  border-radius: 25px;
+  color: White;
+  padding: 5px 10px;
+}
+
+.completed {
+  background-color: lime;
+}
+
+.pending {
+  background-color: $text-secondary;
+}

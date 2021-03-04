@@ -17,8 +17,16 @@ const { validateAgm: validate } = require('../common/joiValidators');
 
 // Get all agms
 router.get('/', async (req, res) => {
+  let filter = {};
+
+  if (req.query.issuerId) {
+    filter["issuer"] = {
+		_id: req.query.issuerId
+	};
+  }
+  
   const agms = await Agm
-    .find()
+    .find(filter)
     .populate('issuer', 'name');
 
   res.send(agms);

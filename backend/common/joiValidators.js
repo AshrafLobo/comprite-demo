@@ -1,6 +1,10 @@
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
+/**
+ * Validators 
+ */
 
+/** API Request Validators */
 // Issuer validator
 function validateIssuer(issuer) {
   const schema = Joi.object({
@@ -77,10 +81,42 @@ function validateDividend(dividend) {
   return schema.validate(dividend);
 }
 
-// Exports
+// User validator
+function validateUser(user) {
+  const schema = Joi.object({
+    name: Joi.string().max(50).required(),
+    email: Joi.string().min(5).max(255).email().required(),
+    password: Joi.string().min(5).max(1024).required()
+  });
+
+  return schema.validate(user);
+}
+
+/** Forms Request Validators */
+// Payroll Form
+function validatePayrollForm(payrollFormData) {
+  const schema = Joi.object({
+    firstName: Joi.string().alphanum().max(50).required(),
+    lastName: Joi.string().alphanum().max(50).required(),
+    email: Joi.string().email().required(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    jobTitle: Joi.string(),
+    numberOfEmployees: Joi.number().min(0),
+    enquireAbout: Joi.string().required(),
+    message: Joi.string().min(5).max(1024).required()
+  });
+
+  return schema.validate(payrollFormData);
+}
+
+/** Exports */
 exports.validateIssuer = validateIssuer;
 exports.validateNews = validateNews;
 exports.validateTimeline = validateTimeline;
 exports.validateAgm = validateAgm;
 exports.validateEgm = validateEgm;
 exports.validateDividend = validateDividend;
+exports.validateUser = validateUser;
+
+/** Forms exports */
+exports.validatePayrollForm = validatePayrollForm;

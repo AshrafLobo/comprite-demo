@@ -37,7 +37,7 @@ export class PayrollFormComponent implements OnInit {
     }),
     enquireAbout: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
-    recaptchaReactive: new FormControl(null, Validators.required),
+    // recaptchaReactive: new FormControl(null, Validators.required),
   });
 
   // Get form controls
@@ -75,6 +75,6 @@ export class PayrollFormComponent implements OnInit {
 
   // Submit form fuction
   submit() {
-    // console.log(this.form.value);
+    console.log(this.form.value);
   }
 }

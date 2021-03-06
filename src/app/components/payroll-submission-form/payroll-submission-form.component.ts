@@ -33,7 +33,7 @@ export class PayrollSubmissionFormComponent implements OnInit {
       Validators.required,
       Validators.pattern('[0-9]+'),
     ]),
-    recaptchaReactive: new FormControl(null, Validators.required),
+    //recaptchaReactive: new FormControl(null, Validators.required),
   });
 
   // Get form controls

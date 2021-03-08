@@ -20,7 +20,7 @@ const { validateIssuer: validate } = require('../common/joiValidators');
  */
 
 // Get all issuers
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
   const issuers = await Issuer.find().sort('name');
   res.send(issuers);
 });

@@ -1,3 +1,5 @@
-<button [disabled]="disabled" [attr.type]="type" mat-raised-button [ngClass]="{'px-5': large, 'py-2': large}">
-  <ng-content></ng-content>
-</button>
+<div [matTooltip]="type === 'submit' && disabled ? 'Fill in the required fields to submit' : ''">
+  <button [disabled]="disabled" [attr.type]="type" mat-raised-button [ngClass]="{'px-5': large, 'py-2': large}">
+    <ng-content></ng-content>
+  </button>
+</div>

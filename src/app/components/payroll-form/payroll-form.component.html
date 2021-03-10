@@ -1,8 +1,7 @@
 <div class="container">
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <div formGroupName="userDetails">
+  <form novalidate [formGroup]="payrollForm" (ngSubmit)="submit()">
+    <div>
       <div class="row">
-
         <!-- First name field -->
         <div class="col-12 col-lg">
           <mat-form-field class="w-100 mb-2" appearance="outline">
@@ -70,7 +69,7 @@
       </div>
     </div>
 
-    <div class="row" formGroupName="companyDetails">
+    <div class="row">
 
       <!--Company field -->
       <div class="col-12 col-lg">
@@ -101,7 +100,7 @@
     <div class="row">
 
       <!-- Number of employees field -->
-      <div class="col-12 col-lg" formGroupName="companyDetails">
+      <div class="col-12 col-lg">
         <mat-form-field class="w-100 mb-2" appearance="outline">
           <!-- Number of employees input -->
           <mat-label>Number of employees</mat-label>
@@ -123,10 +122,11 @@
           <mat-label>Enquire about</mat-label>
           <mat-select formControlName="enquireAbout">
             <mat-option>None</mat-option>
-            <mat-option value="Pay 100">Pay100 Plus</mat-option>
-            <mat-option value="Payroll outsourcing services">Payroll submission</mat-option>
-            <mat-option value="Payroll outsourcing services">Payroll outsourcing services</mat-option>
-            <mat-option value="Online FTP Backup">Online FTP Backup</mat-option>
+            <mat-option value="pay 100">Pay100 Plus</mat-option>
+            <mat-option value="payroll outsourcing services">Payroll submission</mat-option>
+            <mat-option value="payroll outsourcing services">Payroll outsourcing services</mat-option>
+            <mat-option value="online FTP backup">Online FTP Backup</mat-option>
+            <mat-option value="other">Other</mat-option>
           </mat-select>
 
           <!-- Enquire about errors -->
@@ -154,7 +154,7 @@
 
     <div class="row">
       <!-- <re-captcha class="ml-3 mb-2 mb-md-0" [siteKey]="siteKey" formControlName="recaptchaReactive"></re-captcha> -->
-      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
+      <app-custom-button [disabled]="payrollForm.invalid" class="ml-auto mr-3" large="true" type="submit">Submit
       </app-custom-button>
     </div>
   </form>

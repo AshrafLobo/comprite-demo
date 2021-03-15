@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormValidators } from '../../common/form.validators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ShareRegistrationFormService } from 'src/app/services';
 
 @Component({
   selector: 'app-share-registration-form',
@@ -9,69 +10,95 @@ import { FormValidators } from '../../common/form.validators';
 })
 export class ShareRegistrationFormComponent implements OnInit {
   siteKey = '6Lc6ejsaAAAAAI_N3NxRd7Iiu_JoXVmzncrr1z0o';
+  shareRegistrationForm: FormGroup;
 
-  form = new FormGroup({
-    userDetails: new FormGroup({
-      firstName: new FormControl('', [
-        Validators.required,
-        FormValidators.cannotContainSpace,
-      ]),
-      lastName: new FormControl('', [
-        Validators.required,
-        FormValidators.cannotContainSpace,
-      ]),
+  constructor(
+    private shareRegistrationService: ShareRegistrationFormService,
+    private _snackBar: MatSnackBar
+  ) {}
+
+  ngOnInit(): void {
+    this.shareRegistrationForm = new FormGroup({
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       address: new FormControl(''),
       phoneNumber: new FormControl('', [
         Validators.required,
         Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
       ]),
-      id: new FormControl('', [
+      idNumber: new FormControl('', [
         Validators.required,
         Validators.pattern('[0-9]+'),
       ]),
-      cdsc: new FormControl(''),
-    }),
-    company: new FormControl(''),
-    message: new FormControl('', Validators.required),
-    recaptchaReactive: new FormControl(null, Validators.required),
-  });
+      cdscNumber: new FormControl(''),
+      company: new FormControl('', [Validators.required]),
+      service: new FormControl('', [Validators.required]),
+      message: new FormControl('', Validators.required),
+      // recaptchaReactive: new FormControl(null, Validators.required),
+    });
+  }
 
   // Get form controls
   get firstName() {
-    return this.form.get('userDetails.firstName');
+    return this.shareRegistrationForm.get('firstName');
   }
 
   get lastName() {
-    return this.form.get('userDetails.lastName');
+    return this.shareRegistrationForm.get('lastName');
   }
 
   get email() {
-    return this.form.get('userDetails.email');
+    return this.shareRegistrationForm.get('email');
   }
 
   get phoneNumber() {
-    return this.form.get('userDetails.phoneNumber');
+    return this.shareRegistrationForm.get('phoneNumber');
   }
 
-  get id() {
-    return this.form.get('userDetails.id');
+  get idNumber() {
+    return this.shareRegistrationForm.get('idNumber');
   }
 
   get company() {
-    return this.form.get('companyDetails.company');
+    return this.shareRegistrationForm.get('company');
+  }
+
+  get service() {
+    return this.shareRegistrationForm.get('service');
   }
 
   get message() {
-    return this.form.get('message');
+    return this.shareRegistrationForm.get('message');
   }
 
   // Submit form fuction
   submit() {
-    // console.log(this.form.value);
+    let values = this.shareRegistrationForm.value;
+
+    for (let key in this.shareRegistrationForm.value) {
+      if (values[key] === '' || values[key] === null) {
+        delete values[key];
+      }
+    }
+
+    this.shareRegistrationService.create(values).subscribe((resource) => {
+      if (resource && resource !== null) {
+        // Clear form control validations
+        for (let key in this.shareRegistrationForm.controls) {
+          this.shareRegistrationForm.controls[key].clearValidators();
+          this.shareRegistrationForm.controls[key].updateValueAndValidity;
+        }
+
+        this.shareRegistrationForm.reset();
+
+        this._snackBar.open('Message sent successfully', '', {
+          duration: 5000,
+          panelClass: ['success-snackbar'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top',
+        });
+      }
+    });
   }
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

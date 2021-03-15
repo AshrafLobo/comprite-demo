@@ -1,4 +1,5 @@
 const Joi = require('joi');
+const { min } = require('lodash');
 Joi.objectId = require('joi-objectid')(Joi);
 /**
  * Validators 
@@ -93,20 +94,68 @@ function validateUser(user) {
 }
 
 /** Forms Request Validators */
+
 // Payroll Form
-function validatePayrollForm(payrollFormData) {
+function validatePayrollForm(formData) {
   const schema = Joi.object({
-    firstName: Joi.string().alphanum().max(50).required(),
-    lastName: Joi.string().alphanum().max(50).required(),
+    firstName: Joi.string().max(50).required(),
+    lastName: Joi.string().max(50).required(),
     email: Joi.string().email().required(),
     phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    company: Joi.string().required(),
     jobTitle: Joi.string(),
     numberOfEmployees: Joi.number().min(0),
-    enquireAbout: Joi.string().required(),
+    enquireAbout: Joi.string().required().valid('pay 100', 'payroll submission', 'payroll outsourcing services', 'online FTP backup', 'other'),
     message: Joi.string().min(5).max(1024).required()
   });
 
-  return schema.validate(payrollFormData);
+  return schema.validate(formData);
+}
+
+// Payroll Download Form
+function validateDownloadPayrollForm(formData) {
+  const schema = Joi.object({
+    firstName: Joi.string().max(50).required(),
+    lastName: Joi.string().max(50).required(),
+    email: Joi.string().email().required(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    company: Joi.string().required(),
+    numberOfEmployees: Joi.number().min(0),
+  });
+
+  return schema.validate(formData);
+}
+
+// Contact Us Form
+function validateContactUsForm(formData) {
+  const schema = Joi.object({
+    firstName: Joi.string().max(50).required(),
+    lastName: Joi.string().max(50).required(),
+    email: Joi.string().email().required(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    subject: Joi.string().required(),
+    message: Joi.string().min(5).max(1024).required()
+  });
+
+  return schema.validate(formData);
+}
+
+// Share RegistrationForm
+function validateShareRegistrationForm(formData) {
+  const schema = Joi.object({
+    firstName: Joi.string().max(50).required(),
+    lastName: Joi.string().max(50).required(),
+    email: Joi.string().email().required(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    address: Joi.string(),
+    idNumber: Joi.string().required().min(5),
+    cdscNumber: Joi.string().min(5),
+    company: Joi.string().required(),
+    service: Joi.string().required(),
+    message: Joi.string().min(5).max(1024).required()
+  });
+
+  return schema.validate(formData);
 }
 
 /** Exports */
@@ -120,3 +169,6 @@ exports.validateUser = validateUser;
 
 /** Forms exports */
 exports.validatePayrollForm = validatePayrollForm;
+exports.validateDownloadPayrollForm = validateDownloadPayrollForm;
+exports.validateContactUsForm = validateContactUsForm;
+exports.validateShareRegistrationForm = validateShareRegistrationForm;

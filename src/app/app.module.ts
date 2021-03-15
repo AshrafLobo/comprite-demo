@@ -33,6 +33,10 @@ import {
   AgmsService,
   EgmsService,
   DividendsService,
+  PayrollFormService,
+  PayrollDownloadFormService,
+  ContactUsFormService,
+  ShareRegistrationFormService,
 } from './services/index';
 
 import { AppErrorHandler } from './common/app-error-handler';
@@ -66,6 +70,10 @@ import { AppErrorHandler } from './common/app-error-handler';
     AgmsService,
     EgmsService,
     DividendsService,
+    PayrollFormService,
+    PayrollDownloadFormService,
+    ContactUsFormService,
+    ShareRegistrationFormService,
     {
       provide: ErrorHandler,
       useClass: AppErrorHandler,

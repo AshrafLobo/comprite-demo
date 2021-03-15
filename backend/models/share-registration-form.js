@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-// Payroll form model
-const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
+// Share registration form model
+const ShareRegistrationForm = mongoose.model('ShareRegistrationForm', mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -19,24 +19,28 @@ const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
     required: true,
   },
   phoneNumber: {
+    type: String,
+    required: true
+  },
+  address: {
     type: String
   },
+  idNumber: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
+  cdscNumber: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
   company: {
-	type: String,
-	trim: true,
-	required: true
-  },
-  jobTitle: {
     type: String,
-	trim: true
+    required: true
   },
-  numberOfEmployees: {
-    type: Number,
-    min: 0
-  },
-  enquireAbout: {
+  service: {
     type: String,
-	enum: ['pay 100', 'payroll submission', 'payroll outsourcing services', 'online FTP backup', 'other'],
     required: true
   },
   message: {
@@ -47,4 +51,4 @@ const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
   }
 }));
 
-module.exports = PayrollForm;
+module.exports = ShareRegistrationForm;

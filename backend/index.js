@@ -5,7 +5,7 @@ const winston = require('winston');
 const app = express();
 
 /** Load routes */
-require('./startup/logging')();
+require('./startup/logging')(app);
 require('./startup/routes')(app);
 require('./startup/db')();
 require('./startup/config')();

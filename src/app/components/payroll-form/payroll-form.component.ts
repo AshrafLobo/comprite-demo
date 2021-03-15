@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { PayrollFormService } from 'src/app/services';
 
 @Component({
   selector: 'app-payroll-form',
@@ -10,7 +12,10 @@ export class PayrollFormComponent implements OnInit {
   siteKey = '6Lc6ejsaAAAAAI_N3NxRd7Iiu_JoXVmzncrr1z0o';
   payrollForm: FormGroup;
 
-  constructor() {}
+  constructor(
+    private service: PayrollFormService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.payrollForm = new FormGroup({
@@ -73,24 +78,23 @@ export class PayrollFormComponent implements OnInit {
       }
     }
 
-    // console.log(JSON.stringify(values));
-    console.log(this.payrollForm.value);
-    this.payrollForm.reset();
+    this.service.create(values).subscribe((resource) => {
+      if (resource && resource !== null) {
+        this._snackBar.open('Message sent successfully', '', {
+          duration: 5000,
+          panelClass: ['success-snackbar'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top',
+        });
 
-    // Clear control validations
-    this.firstName.clearValidators();
-    this.firstName.updateValueAndValidity();
-    this.lastName.clearValidators();
-    this.lastName.updateValueAndValidity();
-    this.email.clearValidators();
-    this.email.updateValueAndValidity();
-    this.phoneNumber.clearValidators();
-    this.phoneNumber.updateValueAndValidity();
-    this.company.clearValidators();
-    this.company.updateValueAndValidity();
-    this.enquireAbout.clearValidators();
-    this.enquireAbout.updateValueAndValidity();
-    this.message.clearValidators();
-    this.message.updateValueAndValidity();
+        // Clear form control validations
+        for (let key in this.payrollForm.controls) {
+          this.payrollForm.controls[key].clearValidators();
+          this.payrollForm.controls[key].updateValueAndValidity;
+        }
+
+        this.payrollForm.reset();
+      }
+    });
   }
 }

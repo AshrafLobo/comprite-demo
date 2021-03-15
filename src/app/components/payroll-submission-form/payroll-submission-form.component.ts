@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormValidators } from '../../common/form.validators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { PayrollDownloadFormService } from 'src/app/services';
 
 @Component({
   selector: 'app-payroll-submission-form',
@@ -9,61 +10,84 @@ import { FormValidators } from '../../common/form.validators';
 })
 export class PayrollSubmissionFormComponent implements OnInit {
   siteKey = '6Lc6ejsaAAAAAI_N3NxRd7Iiu_JoXVmzncrr1z0o';
+  payrollForm: FormGroup;
+  @Input('activeModal') activeModal;
 
-  constructor() {}
+  constructor(
+    private service: PayrollDownloadFormService,
+    private _snackBar: MatSnackBar
+  ) {}
 
-  ngOnInit(): void {}
-
-  form = new FormGroup({
-    firstName: new FormControl('', [
-      Validators.required,
-      FormValidators.cannotContainSpace,
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-      FormValidators.cannotContainSpace,
-    ]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
-    ]),
-    company: new FormControl('', Validators.required),
-    numberOfEmployees: new FormControl('', [
-      Validators.required,
-      Validators.pattern('[0-9]+'),
-    ]),
-    //recaptchaReactive: new FormControl(null, Validators.required),
-  });
+  ngOnInit(): void {
+    this.payrollForm = new FormGroup({
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      phoneNumber: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
+      ]),
+      company: new FormControl('', Validators.required),
+      numberOfEmployees: new FormControl('', [Validators.pattern('[0-9]+')]),
+      //recaptchaReactive: new FormControl(null, Validators.required),
+    });
+  }
 
   // Get form controls
   get firstName() {
-    return this.form.get('firstName');
+    return this.payrollForm.get('firstName');
   }
 
   get lastName() {
-    return this.form.get('lastName');
+    return this.payrollForm.get('lastName');
   }
 
   get email() {
-    return this.form.get('email');
+    return this.payrollForm.get('email');
   }
 
   get phoneNumber() {
-    return this.form.get('phoneNumber');
+    return this.payrollForm.get('phoneNumber');
   }
 
   get company() {
-    return this.form.get('company');
+    return this.payrollForm.get('company');
   }
 
   get numberOfEmployees() {
-    return this.form.get('numberOfEmployees');
+    return this.payrollForm.get('numberOfEmployees');
   }
 
   // Submit form fuction
   submit() {
-    // console.log(this.form.value);
-    // window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
+    let values = this.payrollForm.value;
+
+    for (let key in this.payrollForm.value) {
+      if (values[key] === '' || values[key] === null) {
+        delete values[key];
+      }
+    }
+
+    this.service.create(values).subscribe((resource) => {
+      if (resource && resource !== null) {
+        // Clear form control validations
+        for (let key in this.payrollForm.controls) {
+          this.payrollForm.controls[key].clearValidators();
+          this.payrollForm.controls[key].updateValueAndValidity;
+        }
+
+        this.payrollForm.reset();
+        this.activeModal.close();
+
+        this._snackBar.open('Message sent successfully', '', {
+          duration: 5000,
+          panelClass: ['success-snackbar'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top',
+        });
+
+        window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
+      }
+    });
   }
 }

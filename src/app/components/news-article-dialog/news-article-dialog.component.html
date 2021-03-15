@@ -22,12 +22,12 @@
 
   <div class="modal-body">
     <h2 class="mx-5 my-3">{{article.title}}</h2>
-    <p class="mx-5">{{article.newsArticle}}</p>
+    <p class="mx-4 mx-lg-4">{{article.newsArticle}}</p>
   </div>
   <div class="modal-footer">
   </div>
 
-  <button ngbAutofocus class="close-button m-3" mat-icon-button (click)="activeModal.dismiss('Cross click')">
+  <button ngbAutofocus class="close-button m-3" mat-icon-button (click)="activeModal.close()">
     <mat-icon>close</mat-icon>
   </button>
 </div>

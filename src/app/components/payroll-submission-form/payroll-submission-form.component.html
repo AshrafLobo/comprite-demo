@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup]="form" (ngSubmit)="submit()">
+  <form [formGroup]="payrollForm" (ngSubmit)="submit()">
     <div class="row">
 
       <!-- First name field -->
@@ -90,7 +90,6 @@
           <!-- Number of employees errors -->
           <mat-error *ngIf="numberOfEmployees.touched && numberOfEmployees.invalid">
             <div *ngIf="numberOfEmployees.errors.pattern">Value should be a number</div>
-            <div *ngIf="numberOfEmployees.errors.required">Number of employees is required</div>
           </mat-error>
         </mat-form-field>
       </div>
@@ -100,7 +99,7 @@
       <!-- <re-captcha class="text-left ml-0 mb-2 mb-lg-0 col-12 col-lg" [siteKey]="siteKey"
         formControlName="recaptchaReactive">
       </re-captcha> -->
-      <app-custom-button [disabled]="form.invalid" class="ml-auto mr-0 col-12 col-lg text-left text-lg-right"
+      <app-custom-button [disabled]="payrollForm.invalid" class="ml-auto mr-0 col-12 col-lg text-left text-lg-right"
         large="true" type="submit">Submit
         and
         download

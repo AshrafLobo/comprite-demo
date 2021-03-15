@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-// Payroll form model
-const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
+// Contact us form model
+const ContactUsForm = mongoose.model('ContactUsForm', mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -21,22 +21,9 @@ const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
   phoneNumber: {
     type: String
   },
-  company: {
-	type: String,
-	trim: true,
-	required: true
-  },
-  jobTitle: {
+  subject: {
     type: String,
-	trim: true
-  },
-  numberOfEmployees: {
-    type: Number,
-    min: 0
-  },
-  enquireAbout: {
-    type: String,
-	enum: ['pay 100', 'payroll submission', 'payroll outsourcing services', 'online FTP backup', 'other'],
+    trim: true,
     required: true
   },
   message: {
@@ -47,4 +34,4 @@ const PayrollForm = mongoose.model('PayrollForm', mongoose.Schema({
   }
 }));
 
-module.exports = PayrollForm;
+module.exports = ContactUsForm;

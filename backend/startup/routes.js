@@ -14,6 +14,9 @@ const auth = require('../routes/auth');
 
 // Forms imports
 const payroll_forms = require('../routes/payroll-forms');
+const payroll_download_forms = require('../routes/payroll-download-forms');
+const contact_us_forms = require('../routes/contact-us-forms');
+const share_registration_forms = require('../routes/share-registration-forms');
 
 // Middleware imports
 const error = require('../middleware/error');
@@ -35,6 +38,9 @@ module.exports = function (app) {
 
   /** Forms API Routes Mapping */
   app.use('/api/payroll-forms', payroll_forms);
+  app.use('/api/payroll-downloads-forms', payroll_download_forms);
+  app.use('/api/contact-us', contact_us_forms);
+  app.use('/api/share-registration-forms', share_registration_forms);
 
   /** Middleware - After Route Call */
   app.use(error)

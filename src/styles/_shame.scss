@@ -87,15 +87,18 @@
 }
 
 // Mat snackbar
-.mat-snack-bar-container {
+.error-snackbar {
   background-color: white;
-
-  simple-snack-bar > span {
-    color: red;
-    font-weight: normal;
-  }
+  color: red;
+  font-weight: normal;
 
   .mat-button-wrapper {
     color: $text-primary;
   }
+}
+
+.success-snackbar {
+  background-color: white;
+  color: #4cbb17;
+  font-weight: normal;
 }

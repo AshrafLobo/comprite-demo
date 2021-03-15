@@ -8,10 +8,11 @@ export class AppErrorHandler implements ErrorHandler {
 
   handleError(error) {
     this.zone.run(() => {
-      this._snackBar.open('An unexpected error occured', 'Dismiss', {
+      this._snackBar.open('An unexpected error occured.', 'Dismiss', {
         duration: 5000,
-        horizontalPosition: 'start',
-        verticalPosition: 'bottom',
+        panelClass: ['error-snackbar'],
+        horizontalPosition: 'end',
+        verticalPosition: 'top',
       });
     });
 

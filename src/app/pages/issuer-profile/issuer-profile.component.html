@@ -9,9 +9,11 @@
       <h2 class="issuer-title m-0 mt-1">{{issuer?.title}}</h2>
       <hr />
       <p class="issuer-description my-3">{{issuer?.description}}</p>
-      <div>
-        <app-custom-button [routerLink]="['/shareholders']">Enquire about company</app-custom-button>
-        <app-custom-button class="ml-2">
+      <div class="row">
+        <app-custom-button class="col-12 my-2 my-xl-0 col-xl-auto" [routerLink]="['/shareholders']">Enquire about
+          company
+        </app-custom-button>
+        <app-custom-button class="col-12 my-2 my-xl-0 col-xl-auto">
           <mat-icon>get_app</mat-icon>Download dividend opt in form
         </app-custom-button>
       </div>

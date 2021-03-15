@@ -43,6 +43,7 @@ testem.log
 /typings
 /backend/node_modules/logfile.log
 /backend/node_modules/uncaughtExceptions.log
+/backend/dump
 
 # System Files
 .DS_Store

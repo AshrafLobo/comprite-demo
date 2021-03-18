@@ -4,7 +4,7 @@ const winston = require('winston');
 
 module.exports = function () {
   /** Connect to MongoDB */
-  mongoose.connect('mongodb://localhost/comprite', {
+  mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,

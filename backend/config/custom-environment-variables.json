@@ -1,6 +1,7 @@
 {
-  "database": {
-    "configurationString": "crk_configurationString"
-  },
-  "jwtPrivateKey": "crk_jwtPrivateKey"
+  "jwtPrivateKey": "crk_jwtPrivateKey",
+  "user": {
+    "user": "crk_user_email",
+    "pass": "crk_user_pass"
+  }
 }

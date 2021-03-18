@@ -11,7 +11,7 @@ import { NotFoundError } from '../common/not-found-error';
   providedIn: 'root',
 })
 export class DataService {
-  URL = 'http://localhost:3000/api/';
+  URL = 'https://safe-gorge-81189.herokuapp.com/api/';
 
   private config = new HttpHeaders()
     .set('Content-Type', 'application/json')

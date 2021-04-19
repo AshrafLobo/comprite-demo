@@ -4,6 +4,7 @@ export * from './faq.service';
 export * from './agms.service';
 export * from './egms.service';
 export * from './dividends.service';
+export * from './timelines.service';
 export * from './payroll-form.service';
 export * from './payroll-download-form.service';
 export * from './contact-us-form.service';

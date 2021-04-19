@@ -50,22 +50,22 @@ export class DataService {
   }
 
   // Update resource
-  update(resource, updateObject) {
-    return this._http
-      .put(`${this.URL}/${resource._id}`, JSON.stringify(updateObject), {
-        headers: this.config,
-      })
-      .pipe(catchError(this.handleError));
-  }
+  //update(resource, updateObject) {
+    //return this._http
+      //.put(`${this.URL}/${resource._id}`, JSON.stringify(updateObject), {
+        //headers: this.config,
+      //})
+      //.pipe(catchError(this.handleError));
+  //}
 
   // Delete resource
-  delete(id) {
-    return this._http
-      .delete(`${this.URL}/${id}`, {
-        headers: this.config,
-      })
-      .pipe(catchError(this.handleError));
-  }
+  //delete(id) {
+    //return this._http
+      //.delete(`${this.URL}/${id}`, {
+        //headers: this.config,
+      //})
+      //.pipe(catchError(this.handleError));
+ //}
 
   // Handle error function
   private handleError(error: Response) {

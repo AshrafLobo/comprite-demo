@@ -22,25 +22,21 @@ const sendEmail = require('../common/sendEmail');
 
 // Add a new payroll form
 router.post('/', async (req, res) => {
-  const { firstName, lastName, email, phoneNumber, subject, message } = req.body;
+  const { firstName, lastName, email, phoneNumber, company, numberOfEmployees } = req.body;
   const output = `
   <p>PAYROLL DOWNLOAD FORM REQUEST</p>
   <h3>User Details</h3>
   <ol>
     <li>Name: ${firstName} ${lastName}</li>    
-    <li>Email: ${email}</li>    
-    <li>Phone number: ${phoneNumber}</li>    
+    <li>Email: ${email || 'N/A'}</li>    
+    <li>Phone number: ${phoneNumber || 'N/A'}</li>    
   </ol> 
   
   <h3>Company Details</h3>
   <ol>
     <li>Company: ${company}</li>
-    <li>Job title: ${jobTitle || "N/A"}</li>    
     <li>Number of employees: ${numberOfEmployees || "N/A"}</li>
   </ol>
-
-  <h3>Message</h3>
-  <p>${message}</p>
 `;
 
   const { error } = validate(req.body);
@@ -48,7 +44,7 @@ router.post('/', async (req, res) => {
 
   const formData = new PayrollDownloadForm(_.pick(req.body, ['firstName', 'lastName', 'email', 'phoneNumber', 'company', 'numberOfEmployees']));
   await formData.save();
-  sendEmail(output, "Payroll download form request");
+  sendEmail(output, "Payroll download form request", "info@comp-rite.com, pay100@comp-rite.com");
   res.send(formData);
 });
 

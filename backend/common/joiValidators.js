@@ -12,9 +12,6 @@ function validateIssuer(issuer) {
     name: Joi.string().min(5).max(255).required(),
     title: Joi.string().min(5).max(255).required(),
     description: Joi.string().required(),
-    src: Joi.string().min(5).max(50).required(),
-    src_small: Joi.string().min(5).max(50).required(),
-    url_link: Joi.string().min(5).max(50).required(),
   });
 
   return schema.validate(issuer);
@@ -48,7 +45,7 @@ function validateAgm(agm) {
     issuerId: Joi.objectId().required(),
     title: Joi.string().min(5).max(255).required(),
     agmDate: Joi.date(),
-    venue: Joi.string().min(5).max(255),
+    venue: Joi.string(),
     status: Joi.string().valid('pending', 'completed')
   });
 
@@ -61,7 +58,7 @@ function validateEgm(egm) {
     issuerId: Joi.objectId().required(),
     title: Joi.string().min(5).max(255).required(),
     egmDate: Joi.date(),
-    venue: Joi.string().min(5).max(255),
+    venue: Joi.string(),
     status: Joi.string().valid('pending', 'completed')
   });
 
@@ -100,12 +97,12 @@ function validatePayrollForm(formData) {
   const schema = Joi.object({
     firstName: Joi.string().max(50).required(),
     lastName: Joi.string().max(50).required(),
-    email: Joi.string().email().required(),
-    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    email: Joi.string().email(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')),
     company: Joi.string().required(),
     jobTitle: Joi.string(),
     numberOfEmployees: Joi.number().min(0),
-    enquireAbout: Joi.string().required().valid('pay 100', 'payroll submission', 'payroll outsourcing services', 'online FTP backup', 'other'),
+    enquireAbout: Joi.string().required(),
     message: Joi.string().min(5).max(1024).required()
   });
 
@@ -117,8 +114,8 @@ function validateDownloadPayrollForm(formData) {
   const schema = Joi.object({
     firstName: Joi.string().max(50).required(),
     lastName: Joi.string().max(50).required(),
-    email: Joi.string().email().required(),
-    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    email: Joi.string().email(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')),
     company: Joi.string().required(),
     numberOfEmployees: Joi.number().min(0),
   });
@@ -131,8 +128,8 @@ function validateContactUsForm(formData) {
   const schema = Joi.object({
     firstName: Joi.string().max(50).required(),
     lastName: Joi.string().max(50).required(),
-    email: Joi.string().email().required(),
-    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    email: Joi.string().email(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')),
     subject: Joi.string().required(),
     message: Joi.string().min(5).max(1024).required()
   });
@@ -145,8 +142,8 @@ function validateShareRegistrationForm(formData) {
   const schema = Joi.object({
     firstName: Joi.string().max(50).required(),
     lastName: Joi.string().max(50).required(),
-    email: Joi.string().email().required(),
-    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')).required(),
+    email: Joi.string().email(),
+    phoneNumber: Joi.string().pattern(new RegExp('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')),
     address: Joi.string(),
     idNumber: Joi.string().required().min(5),
     cdscNumber: Joi.string().min(5),

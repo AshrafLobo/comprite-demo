@@ -1,10 +1,8 @@
-import { AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormGroup, ValidationErrors } from '@angular/forms';
 
-export class FormValidators {
-  static cannotContainSpace(control: AbstractControl): ValidationErrors | null {
-    if ((control.value as string).indexOf(' ') >= 0)
-      return { cannotContainSpace: true };
+export function emailOrNumberRequired(fg: FormGroup): ValidationErrors {
+  const email = fg.controls['email'].value;
+  const phoneNumber = fg.controls['phoneNumber'].value;
 
-    return null;
-  }
+  return email || phoneNumber ? null : { emailOrNumber: true };
 }

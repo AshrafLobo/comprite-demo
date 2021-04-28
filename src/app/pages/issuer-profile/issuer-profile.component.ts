@@ -11,6 +11,8 @@ export class IssuerProfileComponent implements OnInit {
   opened = false;
   issuer;
   articles;
+  opt_in;
+  opt_in_arr = ['Housing Finance Group', 'Total Kenya', 'Wpp ScanGroup'];
 
   // Filter variables
   sort: string = '';
@@ -28,11 +30,28 @@ export class IssuerProfileComponent implements OnInit {
       let issuer_id = params.get('issuer_id');
       this.issuersService.get(issuer_id).subscribe((issuer: {}) => {
         this.issuer = issuer;
+        this.opt_in = this.opt_in_arr.indexOf(this.issuer.name) > 0;
 
         this.newsService
           .getAll(this.issuer._id)
           .subscribe((articles: any[]) => (this.articles = articles));
       });
     });
+  }
+
+  onOptInClick(name) {
+    switch (name) {
+      case 'Housing Finance Group':
+        window.open('../../assets/downloads/hfck.docx');
+        break;
+      case 'Total Kenya':
+        window.open('../../assets/downloads/total.doc');
+        break;
+      case 'Wpp ScanGroup':
+        window.open('../../assets/downloads/wppScangroup.doc');
+        break;
+      default:
+        break;
+    }
   }
 }

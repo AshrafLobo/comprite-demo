@@ -2,7 +2,7 @@ const winston = require('winston');
 const config = require('config');
 const nodemailer = require('nodemailer');
 
-module.exports = async function (output, subject) {
+module.exports = async function (output, subject, receivers) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -18,8 +18,8 @@ module.exports = async function (output, subject) {
   // send mail with defined transport object
   try {
     let info = await transporter.sendMail({
-      from: `"Comprite Email Test" <${config.get('user.user')}>`, // sender address
-      to: "ashraflobo@gmail.com", // list of receivers
+      from: `"Comprite Email" <${config.get('user.user')}>`, // sender address
+      to: receivers, // list of receivers
       subject: subject, // Subject line
       text: "Hello world?", // plain text body
       html: output, // html body

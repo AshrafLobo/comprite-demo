@@ -28,8 +28,8 @@ router.post('/', async (req, res) => {
   <h3>User Details</h3>
   <ol>
     <li>Name: ${firstName} ${lastName}</li>    
-    <li>Email: ${email}</li>    
-    <li>Phone number: ${phoneNumber}</li>    
+    <li>Email: ${email || 'N/A'}</li>    
+    <li>Phone number: ${phoneNumber || 'N/A'}</li>    
   </ol> 
   
   <h3>Subject: ${subject}</h3>
@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
 
   const formData = new ContactUsForm(_.pick(req.body, ['firstName', 'lastName', 'email', 'phoneNumber', 'subject', 'message']));
   await formData.save();
-  sendEmail(output, "Contact us form request");
+  sendEmail(output, "Contact us form request", "info@comp-rite.com, ashraflobo@gmail.com");
   res.send(formData);
 });
 

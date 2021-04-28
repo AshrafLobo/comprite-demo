@@ -28,8 +28,8 @@ router.post('/', async (req, res) => {
   <h3>User Details</h3>
   <ol>
     <li>Name: ${firstName} ${lastName}</li>    
-    <li>Email: ${email}</li>    
-    <li>Phone number: ${phoneNumber}</li>    
+    <li>Email: ${email || 'N/A'}</li>    
+    <li>Phone number: ${phoneNumber || 'N/A'}</li>    
     <li>Address: ${address || "N/A"}</li>    
     <li>ID Number: ${idNumber}</li>    
     <li>CDSC Number: ${cdscNumber || "N/A"}</li>    
@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
 
   const formData = new ShareRegistrationForm(_.pick(req.body, ['firstName', 'lastName', 'email', 'phoneNumber', 'address', 'idNumber', 'cdscNumber', 'company', 'service', 'message']));
   await formData.save();
-  sendEmail(output, "Share registration form request");
+  sendEmail(output, "Share registration form request", "info@comp-rite.com, shares@comp-rite.com, operations@comp-rite.com");
   res.send(formData);
 });
 

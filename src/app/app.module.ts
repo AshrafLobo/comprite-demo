@@ -41,6 +41,7 @@ import {
 } from './services/index';
 
 import { AppErrorHandler } from './common/app-error-handler';
+import { OptInButtonComponent } from './components/opt-in-button/opt-in-button.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AppErrorHandler } from './common/app-error-handler';
     IssuerProfileComponent,
     NewsComponent,
     ContactsComponent,
+    OptInButtonComponent,
   ],
   imports: [
     BrowserModule,

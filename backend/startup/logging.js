@@ -16,7 +16,9 @@ module.exports = function (app) {
   }
 
   /** Handle Uncaught Promise and Synchronous Exceptions */
-  winston.exceptions.handle(new winston.transports.File({ filename: 'uncaughtExceptions.log' }));
+  winston.exceptions.handle(new winston.transports.File({
+    filename: 'uncaughtExceptions.log'
+  }));
 
   // Create winston transport
   winston.add(new winston.transports.File({

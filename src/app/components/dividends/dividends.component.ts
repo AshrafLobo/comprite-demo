@@ -17,7 +17,6 @@ export class DividendsComponent implements OnInit {
   ngOnInit(): void {
     this.service.getAll(this.issuerId).subscribe((resource) => {
       this.dividendsData = resource;
-      console.log('Resource', this.dividendsData);
     });
   }
 }

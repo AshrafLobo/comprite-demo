@@ -37,12 +37,17 @@
         <mat-form-field class="w-100 mb-2" appearance="outline">
           <!-- Email input -->
           <mat-label>Email</mat-label>
-          <input formControlName="email" matInput type="email" placeholder="Please enter your email address" required>
+          <input formControlName="email" matInput type="email" placeholder="Please enter your email address"
+            [errorStateMatcher]="matcher">
 
           <!-- Email errors -->
           <mat-error *ngIf="email.touched && email.invalid">
             <div *ngIf="email.errors.required">Email is required</div>
             <div *ngIf="email.errors.email">Email shoud contain a valid email address</div>
+          </mat-error>
+
+          <mat-error *ngIf="payrollForm.hasError('emailOrNumber')">
+            <div>Email or phone number required</div>
           </mat-error>
         </mat-form-field>
       </div>
@@ -54,12 +59,16 @@
           <!-- Phone number input -->
           <mat-label>Phone number</mat-label>
           <input formControlName="phoneNumber" matInput type="text" placeholder="Please enter your phone number"
-            required>
+            [errorStateMatcher]="matcher">
 
           <!-- Phone number errors -->
           <mat-error *ngIf="phoneNumber.touched && phoneNumber.invalid">
             <div *ngIf="phoneNumber.errors.required">Phone number is required</div>
             <div *ngIf="phoneNumber.errors.pattern">Phone number should be a valid phone number</div>
+          </mat-error>
+
+          <mat-error *ngIf="payrollForm.hasError('emailOrNumber')">
+            <div>Email or phone number required</div>
           </mat-error>
         </mat-form-field>
       </div>

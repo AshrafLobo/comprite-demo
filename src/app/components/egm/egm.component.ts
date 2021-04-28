@@ -9,7 +9,7 @@ import { EgmsService } from 'src/app/services';
 export class EgmComponent implements OnInit {
   egmData;
   today = new Date();
-  
+
   @Input('issuerId') issuerId;
 
   constructor(private service: EgmsService) {}
@@ -17,7 +17,6 @@ export class EgmComponent implements OnInit {
   ngOnInit(): void {
     this.service.getAll(this.issuerId).subscribe((resource) => {
       this.egmData = resource;
-      console.log('Egm Data', this.egmData);
     });
   }
 }

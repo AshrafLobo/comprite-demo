@@ -16,10 +16,9 @@ const PayrollDownloadForm = mongoose.model('PayrollDownloadForm', mongoose.Schem
   },
   email: {
     type: String,
-    required: true,
   },
   phoneNumber: {
-    type: String
+    type: String,
   },
   company: {
     type: String,

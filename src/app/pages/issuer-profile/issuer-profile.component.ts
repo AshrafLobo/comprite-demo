@@ -42,13 +42,19 @@ export class IssuerProfileComponent implements OnInit {
   onOptInClick(name) {
     switch (name) {
       case 'Housing Finance Group':
-        window.open('../../assets/downloads/hfck.docx');
+        window.open(
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/hfck.docx'
+        );
         break;
       case 'Total Kenya':
-        window.open('../../assets/downloads/total.doc');
+        window.open(
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/total.doc'
+        );
         break;
       case 'Wpp ScanGroup':
-        window.open('../../assets/downloads/wppScangroup.doc');
+        window.open(
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/wppScangroup.doc'
+        );
         break;
       default:
         break;

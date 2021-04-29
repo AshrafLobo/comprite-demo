@@ -93,7 +93,9 @@ export class PayrollSubmissionFormComponent implements OnInit {
           verticalPosition: 'top',
         });
 
-        window.open('../../assets/downloads/Setup.exe');
+        window.open(
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/Setup.exe'
+        );
       }
     });
   }

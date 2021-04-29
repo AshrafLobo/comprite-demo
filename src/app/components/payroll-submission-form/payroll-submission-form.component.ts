@@ -93,7 +93,7 @@ export class PayrollSubmissionFormComponent implements OnInit {
           verticalPosition: 'top',
         });
 
-        window.open('../../assets/downloads/B261 Pay100 Plus Setup.exe');
+        window.open('../../assets/downloads/Setup.exe');
       }
     });
   }

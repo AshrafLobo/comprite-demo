@@ -17,7 +17,6 @@ import {
   HomeComponent,
   AboutComponent,
   PayrollComponent,
-  ShareRegistrationComponent,
   IssuersComponent,
   ShareholdersComponent,
   IssuerProfileComponent,
@@ -41,7 +40,6 @@ import {
 } from './services/index';
 
 import { AppErrorHandler } from './common/app-error-handler';
-import { OptInButtonComponent } from './components/opt-in-button/opt-in-button.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +47,11 @@ import { OptInButtonComponent } from './components/opt-in-button/opt-in-button.c
     HomeComponent,
     AboutComponent,
     PayrollComponent,
-    ShareRegistrationComponent,
     IssuersComponent,
     ShareholdersComponent,
     IssuerProfileComponent,
     NewsComponent,
     ContactsComponent,
-    OptInButtonComponent,
   ],
   imports: [
     BrowserModule,

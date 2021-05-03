@@ -78,7 +78,7 @@
 </app-banner>
 
 <!-- News Cards Section -->
-<div *ngIf="articles" class="news-card-section container-fluid no-gutter my-5 mx-auto">
+<div *ngIf="articles && articles.length > 0" class="news-card-section container-fluid no-gutter my-5 mx-auto">
   <div class="text-center mt-0 mb-5">
     <h2>Latest news and information</h2>
     <p>Keep yourself informed with the latest information from our issuers.</p>

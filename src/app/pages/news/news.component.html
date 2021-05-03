@@ -60,8 +60,10 @@
         </button>
 
         <div class="news-cards-container row mx-1 mx-md-auto mx-xl-5 pt-5 mb-3">
-          <div *ngIf="!articles" class="h-100 w-100 text-center align-content-center">NO ARTICLES ADDED
-          </div>
+          <h2 *ngIf="!articles || articles.length <= 0" class="h-100 w-100 text-center align-content-center">NO
+            ARTICLES
+            ADDED
+          </h2>
           <app-news-card *ngFor="let article of (articles | filter:sort:searchTerm:company:dateStart)"
             [article]="article" class="col-12 col-xl-6 mb-3">
           </app-news-card>

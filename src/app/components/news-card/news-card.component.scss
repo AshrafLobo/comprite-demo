@@ -1,5 +1,19 @@
 @import "abstracts/variables";
 @import "base/typography";
+a {
+  text-decoration: none;
+  color: $text-secondary;
+  font-size: $paragraph-size-sm;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &:hover {
+    color: $gold;
+  }
+}
 
 .mat-card-header-container {
   height: 75px;

@@ -11,10 +11,9 @@
   <!-- Card body section -->
   <ng-container class="mat-card-content">
     <div class="text-center mb-2">
-      <p class="testimonial-quote my-4 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nobis
-        consequuntur eos
-        possimus commodi reiciendis
-        quisquam rem ipsum autem facilis?</p>
+      <p class="testimonial-quote my-4 mx-auto">
+        <ng-content select=".quote"></ng-content>
+      </p>
       <div class="row testimonial-details mx-auto">
         <div class="p-0 col-12 col-md-3 col-lg-12 col-xl-3">
           <img src="assets/issuerLogos/wppScangroup/logo_small.png" alt="Logo">

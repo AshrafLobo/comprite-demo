@@ -9,6 +9,7 @@ import {
   CardComponent,
   NewsCardComponent,
   CustomButtonComponent,
+  OptInButtonComponent,
   BannerComponent,
   SplitBannerComponent,
   TimelineComponent,
@@ -30,6 +31,7 @@ import {
   AgmComponent,
   EgmComponent,
   DividendsComponent,
+  CompanyTestimonialsComponent,
 } from '../components/index';
 
 // Pipes
@@ -52,6 +54,7 @@ const reusableComponents = [
   CardComponent,
   NewsCardComponent,
   CustomButtonComponent,
+  OptInButtonComponent,
   BannerComponent,
   SplitBannerComponent,
   TimelineComponent,
@@ -76,6 +79,7 @@ const reusableComponents = [
   SummaryPipe,
   FilterPipe,
   IssuerFilterPipe,
+  CompanyTestimonialsComponent,
 ];
 
 @NgModule({

@@ -5,7 +5,6 @@ import {
   HomeComponent,
   AboutComponent,
   PayrollComponent,
-  ShareRegistrationComponent,
   IssuersComponent,
   ShareholdersComponent,
   IssuerProfileComponent,

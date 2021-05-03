@@ -29,6 +29,10 @@ h2 {
     background-color: $dark-blue;
   }
 
+  .column2 {
+    background-color: white;
+  }
+
   h2 {
     color: white;
     font-size: $heading-size;
@@ -52,7 +56,7 @@ h2 {
   }
 
   h2 {
-    color: white;
+    color: $dark-blue;
     font-size: $heading-size;
     font-weight: 600;
   }

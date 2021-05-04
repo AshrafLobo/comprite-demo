@@ -1,6 +1,6 @@
 <!-- Main content -->
 <app-sidenav>
 	<main class="container-fluid p-0">
-		<router-outlet></router-outlet>
+		<router-outlet (activate)="scrollTop($event)"></router-outlet>
 	</main>
 </app-sidenav>

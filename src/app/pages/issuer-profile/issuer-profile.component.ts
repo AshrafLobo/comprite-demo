@@ -43,17 +43,17 @@ export class IssuerProfileComponent implements OnInit {
     switch (name) {
       case 'Housing Finance Group':
         window.open(
-          'https://ashraflobo.github.io/comprite-demo/assets/downloads/hfck.docx'
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/hfck.pdf'
         );
         break;
       case 'Total Kenya':
         window.open(
-          'https://ashraflobo.github.io/comprite-demo/assets/downloads/total.doc'
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/total.pdf'
         );
         break;
       case 'Wpp ScanGroup':
         window.open(
-          'https://ashraflobo.github.io/comprite-demo/assets/downloads/wppScangroup.doc'
+          'https://ashraflobo.github.io/comprite-demo/assets/downloads/wppScangroup.pdf'
         );
         break;
       default:

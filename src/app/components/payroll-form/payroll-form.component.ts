@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MyErrorStateMatcher } from 'src/app/common/error-state-matcher';
-import { emailOrNumberRequired } from 'src/app/common/form.validators';
+import { FormValidators } from 'src/app/common/form.validators';
 import { PayrollFormService } from 'src/app/services';
 
 @Component({
@@ -25,8 +25,14 @@ export class PayrollFormComponent implements OnInit {
 
     this.payrollForm = new FormGroup(
       {
-        firstName: new FormControl('', [Validators.required]),
-        lastName: new FormControl('', [Validators.required]),
+        firstName: new FormControl('', [
+          Validators.required,
+          FormValidators.cannotContainSpace,
+        ]),
+        lastName: new FormControl('', [
+          Validators.required,
+          FormValidators.cannotContainSpace,
+        ]),
         email: new FormControl('', [Validators.email]),
         phoneNumber: new FormControl('', [
           Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-s./0-9]*$'),
@@ -38,7 +44,7 @@ export class PayrollFormComponent implements OnInit {
         message: new FormControl('', Validators.required),
         // recaptchaReactive: new FormControl(null, Validators.required),
       },
-      { validators: emailOrNumberRequired }
+      { validators: FormValidators.emailOrNumberRequired }
     );
   }
 

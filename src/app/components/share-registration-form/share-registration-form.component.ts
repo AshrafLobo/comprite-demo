@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MyErrorStateMatcher } from 'src/app/common/error-state-matcher';
-import { emailOrNumberRequired } from 'src/app/common/form.validators';
+import { FormValidators } from 'src/app/common/form.validators';
 import { IssuersService, ShareRegistrationFormService } from 'src/app/services';
 
 @Component({
@@ -27,8 +27,14 @@ export class ShareRegistrationFormComponent implements OnInit {
 
     this.shareRegistrationForm = new FormGroup(
       {
-        firstName: new FormControl('', [Validators.required]),
-        lastName: new FormControl('', [Validators.required]),
+        firstName: new FormControl('', [
+          Validators.required,
+          FormValidators.cannotContainSpace,
+        ]),
+        lastName: new FormControl('', [
+          Validators.required,
+          FormValidators.cannotContainSpace,
+        ]),
         email: new FormControl('', [Validators.email]),
         address: new FormControl(''),
         phoneNumber: new FormControl('', [
@@ -44,7 +50,7 @@ export class ShareRegistrationFormComponent implements OnInit {
         message: new FormControl('', Validators.required),
         // recaptchaReactive: new FormControl(null, Validators.required),
       },
-      { validators: emailOrNumberRequired }
+      { validators: FormValidators.emailOrNumberRequired }
     );
 
     this.issuersService.getAll().subscribe((result) => (this.issuers = result));

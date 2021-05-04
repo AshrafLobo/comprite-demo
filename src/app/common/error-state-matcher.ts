@@ -6,6 +6,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     control: FormControl | null,
     form: FormGroupDirective | NgForm | null
   ): boolean {
-    return control?.touched && form.errors?.emailOrNumber;
+    return control?.touched && (form.errors?.emailOrNumber || control?.invalid);
   }
 }

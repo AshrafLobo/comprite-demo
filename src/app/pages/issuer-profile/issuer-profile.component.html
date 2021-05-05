@@ -1,10 +1,10 @@
 <!-- Profile section -->
-<div class="container my-5">
+<div class="container my-5 title-section">
   <div class="row">
     <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
       <img class="w-100" [attr.src]="issuer?.src_small" [attr.alt]="issuer?.name">
     </div>
-    <div class="col-12 col-lg-8 my-5 text-center text-lg-left">
+    <div class="col-12 col-lg-6 my-5 text-center text-lg-left">
       <h1 class="issuer-name mb-1">{{issuer?.name}}</h1>
       <h2 class="issuer-title m-0 mt-1">{{issuer?.title}}</h2>
       <hr />
@@ -14,11 +14,18 @@
           company
         </app-custom-button>
         <ng-container *ngIf="opt_in">
-          <app-opt-in-button (click)="onOptInClick(issuer.name)" class="col-12 my-2 my-xl-0 col-xl-auto">
-            <mat-icon>get_app</mat-icon>Download dividend opt in form
+          <app-opt-in-button (click)="onOptInClick(issuer.name.toLowerCase())" class="col-12 my-2 my-xl-0 col-xl-auto">
+            <mat-icon>get_app</mat-icon>Download Mpesa dividend opt in form
           </app-opt-in-button>
         </ng-container>
       </div>
+    </div>
+
+    <div class="col-12 col-lg-2 my-5 text-center text-lg-left our-issuers d-none d-lg-block">
+      <h2>OUR ISSUERS</h2>
+      <li *ngFor="let issuer of issuers">
+        <a [routerLink]="['/issuers', issuer._id]" routerLinkActive="active-link">{{issuer.name}}</a>
+      </li>
     </div>
   </div>
 </div>
@@ -29,7 +36,7 @@
     <mat-tab label="News">
 
       <!-- News section -->
-      <div class="row m-0 my-3 news-section">
+      <div class="row m-0 mb-3 news-section">
         <mat-sidenav-container>
 
           <!-- Filter sidenav section -->
@@ -89,7 +96,7 @@
 
     <!-- Shareholder inforamtion section -->
     <mat-tab label="Shareholder information">
-      <div class="my-5 shareholder-information table-responsive-sm">
+      <div class="my-5 mx-2 shareholder-information table-responsive-sm">
         <!-- AGM table section -->
         <app-agm *ngIf="issuer" [issuerId]="issuer._id"></app-agm>
 

@@ -23,7 +23,7 @@
         <td>{{ (data.disbursmentDate | date:'MM/dd/yyyy') || 'TBD'}}</td>
         <td>{{ (data.bookClosureDate | date:'yyyy') || (today | date:'yyyy') }}</td>
         <td>{{ data.dividendType || 'TBD'}}</td>
-        <td>{{ data.dividendRate || 'TBD'}}</td>
+        <td>{{ data.dividendRate || '-'}}</td>
         <td>
           <div class="text-center" [ngClass]="{
             'pending': data.status === 'pending',

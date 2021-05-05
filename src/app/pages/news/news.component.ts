@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services';
+import { IssuersService } from 'src/app/services';
 
 @Component({
   selector: 'app-news',
@@ -8,6 +9,7 @@ import { NewsService } from 'src/app/services';
 })
 export class NewsComponent implements OnInit {
   articles;
+  issuers;
 
   // Filter variables
   sort: string = '';
@@ -15,11 +17,18 @@ export class NewsComponent implements OnInit {
   company: string = '';
   dateStart: string = '';
 
-  constructor(private service: NewsService) {}
+  constructor(
+    private newsService: NewsService,
+    private issuersService: IssuersService
+  ) {}
 
   ngOnInit(): void {
-    this.service
+    this.newsService
       .getAll()
       .subscribe((articles: any[]) => (this.articles = articles));
+
+    this.issuersService
+      .getAll()
+      .subscribe((issuers: any[]) => (this.issuers = issuers));
   }
 }

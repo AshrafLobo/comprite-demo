@@ -1,4 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  SimpleChange,
+} from '@angular/core';
 import { EgmsService } from 'src/app/services';
 
 @Component({
@@ -6,7 +13,7 @@ import { EgmsService } from 'src/app/services';
   templateUrl: './egm.component.html',
   styleUrls: ['./egm.component.scss'],
 })
-export class EgmComponent implements OnInit {
+export class EgmComponent implements OnChanges {
   egmData;
   today = new Date();
 
@@ -14,8 +21,10 @@ export class EgmComponent implements OnInit {
 
   constructor(private service: EgmsService) {}
 
-  ngOnInit(): void {
-    this.service.getAll(this.issuerId).subscribe((resource) => {
+  ngOnChanges(changes: SimpleChanges): void {
+    const issuerId: SimpleChange = changes.issuerId;
+
+    this.service.getAll(issuerId.currentValue).subscribe((resource) => {
       this.egmData = resource;
     });
   }

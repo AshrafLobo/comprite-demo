@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChange,
+  SimpleChanges,
+} from '@angular/core';
 import { DividendsService } from 'src/app/services';
 
 @Component({
@@ -6,7 +12,7 @@ import { DividendsService } from 'src/app/services';
   templateUrl: './dividends.component.html',
   styleUrls: ['./dividends.component.scss'],
 })
-export class DividendsComponent implements OnInit {
+export class DividendsComponent implements OnChanges {
   dividendsData;
   today = new Date();
 
@@ -14,8 +20,10 @@ export class DividendsComponent implements OnInit {
 
   constructor(private service: DividendsService) {}
 
-  ngOnInit(): void {
-    this.service.getAll(this.issuerId).subscribe((resource) => {
+  ngOnChanges(changes: SimpleChanges): void {
+    const issuerId: SimpleChange = changes.issuerId;
+
+    this.service.getAll(issuerId.currentValue).subscribe((resource) => {
       this.dividendsData = resource;
     });
   }

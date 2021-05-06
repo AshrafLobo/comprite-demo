@@ -1,7 +1,7 @@
 <!-- Profile section -->
 <div class="container my-5 title-section">
   <div class="row">
-    <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo">
+    <div class="col-12 col-lg-4 text-center text-lg-right issuer-logo p-0 pr-lg-3">
       <img class="w-100" [attr.src]="issuer?.src_small" [attr.alt]="issuer?.name">
     </div>
     <div class="col-12 col-lg-6 my-5 text-center text-lg-left">
@@ -31,7 +31,7 @@
 </div>
 
 <!-- Tabs section -->
-<div class="container">
+<div class="container p-0">
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="News">
 
@@ -96,7 +96,7 @@
 
     <!-- Shareholder inforamtion section -->
     <mat-tab label="Shareholder information">
-      <div class="my-5 mx-2 shareholder-information table-responsive-sm">
+      <div class="my-5 mx-3 shareholder-information table-responsive-sm">
         <!-- AGM table section -->
         <app-agm *ngIf="issuer" [issuerId]="issuer._id"></app-agm>
 

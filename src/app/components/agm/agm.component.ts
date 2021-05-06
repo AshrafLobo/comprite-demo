@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChange,
+  SimpleChanges,
+} from '@angular/core';
 import { AgmsService } from 'src/app/services';
 
 @Component({
@@ -6,17 +12,18 @@ import { AgmsService } from 'src/app/services';
   templateUrl: './agm.component.html',
   styleUrls: ['./agm.component.scss'],
 })
-export class AgmComponent implements OnInit {
+export class AgmComponent implements OnChanges {
   agmData;
   today = new Date();
 
   @Input('issuerId') issuerId;
 
   constructor(private service: AgmsService) {}
+  ngOnChanges(changes: SimpleChanges): void {
+    const issuerId: SimpleChange = changes.issuerId;
 
-  ngOnInit(): void {
     this.service
-      .getAll(this.issuerId)
+      .getAll(issuerId.currentValue)
       .subscribe((resource) => (this.agmData = resource));
   }
 }

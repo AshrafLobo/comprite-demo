@@ -11,7 +11,7 @@ import { NotFoundError } from '../common/not-found-error';
   providedIn: 'root',
 })
 export class DataService {
-  URL = 'http://ashraflobo.co.uk/api/';
+  URL = 'https://safe-gorge-81189.herokuapp.com/api/';
 
   private config = new HttpHeaders()
     .set('Content-Type', 'application/json')

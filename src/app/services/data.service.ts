@@ -11,7 +11,7 @@ import { NotFoundError } from '../common/not-found-error';
   providedIn: 'root',
 })
 export class DataService {
-  URL = 'https://ashraflobo.co.uk/api/';
+  URL = `${window.location.protocol + '://' + window.location.hostname}/api/`;
 
   private config = new HttpHeaders()
     .set('Content-Type', 'application/json')

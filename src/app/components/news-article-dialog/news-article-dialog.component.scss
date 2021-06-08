@@ -97,3 +97,21 @@ hr {
     }
   }
 }
+
+.modal-footer {
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
